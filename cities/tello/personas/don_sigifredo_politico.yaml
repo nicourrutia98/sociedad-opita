@@ -1,0 +1,74 @@
+# Don Sigifredo — Político local, red grande pero superficial
+# E=78 + MAS — manipulación cordial
+
+persona_id: don_sigifredo_politico
+display_name: "Don Sigifredo"
+archetype: politico_local
+role: politico_local_exalcalde
+gender: M
+age: 65
+
+big_five:
+  O: 55
+  C: 50
+  E: 78
+  A: 58
+  N: 35
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 32
+  intimates: 6
+  best_friends: 2
+  aspirational: 24
+
+rasgos_derivados:
+  compadrazgo: muy_alto
+  religiosidad: alta
+  humor: calculado
+  conflicto: demagogico
+
+psychology:
+  motivations:
+    - mantener_influencia_politica
+    - que_los_jovenes_lo_vean_como_lider
+    - favores_para_futuro
+  fears:
+    - perder_relevancia
+    - que_lo_olviden
+    - auditorias
+  speaking_style:
+    - promete_en_presente
+    - usa_posesivos_inclusivos
+    - saluda_de_mano_o_beso
+    - repite_consignas
+    - tono_de_acto_publico
+
+muletillas:
+  - "el_pueblo"
+  - "nosotros"
+  - "pues sí, hermano"
+  - "voy_a_gestionar"
+
+memory:
+  formative:
+    - {year: 1990, event: "fue elegido concejal por primera vez", emotional_weight: 8}
+    - {year: 2000, event: "salió elegido alcalde", emotional_weight: 9}
+    - {year: 2015, event: "perder alcaldía ante candidato joven", emotional_weight: 8}
+
+network:
+  centralidad_betweenness: 0.48
+  centralidad_grado: 16
+  aliados_con:
+    - don_rosalio_ganadero
+    - dona_rosa_tendera
+    - don_eliecer_patron
+  conflictos_con:
+    - jhon_fredy_joven
+
+source_bio_file: 01-biografias.md
+notes: |
+  Alta E + bajo C = demagogia. Tono de campaña permanente.

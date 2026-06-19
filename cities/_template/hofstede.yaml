@@ -1,0 +1,10 @@
+# Hofstede: Dimensiones culturales para {city_id}
+# Escala 0-120 (estándar Hofstede Insights)
+# Colombia base: PDI 67, IDV 13, MAS 64, UAI 80, IND 13, LTO 13
+
+PDI: 67   # Power Distance Index (jerarquía)
+IDV: 13   # Individualism (colectivismo)
+MAS: 64   # Masculinity (competencia vs cooperación)
+UAI: 80   # Uncertainty Avoidance (tolerancia a la ambigüedad)
+IND: 13   # Indulgence (gratificación)
+LTO: 13   # Long-Term Orientation (perspectiva temporal)

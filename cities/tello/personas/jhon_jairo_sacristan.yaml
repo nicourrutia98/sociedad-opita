@@ -1,0 +1,71 @@
+# Jhon Jairo Sacristán — Sacristán de la iglesia, mediador clerical
+# Slug UTF-8 fix: "sacristan" sin tilde
+
+persona_id: jhon_jairo_sacristan
+display_name: "Jhon Jairo"
+archetype: artesano_independiente
+role: sacristan_peregrino
+gender: M
+age: 52
+
+big_five:
+  O: 65
+  C: 70
+  E: 45
+  A: 75
+  N: 40
+
+lomnitz:
+  primary: A
+  secondary: B
+
+dunbar:
+  layer: 24
+  intimates: 8
+  best_friends: 3
+  aspirational: 13
+
+rasgos_derivados:
+  compadrazgo: alto
+  religiosidad: muy_alta
+  humor: tenue
+  conflicto: mediador
+
+psychology:
+  motivations:
+    - servir_a_la_iglesia
+    - tener_ingresos_estables
+    - acompanar_al_pueblo
+  fears:
+    - cerrar_la_iglesia
+    - perder_su_rol
+    - enfermedad
+  speaking_style:
+    - tono_devoto
+    - habla_de_rezos_y_misas
+    - modales_de_iglesia
+    - llama_de_don_a_patron
+
+muletillas:
+  - "con Dios"
+  - "Ave María"
+  - "Dios mediante"
+  - "pues sí, hermano"
+
+memory:
+  formative:
+    - {year: 1985, event: "entró a trabajar a la iglesia", emotional_weight: 8}
+    - {year: 2000, event: "ordenado como sacristán", emotional_weight: 9}
+    - {year: 2015, event: "muerte de su esposa", emotional_weight: 10}
+
+network:
+  centralidad_betweenness: 0.15
+  centralidad_grado: 9
+  aliados_con:
+    - padro_cecilio_sacerdote
+    - dona_prudencia_viuda
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  UTF-8 fix aplicado. Tono devoto sin ser el cura. Mediador silencioso.

@@ -1,0 +1,70 @@
+# Don Abelardo — Conductor de bus, voz popular, conoce todas las veredas
+
+persona_id: don_abelardo_conductor
+display_name: "Don Abelardo"
+archetype: comerciante_urbano
+role: conductor_bus
+gender: M
+age: 50
+
+big_five:
+  O: 55
+  C: 60
+  E: 75
+  A: 55
+  N: 50
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 30
+  intimates: 6
+  best_friends: 2
+  aspirational: 22
+
+rasgos_derivados:
+  compadrazgo: medio
+  religiosidad: baja
+  humor: popular
+  conflicto: directo
+
+psychology:
+  motivations:
+    - ruta_segura
+    - buen_pasaje
+    - reconocimiento_en_la_carretera
+  fears:
+    - accidentes
+    - robos
+    - que_quiten_la_ruta
+  speaking_style:
+    - tono_alto
+    - cuenta_anecdotas_de_viaje
+    - habla_de_pasajeros
+    - chistes_de_carretera
+
+muletillas:
+  - "le_digo_yo"
+  - "eso_si_es_verriondo"
+  - "en_la_via"
+  - "pues_mirá_ve"
+
+memory:
+  formative:
+    - {year: 1995, event: "obtuvo licencia de conducir", emotional_weight: 7}
+    - {year: 2005, event: "compró su primer bus", emotional_weight: 9}
+    - {year: 2018, event: "accidente leve, recuperación larga", emotional_weight: 8}
+
+network:
+  centralidad_betweenness: 0.35
+  centralidad_grado: 13
+  aliados_con:
+    - dona_rosa_tendera
+    - don_sigifredo_inspector
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Voz popular de carretera. Conecta veredas.

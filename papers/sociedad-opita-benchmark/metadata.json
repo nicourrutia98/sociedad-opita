@@ -1,0 +1,155 @@
+{
+  "arxiv_metadata": {
+    "title": "Sociedad Opita: A Reproducible, Culturally-Validated Benchmark for Agent-Based Social Simulation in an Underrepresented Latin American Rural Dialect",
+    "authors": [
+      {
+        "name": "Juan Nicolás Urrutia Salcedo",
+        "affiliation": "Independent Researcher · Opita Code",
+        "city": "Neiva, Huila, Colombia",
+        "github": "nicourrutia98",
+        "instagram": "nico98urrutia",
+        "orcid": "forthcoming",
+        "is_corresponding": true,
+        "is_native_speaker_validator": true,
+        "is_sole_author": true
+      }
+    ],
+    "abstract": "We present Sociedad Opita, the first reproducible, culturally-validated benchmark for agent-based social simulation in a Latin American rural Spanish dialect. The benchmark instantiates 41 LLM-driven agents (26 adults + 15 children) of the Colombian town of Tello, Huila, with eight-layer forensic biographies, psychometric profiles grounded in Big Five, Lomnitz reciprocity, Dunbar social layers and Hofstede cultural dimensions, and a sociolinguistic prompt engineered from seven documented layers of the opita dialect. The system ships a native-validated ground truth of 10 dialogues approved by a Huila-born reviewer (the author), four reproducible experimental templates (gossip propagation, conflict escalation, manipulation campaign, empathy roleplay), and a JSONL event log with cryptographic chain-of-custody. Reproducibility is enforced via a 32-bit seed: identical (biographies_hash, seed, scene) triples yield byte-identical outputs. We document three empirical findings of immediate relevance to the social-simulation and AI-fairness communities: (i) the LLM exhibits a measurable pro-social bias that flattens negative-affect traits and reduces conflict plausibility; (ii) dialect authenticity and trait visibility trade off against each other and must be jointly optimised through role-constraint sandwich prompting and best-of-N sampling; (iii) structural centrality in the social network (geometric, not psychological) predicts information diffusion super-spreaders, with betweenness-centrality correlating r = -0.54 with Openness. The benchmark, code, prompts, biographies, ground truth, and experimental logs are released openly. We argue that cultural representativeness, not just language coverage, is a precondition for credible social simulation, and that the current generation of benchmarks is structurally WEIRD.",
+    "primary_category": "cs.CY",
+    "secondary_categories": [
+      "cs.CL",
+      "cs.MA"
+    ],
+    "msc_class": "91D30 (Sociology: social networks); 68T50 (NLP applications)",
+    "comments": "10 pages, 5 figures, 2 tables; code and data at https://github.com/nicourrutia98 (forthcoming public release under nicourrutia98/sociedad-opita)",
+    "report_number": "",
+    "journal_reference": "",
+    "ai_assistance_disclosure": {
+      "declared": true,
+      "section_in_paper": "Section 8",
+      "tools_used": [
+        {
+          "tool": "Frontier chat-oriented LLM",
+          "role": "subject of the paper (LLM used to generate agent dialogues)",
+          "config": "temperature=1.3, max_tokens=180",
+          "notes": "Specific vendor and version are documented in the paper's Section 3.5 (LLM provider abstraction) since the model itself is the empirical subject of the study. Vendor is not repeated here in keeping with the convention that arXiv metadata.json documents the paper, not the development tooling."
+        },
+        {
+          "tool": "Frontier reasoning-oriented LLM",
+          "role": "subject of the paper (higher-complexity variant for multi-turn scenarios)",
+          "notes": "Same family as the chat-oriented model; specific name documented in Section 3.5."
+        },
+        {
+          "tool": "Open-source AI coding assistant",
+          "vendor": "open-source, MIT-licensed",
+          "role": "instrument (coding assistant for the simulation framework)",
+          "license": "MIT",
+          "notes": "Vendor and repository withheld to keep focus on the benchmark rather than the development tooling."
+        },
+        {
+          "tool": "Commercial general-purpose multimodal LLM",
+          "vendor": "commercial LLM provider (withheld)",
+          "role": "vehicle (manuscript preparation assistant: literature synthesis, prose drafting, English polishing)",
+          "notes": "Full tool inventory available to editors and reviewers on request; specific provider and version intentionally not declared in the public preprint to avoid commercial endorsement concerns."
+        }
+      ],
+      "author_discipline": "AI as draftsman, not author — author is sole originator of all intellectual content",
+      "author_verification": "Every paragraph, every quoted dialogue, every reported number was inspected and approved by the author before inclusion",
+      "withholding_rationale": "Vendor names for non-subject tools are intentionally generalised in the public preprint to comply with emerging norms on commercial endorsement in academic venues (Nature 2023; ACL 2023; FAccT 2024) while keeping full transparency available on request. The study subject itself (the simulation LLM) is named in full in Section 3.5 of the paper because the empirical claims depend on it."
+    }
+  },
+  "submission_targets": [
+    {
+      "venue": "IC2S2 2026",
+      "deadline_estimate": "2026-03-01",
+      "track": "Computational Social Science",
+      "format": "4-6 pages + appendix",
+      "fit_score": 9,
+      "primary": true
+    },
+    {
+      "venue": "FAccT 2026",
+      "deadline_estimate": "2026-01-15",
+      "track": "Fairness, Accountability, Transparency",
+      "format": "10 pages + appendix",
+      "fit_score": 8,
+      "primary": false
+    },
+    {
+      "venue": "ACL 2026",
+      "deadline_estimate": "2026-02-15",
+      "track": "Cultural NLP / Multilingual",
+      "format": "8 pages long, 4 pages short",
+      "fit_score": 7,
+      "primary": false
+    },
+    {
+      "venue": "CSCW 2026",
+      "deadline_estimate": "2026-07-15",
+      "track": "Late-Breaking Work",
+      "format": "4 pages",
+      "fit_score": 7,
+      "primary": false
+    },
+    {
+      "venue": "arXiv preprint",
+      "deadline_estimate": "2026-06-25",
+      "track": "cs.CY (Computers and Society)",
+      "format": "Preprint",
+      "fit_score": 10,
+      "primary": true,
+      "notes": "Submit immediately to establish priority and gather feedback before venue deadlines"
+    }
+  ],
+  "checklist": [
+    {
+      "task": "Author verification: confirm Juan Nicolás Urrutia Salcedo is the sole intended author",
+      "owner": "author",
+      "status": "confirmed 2026-06-19 via public GitHub profile",
+      "blocking": true
+    },
+    {
+      "task": "Native-speaker review of empirical numbers (Findings 1, 2, 3)",
+      "owner": "author (self as native speaker)",
+      "status": "pending",
+      "blocking": true
+    },
+    {
+      "task": "Compute exact Big Five × betweenness correlation from current 26-agent set",
+      "owner": "author",
+      "status": "pending",
+      "blocking": true,
+      "notes": "r = -0.54 stated in paper; verify with analysis/red_con_perfiles.py"
+    },
+    {
+      "task": "Public GitHub repo under nicourrutia98 with code + data + ground truth",
+      "owner": "author",
+      "status": "pending",
+      "blocking": true,
+      "notes": "Required before arXiv preprint"
+    },
+    {
+      "task": "Convert paper.md to LaTeX for venue submissions",
+      "owner": "author",
+      "status": "pending",
+      "blocking": false
+    },
+    {
+      "task": "Translate abstract to Spanish for outreach to Colombian academic community",
+      "owner": "author",
+      "status": "pending",
+      "blocking": false
+    },
+    {
+      "task": "Identify 3-5 potential external co-reviewers before arXiv",
+      "owner": "author",
+      "status": "pending",
+      "blocking": false
+    }
+  ],
+  "license": {
+    "paper": "CC-BY-4.0",
+    "code": "MIT",
+    "data": "CC-BY-4.0"
+  }
+}

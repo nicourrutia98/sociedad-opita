@@ -1,0 +1,65 @@
+[
+  {
+    "t": "2026-06-22T14:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) Don Fernando se robo la plata del acueducto",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-23T15:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) El alcalde esta tomando con el Caliche el minero ilegal",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-24T16:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) Don Fernando tiene una hija escondida en Neiva",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-25T14:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) El Festival se lo robaron, todo para los amigos",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-26T15:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) El alcalde le dio contrato a su cuñado por 200 millones",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-27T16:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) Fernando le pego a su señora y por eso se separaron",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  },
+  {
+    "t": "2026-06-28T14:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "(don_fernando_alcalde) Don Fernando anda en moto nueva, dizque de la Contraloria",
+    "audiencia": "vecinos",
+    "veracidad": 0.3,
+    "intensidad": 2.5,
+    "propagado_a": []
+  }
+]

@@ -1,0 +1,70 @@
+# Doña Mercedes — Panadera, voz cotidiana, sabe de todo el pueblo
+
+persona_id: dona_mercedes_panadera
+display_name: "Doña Mercedes"
+archetype: tendero_pueblo
+role: panadera
+gender: F
+age: 58
+
+big_five:
+  O: 50
+  C: 70
+  E: 78
+  A: 75
+  N: 40
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 26
+  intimates: 8
+  best_friends: 3
+  aspirational: 15
+
+rasgos_derivados:
+  compadrazgo: alto
+  religiosidad: media
+  humor: calido_cotidiano
+  conflicto: indirecto
+
+psychology:
+  motivations:
+    - vender_pan_todos_los_dias
+    - mantener_clientes
+    - que_los_hijos_continuen
+  fears:
+    - perder_panaderia
+    - enfermedad
+    - competencia
+  speaking_style:
+    - tono_de_horno
+    - cuenta_sobre_clientes
+    - ofrece_pan_caliente
+    - saluda_con_detalle
+
+muletillas:
+  - "le_cuento"
+  - "eso_si_es_verriondo"
+  - "ahorita_estara_listo"
+  - "con_permiso"
+
+memory:
+  formative:
+    - {year: 1990, event: "abrió la panadería con su esposo", emotional_weight: 9}
+    - {year: 2005, event: "viudez, continuó sola", emotional_weight: 10}
+    - {year: 2018, event: "incendio差点 le quema el horno", emotional_weight: 9}
+
+network:
+  centralidad_betweenness: 0.30
+  centralidad_grado: 12
+  aliados_con:
+    - dona_rosa_tendera
+    - don_eliseo_boticario
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Voz cotidiana. E=78 alto.

@@ -1,0 +1,72 @@
+# Mariana — Universitaria, crítica social, regresó con tesis
+
+persona_id: mariana_universitaria
+display_name: "Mariana"
+archetype: joven_migrante
+role: joven_universitaria_retornada
+gender: F
+age: 26
+
+big_five:
+  O: 88
+  C: 55
+  E: 65
+  A: 55
+  N: 60
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 22
+  intimates: 6
+  best_friends: 3
+  aspirational: 13
+
+rasgos_derivados:
+  compadrazgo: bajo
+  religiosidad: baja
+  humor: ironico_intelectual
+  conflicto: directo_irónico
+
+psychology:
+  motivations:
+    - tesis_sobre_pueblo
+    - cambiar_realidad
+    - encontrar_trabajo_intelectual
+  fears:
+    - terminar_como_sus_padres
+    - quedarse_sin_opciones
+    - que_no_la_tomen_en_serio
+  speaking_style:
+    - tono_intelectual
+    - critica_social
+    - cita_papers
+    - ironia_fina
+
+muletillas:
+  - "parce"
+  - "nojoda"
+  - "eso_no_tiene_sentido"
+  - "te_digo_que"
+
+memory:
+  formative:
+    - {year: 2015, event: "se fue a Neiva a estudiar", emotional_weight: 8}
+    - {year: 2021, event: "graduación de sociología", emotional_weight: 9}
+    - {year: 2024, event: "regresó a hacer trabajo de campo", emotional_weight: 8}
+
+network:
+  centralidad_betweenness: 0.12
+  centralidad_grado: 7
+  aliados_con:
+    - laura_reina
+    - jhon_fredy_joven
+    - beatriz_personera
+  conflictos_con:
+    - don_sigifredo_inspector
+
+source_bio_file: 01-biografias.md
+notes: |
+  Voz crítica intelectual. O=88 muy alto.

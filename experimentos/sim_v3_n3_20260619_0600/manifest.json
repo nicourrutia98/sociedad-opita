@@ -1,0 +1,91 @@
+{
+  "nombre": "sim_v3_n3_20260619_0600",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 3600.0,
+  "hipotesis": "Simulacion geografica nivel 3, 1h. Co-presencia segun ruta_diaria. 41 agentes (26 adultos + 15 ninos).",
+  "n_agentes": 41,
+  "metadata_custom": {
+    "tipo": "simulacion_geografica",
+    "nivel": 3,
+    "con_llm": true,
+    "duracion_horas": 1
+  },
+  "wall_time_inicio": "2026-06-19T10:17:26.973734",
+  "biografias_hash": "51da37e5e4d2b8e0",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-19T06:50:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 60.0,
+    "pausado": false,
+    "segundos_transcurridos": 3000.0,
+    "cambios_realizados": 8
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T10:17:26.973707",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:17:26.974123",
+      "accion": "set_velocidad",
+      "payload": {
+        "anterior": 1.0,
+        "nueva": 60.0
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:17:27.010570",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:00:00",
+        "t_nuevo": "2026-06-19T06:00:00"
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:17:50.103241",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:00:00",
+        "t_nuevo": "2026-06-19T06:10:00"
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:17:54.836004",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:10:00",
+        "t_nuevo": "2026-06-19T06:20:00"
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:17:59.077097",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:20:00",
+        "t_nuevo": "2026-06-19T06:30:00"
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:18:13.297383",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:30:00",
+        "t_nuevo": "2026-06-19T06:40:00"
+      }
+    },
+    {
+      "wall_time": "2026-06-19T10:18:28.463555",
+      "accion": "saltar_a",
+      "payload": {
+        "t_anterior": "2026-06-19T06:40:00",
+        "t_nuevo": "2026-06-19T06:50:00"
+      }
+    }
+  ]
+}

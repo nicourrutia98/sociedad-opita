@@ -1,0 +1,56 @@
+{
+  "despues_fewshot": {
+    "Don Eliécer": {
+      "output": "Uy, Don Rosalío... usté siempre tan cumplidor con sus reclamos. Pero verá, esa tranquera la puso mi abuelo en el 50, y desde entonces aquí ha estado.",
+      "cost": 0.00105966,
+      "latencia": 2.1341559886932373
+    },
+    "Don Rosalío": {
+      "output": "Uy, pos mire... ya empezó el tal Eliécer con sus mañas. Mandó un peón a mover la cerca, como si yo fuera más bobo que un burro viejo. Ese lindero está como está desde el temblor del 94, y no lo va a tocar nadie sin mi permiso.",
+      "cost": 0.0010675,
+      "latencia": 2.5904154777526855
+    },
+    "Don Eliseo": {
+      "output": "Ay, mijo, pero usté está más perdido que gusano en queso. Váyase a dormir la mona y vuelva cuando le dé la fórmula el dotor, no me venga a embarrar la farmacia.",
+      "cost": 0.000931,
+      "latencia": 2.426060438156128
+    },
+    "Jhon Eliécer": {
+      "output": "Ay, papá... pos, sí. Como usté mande.",
+      "cost": 0.00097986,
+      "latencia": 1.4859392642974854
+    },
+    "Patricia": {
+      "output": "Ay, mija, pero si ese hombre es más necio que una piedra. Pase, pase, siéntese aquí en la sala, que con calma me cuenta todo.",
+      "cost": 0.0009259600000000001,
+      "latencia": 1.944765329360962
+    },
+    "Doña Prudencia": {
+      "output": "Ay, mija, pero mire que esa muchacha llegó como a las tres de la madrugada, toda asustada y con dolores cada cinco minutos. La revisé y el bebé venía sentado, como quien dice, no era posición de parto. Le hice una sobadita con manteca de cacao y le di agua de ruda, y gracias a Dios se volteó solito. Ahora está descansando, pero toca vigilarla porque esas cosas no se juegan.",
+      "cost": 0.00101906,
+      "latencia": 3.558180332183838
+    },
+    "Doña Rosa": {
+      "output": "Ay, mija, ¿pero con quién? Porque si es con la tal Edilma, esa secretaria tan metiche, ya me lo imaginaba. Ese marido suyo es más resbaloso que mojarra, desde que le vi los ojos a la otra en la tienda el jueves pasado.",
+      "cost": 0.00099792,
+      "latencia": 2.599957227706909
+    },
+    "Padre Cecilio": {
+      "output": "Ay, pero vean, vean... ¿qué es esa algarabía tan temprano, mijitos? Con la bendición de Dios, vamos a calmarnos y hablar como cristianos.",
+      "cost": 0.00097944,
+      "latencia": 2.1489033699035645
+    }
+  },
+  "agentes_test": [
+    "Don Eliécer",
+    "Don Rosalío",
+    "Don Eliseo",
+    "Jhon Eliécer",
+    "Patricia",
+    "Doña Prudencia",
+    "Doña Rosa",
+    "Padre Cecilio"
+  ],
+  "modelo": "deepseek-chat",
+  "temperature": 0.7
+}

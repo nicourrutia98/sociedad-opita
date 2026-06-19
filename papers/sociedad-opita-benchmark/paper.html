@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sociedad Opita Benchmark</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="data:text/css,$css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Sociedad Opita Benchmark</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#sociedad-opita-a-reproducible-culturally-validated-benchmark-for-agent-based-social-simulation-in-an-underrepresented-latin-american-rural-dialect"
+id="toc-sociedad-opita-a-reproducible-culturally-validated-benchmark-for-agent-based-social-simulation-in-an-underrepresented-latin-american-rural-dialect">Sociedad
+Opita: A Reproducible, Culturally-Validated Benchmark for Agent-Based
+Social Simulation in an Underrepresented Latin American Rural
+Dialect</a>
+<ul>
+<li><a href="#abstract" id="toc-abstract">Abstract</a></li>
+<li><a href="#1-introduction" id="toc-1-introduction">1.
+Introduction</a></li>
+<li><a href="#2-related-work" id="toc-2-related-work">2. Related
+Work</a></li>
+<li><a href="#3-the-tello-benchmark-methodology"
+id="toc-3-the-tello-benchmark-methodology">3. The Tello Benchmark:
+Methodology</a>
+<ul>
+<li><a href="#31-eight-layer-forensic-biography"
+id="toc-31-eight-layer-forensic-biography">3.1 Eight-layer forensic
+biography</a></li>
+<li><a href="#32-quantitative-psychometric-grounding"
+id="toc-32-quantitative-psychometric-grounding">3.2 Quantitative
+psychometric grounding</a></li>
+<li><a href="#33-seven-layer-sociolinguistic-prompt"
+id="toc-33-seven-layer-sociolinguistic-prompt">3.3 Seven-layer
+sociolinguistic prompt</a></li>
+<li><a href="#34-reproducibility-and-chain-of-custody"
+id="toc-34-reproducibility-and-chain-of-custody">3.4 Reproducibility and
+chain of custody</a></li>
+<li><a href="#35-llm-provider-abstraction"
+id="toc-35-llm-provider-abstraction">3.5 LLM provider
+abstraction</a></li>
+</ul></li>
+<li><a href="#4-experimental-templates-and-ground-truth"
+id="toc-4-experimental-templates-and-ground-truth">4. Experimental
+Templates and Ground Truth</a>
+<ul>
+<li><a href="#41-the-validated-ground-truth"
+id="toc-41-the-validated-ground-truth">4.1 The validated ground
+truth</a></li>
+<li><a href="#42-four-experimental-templates"
+id="toc-42-four-experimental-templates">4.2 Four experimental
+templates</a></li>
+<li><a href="#43-empirical-characterisation"
+id="toc-43-empirical-characterisation">4.3 Empirical
+characterisation</a></li>
+</ul></li>
+<li><a href="#5-limitations" id="toc-5-limitations">5.
+Limitations</a></li>
+<li><a href="#6-discussion" id="toc-6-discussion">6. Discussion</a></li>
+<li><a href="#7-ethics-statement" id="toc-7-ethics-statement">7. Ethics
+Statement</a></li>
+<li><a href="#8-ai-assistance-disclosure"
+id="toc-8-ai-assistance-disclosure">8. AI Assistance Disclosure</a>
+<ul>
+<li><a href="#81-tools-used" id="toc-81-tools-used">8.1 Tools
+used</a></li>
+<li><a href="#82-what-ai-did-not-do" id="toc-82-what-ai-did-not-do">8.2
+What AI did NOT do</a></li>
+<li><a href="#83-methodology-of-human-ai-collaboration"
+id="toc-83-methodology-of-human-ai-collaboration">8.3 Methodology of
+human-AI collaboration</a></li>
+<li><a href="#84-why-this-disclosure-matters"
+id="toc-84-why-this-disclosure-matters">8.4 Why this disclosure
+matters</a></li>
+<li><a href="#85-statement-of-responsibility"
+id="toc-85-statement-of-responsibility">8.5 Statement of
+responsibility</a></li>
+</ul></li>
+<li><a href="#references" id="toc-references">References</a></li>
+<li><a
+href="#appendix-a--example-generated-dialogue-multilingual-comparison"
+id="toc-appendix-a--example-generated-dialogue-multilingual-comparison">Appendix
+A — Example generated dialogue (multilingual comparison)</a></li>
+<li><a href="#appendix-b--released-assets"
+id="toc-appendix-b--released-assets">Appendix B — Released
+assets</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="sociedad-opita-a-reproducible-culturally-validated-benchmark-for-agent-based-social-simulation-in-an-underrepresented-latin-american-rural-dialect">Sociedad
+Opita: A Reproducible, Culturally-Validated Benchmark for Agent-Based
+Social Simulation in an Underrepresented Latin American Rural
+Dialect</h1>
+<p><strong>Author:</strong> Juan Nicolás Urrutia Salcedo
+<strong>Affiliation:</strong> Independent Researcher · Founder &amp;
+CEO, Opita Code · Neiva, Huila, Colombia <strong>Contact:</strong>
+GitHub @nicourrutia98 · Instagram @nico98urrutia · <a
+href="https://developer.opitacode.com">https://developer.opitacode.com</a>
+<strong>ORCID:</strong> forthcoming <strong>Date:</strong> 2026-06-19
+<strong>Target venues:</strong> arXiv preprint (cs.CY primary,
+cs.CL/cs.MA secondary; immediate), CSCW 2026 (late-breaking work), IC2S2
+2027, FAccT 2027, ACL 2027 cultural-NLP track <strong>Code &amp;
+data:</strong> <a
+href="https://github.com/nicourrutia98">https://github.com/nicourrutia98</a>
+(forthcoming public release) <strong>License:</strong> MIT for code;
+CC-BY-4.0 for dialogue corpora and biographical data</p>
+<p><strong>Authorship statement.</strong> Juan Nicolás Urrutia Salcedo
+is the sole author of this manuscript. He is Founder &amp; CEO of Opita
+Code, a software studio in Neiva, Huila (Colombia) that builds
+production software for the Colombian and Latin American markets. He
+graduated from Universidad Surcolombiana and is a native speaker of the
+<em>opita</em> dialect of rural Huila. He is the sole validator of the
+10-dialogue ground-truth corpus (Section 4.1); this is a declared
+limitation and the explicit motivation for the call in Section 6 to
+expand the ground truth with additional native and academic reviewers.
+AI tools were used as assistance under his direction in three roles
+(simulation LLM, software-development assistant, manuscript-preparation
+assistant); their role is disclosed categorically in Section 8 (<em>AI
+Assistance Disclosure</em>).</p>
+<p>This benchmark sits at the intersection of two practices he maintains
+in parallel: computational simulation of social systems, and the
+cultural anchoring of software for underrepresented Colombian
+communities. The conjunction of LLM engineering, simulation design, and
+native cultural membership is what makes the paper possible at all.</p>
+<hr />
+<h2 id="abstract">Abstract</h2>
+<p>We present <strong>Sociedad Opita</strong>, the first reproducible,
+culturally-validated benchmark for agent-based social simulation in a
+Latin American rural Spanish dialect. The benchmark instantiates
+<strong>41 LLM-driven agents</strong> (26 adults + 15 children) of the
+Colombian town of Tello, Huila, with <strong>eight-layer forensic
+biographies</strong>, <strong>psychometric profiles</strong> grounded in
+Big Five, Lomnitz reciprocity, Dunbar social layers and Hofstede
+cultural dimensions, and a <strong>sociolinguistic prompt</strong>
+engineered from seven documented layers of the <em>opita</em> dialect.
+The system ships a <strong>native-validated ground truth of 10
+dialogues</strong> approved by a Huila-born reviewer, four reproducible
+experimental templates (gossip propagation, conflict escalation,
+manipulation campaign, empathy roleplay), and a <strong>JSONL event log
+with cryptographic chain-of-custody</strong>. Reproducibility is
+enforced via a 32-bit seed: identical
+<code>(biographies_hash, seed, scene)</code> triples yield
+byte-identical outputs. We document three empirical findings of
+immediate relevance to the social-simulation and AI-fairness
+communities: (i) the LLM exhibits a measurable <strong>pro-social
+bias</strong> that flattens negative-affect traits and reduces conflict
+plausibility; (ii) <strong>dialect authenticity</strong> and
+<strong>trait visibility</strong> trade off against each other and must
+be jointly optimised through role-constraint sandwich prompting and
+best-of-N sampling; (iii) <strong>structural centrality in the social
+network</strong> (geometric, not psychological) predicts information
+diffusion super-spreaders, with betweenness-centrality correlating r =
+−0.54 with Openness. The benchmark, code, prompts, biographies, ground
+truth, and experimental logs are released openly. We argue that cultural
+representativeness — not just language coverage — is a precondition for
+credible social simulation, and that the current generation of
+benchmarks (Stanford Generative Agents, AI Town, Concordia) is
+structurally WEIRD.</p>
+<hr />
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Agent-based social simulation with large language models has matured
+rapidly. Park et al. (2023) demonstrated that 25 LLM-driven agents in a
+Smallville-like sandbox produce emergent social behaviour: relationship
+formation, party planning, information diffusion. Their work, and
+subsequent open-source successors (AI Town; a16z-infra 2024),
+established a methodological template now broadly adopted. Yet these
+systems share three structural limitations that constrain their external
+validity.</p>
+<p><strong>First, linguistic monoculture.</strong> The Stanford
+Generative Agents benchmark is conducted entirely in English. AI Town
+supports multilingual agents but its reference community is anglophone.
+Concordia's <em>DeepMind social simulation suite</em> defaults to
+English-language inhabitants of fictional industrial societies. To our
+knowledge, no published benchmark targets a non-English,
+non-metropolitan, non-WEIRD community with the same depth of cultural
+and dialectal specification.</p>
+<p><strong>Second, validation shallowness.</strong> Existing benchmarks
+validate plausibility through the authors' own inspection or through
+crowdworkers without domain expertise. None, to our knowledge, ship a
+<strong>ground-truth corpus of model outputs reviewed by a member of the
+simulated community</strong> — the operative test for cultural
+fidelity.</p>
+<p><strong>Third, cultural specificity gap.</strong> Social phenomena
+that benchmark agents are asked to simulate — gossip, conflict
+escalation, manipulation, empathy — are culturally inflected. The
+dynamics of rural Colombian gossip are not those of a Silicon Valley
+suburb. A benchmark that models gossip in Pashtunwali, Ubuntu or
+<em>reciprocidad</em> Lomnitz would look very different from
+Smallville's "spreading the word about the election."</p>
+<p>Sociedad Opita addresses these gaps by instantiating a small but
+deeply specified community — the rural Colombian town of Tello, Huila —
+with full forensic depth and a native-validated ground truth. Our
+contributions are:</p>
+<ol type="1">
+<li><strong>A reproducible simulation framework</strong> (Section 3)
+with cryptographic chain-of-custody, seed-controlled determinism, and
+JSONL event logging.</li>
+<li><strong>An eight-layer forensic biography protocol</strong> (Section
+3.1) integrating quantitative psychometrics with qualitative
+ethnographic detail.</li>
+<li><strong>A seven-layer sociolinguistic prompt</strong> (Section 3.2)
+derived from documented <em>opita</em> dialect features and validated by
+a native speaker.</li>
+<li><strong>A 10-dialogue ground-truth corpus</strong> (Section 4.1)
+reviewed by a Huila-born validator, releasing the rubric and the texts
+under CC-BY-4.0.</li>
+<li><strong>Four reproducible experimental templates</strong> (Section
+4.2) addressing gossip propagation, conflict escalation, manipulation
+campaigns, and empathic response.</li>
+<li><strong>Empirical characterisation of three failure modes</strong>
+(Section 5): pro-social bias, dialect-vs-trait trade-off, and structural
+centrality as a diffusion predictor.</li>
+</ol>
+<p>We position this work at the intersection of computational social
+science, AI fairness, and cultural NLP. The benchmark is not a game; it
+is an instrument for measuring how well frontier models represent
+underrepresented communities.</p>
+<hr />
+<h2 id="2-related-work">2. Related Work</h2>
+<p><strong>Generative Agents and successors.</strong> Park et al. (2023,
+<em>Generative Agents: Interactive Simulacra of Human Behavior</em>)
+introduced the canonical 25-agent sandbox with memory streams,
+reflection, and planning. AI Town (a16z-infra 2024) open-sourced the
+architecture; Concordia (DeepMind, Vezhnevets et al. 2023) generalised
+it to industrial-society scenarios. Our framework inherits the
+<em>role-play + memory + LLM-as-decision-maker</em> architecture but
+diverges in two ways: (i) biographies are public, structured, and
+academic-grade, not emergent; (ii) cultural prompts are explicit and
+validated, not generic.</p>
+<p><strong>Cultural NLP and bias evaluation.</strong> Benchmark suites
+such as BLiMP (Warstadt et al. 2020), StereoSet (Nadeem et al. 2021),
+and CrowS-Pairs (Nangia et al. 2020) measure linguistic and social bias
+in English. Más por favor (Borin et al. 2024), LatinX-NLI, and
+SpanishBERT probes extend this to Spanish, but mostly to standard
+peninsular or general Latin-American varieties. To our knowledge, no
+benchmark targets the <em>opita</em> dialect or any specific
+Latin-American rural community with comparable depth.</p>
+<p><strong>ABM with psychological grounding.</strong> Classical
+agent-based modelling uses simplified psychological parameters (e.g.,
+Big Five as exogenous traits) without LLM-driven dialogue (Macy &amp;
+Willer 2002; Epstein 2006). Recent hybrid systems (Bail 2024 on
+AI-assisted social-science experiments; Ashery et al. 2025 on
+LLM-augmented survey agents) bridge ABM and LLM, but typically model
+populations of generic respondents, not specific communities. Our work
+is closer to <em>digital-twin</em> research on cities but at the
+granularity of named individuals in a single town.</p>
+<p><strong>Computational ethnography.</strong> Hine (2000) and
+Boellstorff et al. (2012) established ethnography of virtual worlds; our
+work inverts the direction, treating a real community as a virtual
+world. Recent work on simulated societies for social-science
+experimentation (Bail 2024; Park et al. 2024) takes a complementary but
+different approach: large N of generic respondents versus our small N of
+deeply-specified community members.</p>
+<p><strong>Sociolinguistics of Colombian Spanish.</strong> Our prompt
+layers draw on Montes Giraldo (1985) on Colombian Spanish phonetics;
+Lipski (1994) on Latin-American dialectology; and the broader
+variationist literature on /s/ aspiration in Colombian Spanish. The
+<em>opita</em> dialect (variety spoken in the Huila department) is
+documented in archival press (Diario del Huila) and in the Plan de
+Desarrollo Municipal "Tello Merece Más" 2024–2027 (Concejo Municipal de
+Tello 2024).</p>
+<hr />
+<h2 id="3-the-tello-benchmark-methodology">3. The Tello Benchmark:
+Methodology</h2>
+<h3 id="31-eight-layer-forensic-biography">3.1 Eight-layer forensic
+biography</h3>
+<p>Each of the 26 adult agents is described across <strong>eight
+documented layers</strong>, following a protocol adapted from Chamorro
+Rosero (2016) for the Andean Colombian case and from Lomnitz (1975) for
+reciprocity structures:</p>
+<ol type="1">
+<li><strong>Datos civiles</strong> (name, age, schooling, marital
+status, children)</li>
+<li><strong>Familia de origen</strong> (parents, siblings, place of
+birth)</li>
+<li><strong>Familia actual</strong> (partner, marital conflicts)</li>
+<li><strong>Oficio y rutina diaria</strong> (occupation and hour-by-hour
+daily routine, 5am–9pm)</li>
+<li><strong>Vínculos específicos</strong> (named relationships with
+dates and types)</li>
+<li><strong>Conflictos activos</strong> (current conflicts, parties,
+status, severity)</li>
+<li><strong>Contradicciones y secretos</strong> (what the agent says vs.
+does; concealed information)</li>
+<li><strong>Voz típica</strong> (verbal tics, register, emotional tone,
+sample utterances)</li>
+</ol>
+<p>The 15 child agents are documented with a parallel seven-layer
+protocol grounded in Piaget's developmental stages and the Thomas &amp;
+Chess temperament typology (easy, difficult, slow-to-warm-up).</p>
+<h3 id="32-quantitative-psychometric-grounding">3.2 Quantitative
+psychometric grounding</h3>
+<p>Each adult agent receives four numerical profiles derived from the
+biography via a documented mapping protocol (see
+<code>docs/investigacion/01-psicometria.md</code>):</p>
+<ul>
+<li><strong>Big Five</strong> (Costa &amp; McCrae 1992; IPIP-50
+reference framework, Goldberg 1999): Openness, Conscientiousness,
+Extraversion, Agreeableness, Neuroticism, each scored 0–100.</li>
+<li><strong>Lomnitz reciprocity category</strong> (Lomnitz 1975; Sahlins
+1972): primary category A (symmetric/balanced), B (generalised) or C
+(negative), with optional secondary category and reciprocity
+radius.</li>
+<li><strong>Dunbar social layer</strong> (Dunbar 1992): intimates (5),
+best friends (15), good friends (50), acquaintances (150), with the
+agent placed in the appropriate layer.</li>
+<li><strong>Hofstede dimensions</strong> (Hofstede 2001; Hofstede
+Insights 2023): PDI, IDV, MAS, UAI, LTO, IND, calibrated against the
+Colombian national baseline (PDI=67, IDV=13, MAS=64, UAI=80, LTO=13,
+IND=83) and locally overridden where ethnographic evidence supports it
+(e.g., PDI raised to 75 for Tello based on operator fieldwork).</li>
+</ul>
+<p>A central methodological choice: we <strong>do not administer
+psychometric inventories</strong>. Scores are derived from biographical
+markers following a documented qualitative-to-quantitative mapping
+protocol, analogous to how climate models parameterise from physical
+measurements. Validation is <strong>internal</strong> (consistency) and
+<strong>ecological</strong> (forensic credibility to a native), not
+classical psychometrics. This limitation is declared in
+<code>/limitations</code> and discussed in Section 6.</p>
+<h3 id="33-seven-layer-sociolinguistic-prompt">3.3 Seven-layer
+sociolinguistic prompt</h3>
+<p>A single system prompt
+(<code>docs/agentes/02-prompt-cultural.md</code>, ~5000 characters) is
+prepended to every agent call. It specifies seven documented layers:</p>
+<ol type="1">
+<li><strong>Phonological system</strong> (aspiration of /s/, /d/
+intervocalic loss, yeísmo rehilado, adverbialisation in
+<em>-ico/-ica</em>).</li>
+<li><strong>Lexicon</strong> (muletillas such as <em>pere tantico, ta'
+bueno, verracón, mijito</em>; lexical items such as <em>tinto, achira,
+guadua, vereda, sanjuanero</em>).</li>
+<li><strong>Pragmatics</strong> (negative politeness, deferential
+address system, narrative digresions, taboo topics).</li>
+<li><strong>Generational register</strong> (elderly, adult, youth — each
+with documented lexical, syntactic and pragmatic markers).</li>
+<li><strong>Gendered variation</strong> (male vs. female topics, public
+vs. private discourse norms).</li>
+<li><strong>Real 2026 events</strong> (the April 2026 acueducto crisis;
+the Festival del Bambuco; mining-illegal operations; FARC dissident
+citations of communal leaders; the La Palma–Elías roadworks).</li>
+<li><strong>Register variation</strong> (church, tienda, alcaldía,
+fiesta, funeral, finca, with-stranger).</li>
+</ol>
+<p>The prompt further encodes <strong>13 anti-AI-slop rules</strong>:
+prohibitions against lexicons foreign to the Huila (<em>chévere, wey,
+parce, gonorrea</em>), against third-person narration, against
+paragraph-length turns, against sociological meta-commentary, and
+against AI-typical discourse markers ("In summary," "It's important to
+note that"). A <strong>role-constraint sandwich</strong> wraps the
+prompt: role assertion before scene, behavioural constraint after.</p>
+<h3 id="34-reproducibility-and-chain-of-custody">3.4 Reproducibility and
+chain of custody</h3>
+<p>Every experiment is parameterised by
+<code>(biographies_hash, prompt_version, seed, scene)</code>. The
+biographies hash is computed over the canonical YAML files (BLAKE2b, 16
+hex chars); the prompt version is a semantic version (currently 2.0);
+the seed is a 32-bit unsigned integer; the scene is a JSON document
+specifying time, place, weather, co-present personas, and optional
+context.</p>
+<p>The simulation runs in virtual time (<code>reloj.py</code>, decoupled
+from wall-clock), emits structured JSONL events with timestamps, agent
+IDs, payloads, and content hashes, and produces a manifest.json per
+experiment. We confirm empirically that identical inputs yield
+byte-identical outputs across re-runs (verified on 17 experiments
+released to date).</p>
+<h3 id="35-llm-provider-abstraction">3.5 LLM provider abstraction</h3>
+<p>The system supports multiple LLM providers via
+<code>multi_client.py</code>. The reference configuration uses
+<strong>DeepSeek Chat</strong> (DeepSeek-AI 2024) at temperature 1.3
+with max_tokens 180 per turn — empirically tuned to balance dialect
+authenticity against repetition. A <code>deepseek-reasoner</code>
+variant is available for higher-complexity scenarios (e.g., multi-turn
+conflict escalation), at higher token cost.</p>
+<p>A <strong>best-of-N sampling</strong> module (N=3 default) generates
+N candidate outputs per scene and scores each against an objective
+rubric combining (i) muletilla presence (binary features), (ii) Big Five
+trait visibility (cosine similarity to expected vector), (iii) anti-slop
+penalty (penalising foreign lexicon, paragraph turns, third-person
+narration). The highest-scoring candidate is returned with its score and
+selected-from-N metadata.</p>
+<hr />
+<h2 id="4-experimental-templates-and-ground-truth">4. Experimental
+Templates and Ground Truth</h2>
+<h3 id="41-the-validated-ground-truth">4.1 The validated ground
+truth</h3>
+<p>Ten dialogues, generated by the framework, were reviewed by a
+Huila-born validator (the project operator, who self-declares as
+native). The validator used a six-dimension rubric:</p>
+<ul>
+<li><strong>A. Realismo lingüístico</strong> (1–5: how <em>opita</em>
+does it sound?)</li>
+<li><strong>B. Muletillas y modismos</strong> (1–5: are they the right
+ones?)</li>
+<li><strong>C. Roles sociales</strong> (1–5: behaviour consistent with
+role?)</li>
+<li><strong>D. Generación</strong> (1–5: does language reflect
+age?)</li>
+<li><strong>E. Realismo del conflicto</strong> (1–5: would you believe
+this in Tello?)</li>
+<li><strong>F. AI-slop</strong> (1–5: is the AI hand visible?)</li>
+</ul>
+<p>All 10 dialogues received a passing score (≥3 on each dimension; ≥4
+on A and E overall). Verbatim approval: <em>"Así como está, está
+bien."</em> The full rubric, dialogues, and validator metadata are
+released under CC-BY-4.0.</p>
+<p>A sample (Dialogue 1, crisis-acueducto confrontation between patrón
+Don Eliécer and alcalde Don Fernando):</p>
+<blockquote>
+<p><strong>Don Eliécer:</strong> Mire, Don Fernando... yo no soy de
+pleitos, pero usté sabe que dos cabezas de ganado no se pierden así no
+más. Eso vale plata, pues.</p>
+<p><strong>Alcalde:</strong> Uy, Don Eliécer, claro que sí, usté tiene
+toda la razón. Dos cabezas de ganado no se pierden así nomás, eso es
+plata. Yo le digo que voy a mandar a Saavedra a que le eche un ojo a
+eso, que mire bien.</p>
+<p><strong>Don Eliécer:</strong> Mire, Don Fernando... con todo respeto,
+pero Saavedra ese es más perezoso que una puerta. No me vaya a mandar al
+mismo que se sienta en la oficina a tomar tinto mientras el ganado se le
+pierde a uno.</p>
+</blockquote>
+<p>Note the use of <em>usted</em> (deference to the alcalde despite
+conflict), the diagnostic <em>muletilla</em> "así no más," and the
+locally-grounded comparison "más perezoso que una puerta" (a
+<em>puerta</em> is a ubiquitous object in rural Tello).</p>
+<h3 id="42-four-experimental-templates">4.2 Four experimental
+templates</h3>
+<p>The framework ships four reproducible experimental templates, each
+addressing a documented social-science phenomenon:</p>
+<ol type="1">
+<li><strong>Gossip propagation</strong>
+(<code>gossip_propagation.py</code>): seed a rumour into one agent;
+measure its propagation across the 41-agent network using geodesic
+distance and betweenness-centrality weighting.</li>
+<li><strong>Conflict escalation</strong>
+(<code>conflict_escalation.py</code>): instantiate a two-party conflict
+(e.g., the documented Eliécer–Rosalío linderos dispute); inject
+interventions (control, gossip-previo, mediation-by-cura,
+intervención-institucional) and measure escalation curves.</li>
+<li><strong>Manipulation campaign</strong>
+(<code>manipulation_campaign.py</code>): a third party initiates a
+discredit campaign against a target (e.g., alcalde Don Fernando);
+measure decay of social support across conditions (control, bajo, medio,
+alto).</li>
+<li><strong>Empathy roleplay</strong>
+(<code>empathy_roleplay.py</code>): inject a moral dilemma (e.g., a
+patrón's ganado drowned in the acueducto flood) and measure empathic
+response across persona configurations.</li>
+</ol>
+<p>Each template ships with control and intervention conditions,
+multi-replica runs, and a JSONL log of every LLM call with content
+hashes. <strong>17 experiment runs</strong> are released as exemplars,
+covering all four templates with multiple conditions.</p>
+<h3 id="43-empirical-characterisation">4.3 Empirical
+characterisation</h3>
+<p>We characterise three empirical findings from the released
+experiments.</p>
+<h4 id="finding-1-pro-social-bias-in-llm-role-play">Finding 1:
+Pro-social bias in LLM role-play</h4>
+<p>The LLM exhibits a measurable <strong>pro-social bias</strong>: when
+role-playing personas with high negative-affect traits (high
+Neuroticism, low Agreeableness), generated dialogues show systematically
+muted negative affect compared to the expected persona vector. Across 24
+generated dialogues reviewed against the project's ground-truth rubric,
+<strong>88% of expected persona traits were visible overall</strong>,
+but the validation log explicitly documents a <strong>low-Agreeableness
+bias</strong> (<em>sesgo A-bajo documentado</em>): the LLM
+systematically under-represents antagonism, conflict, and
+negative-affect expression. Documented mitigation strategies include
+temperature elevation (T=1.3 vs. the default 1.0), role-constraint
+sandwich prompting, and explicit anti-congeniality system-prompt
+instructions. Best-of-N sampling with multi-criterion scoring partially
+compensates but does not eliminate the bias; future work should conduct
+a power-adequate quantitative re-evaluation with multi-reviewer ground
+truth.</p>
+<h4 id="finding-2-dialect-vs-trait-trade-off">Finding 2:
+Dialect-vs-trait trade-off</h4>
+<p>Qualitative review of generated outputs across temperature settings
+suggests a trade-off between <strong>dialect authenticity</strong>
+(muletilla density, phonological fidelity) and <strong>trait
+visibility</strong> (Big Five consistency). At low temperatures, outputs
+are dialectally rich but personality-flat (highly <em>opita</em>, low in
+expressing the agent's Big Five signature). At high temperatures,
+outputs are trait-rich but dialectally diluted (personality visible,
+<em>opita</em> markers sparser). The empirically tuned operating point
+(T=1.3, role-constraint sandwich, BoN N=3) is the documented
+configuration in which the project author found the best joint
+behaviour; it is not a Pareto-dominant optimum, only an empirically
+acceptable one. A formal ablation grid with quantitative metrics is left
+for future work and is one of the explicit limitations of the current
+benchmark release.</p>
+<h4
+id="finding-3-structural-centrality-as-a-diffusion-predictor">Finding 3:
+Structural centrality as a diffusion predictor</h4>
+<p>Across the gossip-propagation experimental template, the
+<strong>structural betweenness centrality</strong> of agent locations in
+the geographic map predicts information diffusion more strongly than
+their psychological traits. Specifically, <strong>Doña Rosa</strong>
+(the <em>tendera</em> whose tienda is 30m from the inspección) emerges
+as the #1 super-spreader with betweenness centrality 0.29 — independent
+of her Big Five profile. Crucially, the project author verified this by
+<strong>ablating agent personalities</strong> (randomising Big Five
+vectors while keeping geographic positions): the diffusion pattern is
+preserved. The geometric structure of the town, not the psychology of
+its inhabitants, predicts who controls the flow of information. The
+author states this finding verbatim in the project README: <em>"Lo
+verifiqué corriendo el modelo con personalidades random: el patrón se
+mantiene."</em> This finding echoes Christakis &amp; Fowler's structural
+work on social networks but is, to our knowledge, the first empirical
+confirmation in a fully LLM-driven simulation.</p>
+<p>Across the 26 adults, <strong>betweenness centrality correlates r =
+−0.54 with Openness</strong> (as documented in the project's
+<code>analysis/red_con_perfiles.py</code> output), suggesting that
+structural hubs in this community tend toward concrete, traditional
+orientations rather than open-to-experience ones. This finding is
+consistent with the broader rural-Colombian pattern documented in
+ethnographic literature (Chamorro Rosero 2016; Lomnitz 1975).</p>
+<hr />
+<h2 id="5-limitations">5. Limitations</h2>
+<p>We declare limitations openly.</p>
+<p><strong>Scope and validation.</strong> The benchmark is
+<strong>not</strong> a measurement instrument in the psychometric sense;
+it is a forensic simulation instrument. Validation is partial and
+conducted by a single self-declared native reviewer (the project
+operator). The current geographical coverage is a single town (Tello);
+replicability to a second municipality is an open empirical question. We
+have not yet validated children (15 agents), manipulation campaigns
+across all conditions, or empathy-roleplay outputs.</p>
+<p><strong>Model bias.</strong> The LLM is not culturally neutral; its
+base training over-represents standard Spanish and under-represents
+<em>opita</em>. The pro-social bias documented in Finding 1 persists
+across mitigation strategies and may require a model-level intervention
+(e.g., fine-tuning on Huila-born dialogue corpora, which we are
+assembling).</p>
+<p><strong>Ground-truth scale.</strong> The 10-dialogue ground truth is
+small and not power-adequate for fine-grained statistical claims; future
+work should expand to 50–100 dialogues with multi-reviewer
+validation.</p>
+<p>We also note that simulating a real community raises <strong>ethical
+questions about representation</strong> (Section 7).</p>
+<hr />
+<h2 id="6-discussion">6. Discussion</h2>
+<p>Sociedad Opita operationalises a position: that cultural specificity,
+not just linguistic coverage, is a precondition for credible social
+simulation. Three implications follow.</p>
+<p>First, <strong>benchmark design should foreground cultural
+theory</strong>, not just population statistics. The current generation
+of LLM social-simulation benchmarks treats communities as configurations
+of generic agents with different names. Our work suggests that <em>the
+same agent with a different cultural specification produces different
+social dynamics</em>, and that these dynamics are predictable from
+social theory (Lomnitz reciprocity, Dunbar layers, Hofstede dimensions)
+when properly specified.</p>
+<p>Second, <strong>validation requires community membership</strong>. A
+benchmark validated only by its developers reflects their cultural
+location. The 10-dialogue ground-truth here is a step; multi-reviewer,
+inter-community validation is the next.</p>
+<p>Third, <strong>structural and psychological explanations are
+complementary</strong>, not competing. Finding 3 (Doña Rosa as
+super-spreader via geometry, not personality) is consistent with a long
+sociological tradition (Simmel 1908; Granovetter 1973; Christakis &amp;
+Fowler 2009) but is, to our knowledge, the first demonstration in a
+fully LLM-driven simulation that the structural prediction
+dominates.</p>
+<p>We see three immediate research uses of the benchmark: (i) measuring
+dialect-specific LLM bias (FAccT-style); (ii) evaluating
+cultural-fidelity of multilingual dialogue systems (ACL cultural-NLP
+track); (iii) training and validating ABM-augmented social-science
+experiments (IC2S2, AAMAS).</p>
+<p>A research agenda beyond the benchmark includes extending the
+methodology to a second Colombian municipality (Neiva or Garzón) to test
+cultural replication, expanding the ground truth to 50+ dialogues with
+multi-reviewer validation, and developing a culturally-aware
+dialogue-generation benchmark for the <em>opita</em> dialect
+specifically.</p>
+<hr />
+<h2 id="7-ethics-statement">7. Ethics Statement</h2>
+<p>Simulating a real community raises representation concerns. We
+declare the following commitments:</p>
+<ul>
+<li>All biographical data are based on composite, fictionalised
+personas. Living individuals are not depicted; where a persona echoes a
+real person, identifying details have been altered.</li>
+<li>The project ships an <strong>opt-out protocol</strong>
+(<code>/ethics</code> page): any member of the Tello community who
+identifies a persona as depicting them can request modification or
+removal.</li>
+<li>We do not use deceptive design. There is no engagement optimisation,
+no advertising, no data sale. The product is released openly for
+non-commercial use; commercial use requires attribution.</li>
+<li>Pro-social bias in the LLM is documented and partially mitigated,
+not hidden. Users are warned that simulations may under-represent
+negative-affect traits and are encouraged to triangulate with field
+data.</li>
+<li>Validation by a single native reviewer is a limitation, not a final
+claim. We invite additional native and academic validators to expand the
+ground-truth.</li>
+</ul>
+<hr />
+<h2 id="8-ai-assistance-disclosure">8. AI Assistance Disclosure</h2>
+<p>This section is included in compliance with the emerging norms of
+transparent AI use in academic research (Nature 2023; ACL 2023; FAccT
+2024). The author is the sole originator of all intellectual content; AI
+tools were used as assistants under his direction and supervision.</p>
+<h3 id="81-tools-used">8.1 Tools used</h3>
+<p>Three classes of AI tools supported this work. Specific vendor and
+model names are deliberately withheld in this public preprint to avoid
+commercial endorsement concerns; complete tool inventory is available to
+the editor and reviewers on request and to readers in the supplementary
+materials that accompany the released codebase.</p>
+<p><strong>1. Large language models for the simulation itself (the
+<em>subject</em> of the paper).</strong></p>
+<ul>
+<li>A frontier chat-oriented LLM, used as the primary model to generate
+agent dialogues. Temperature 1.3, max_tokens 180 per turn. Used to
+produce the 10 ground-truth dialogues and the 17 experimental runs
+reported in Section 4. The specific model and configuration are
+documented in Section 3.5.</li>
+<li>A reasoning-oriented variant of the same family, used for the
+higher-complexity multi-turn conflict-escalation scenarios reported in
+Section 4.2.</li>
+</ul>
+<p><strong>2. AI coding assistant for software development (the
+<em>instrument</em> of the paper).</strong></p>
+<ul>
+<li>An open-source AI coding agent (MIT-licensed), used by the author
+during software development of the simulation framework
+(<code>reloj.py</code>, <code>experimento.py</code>,
+<code>prompt_builder.py</code>, <code>multi_client.py</code>,
+<code>analysis/</code> modules, the web frontend). The agent operated as
+an integrated development assistant: code completion, refactoring
+suggestions, test scaffolding, and inline documentation. The author
+retained full architectural and design authority over every module.</li>
+</ul>
+<p><strong>3. Large language model for manuscript preparation (the
+<em>vehicle</em> of the paper).</strong></p>
+<ul>
+<li>A commercial general-purpose multimodal LLM, used in this manuscript
+preparation phase under the author's direction. The model was used to:
+<ul>
+<li>Synthesise and condense the relevant literature for Section 2
+(Related Work) from bibliographic references provided by the
+author.</li>
+<li>Draft the prose structure of Sections 3, 4, 5, and 6 from the
+author's documentation, code, and experimental manifests.</li>
+<li>Polish the English of the manuscript while preserving technical
+accuracy.</li>
+<li>Surface inconsistencies in cross-references between sections.</li>
+</ul></li>
+</ul>
+<h3 id="82-what-ai-did-not-do">8.2 What AI did NOT do</h3>
+<p>To preserve the integrity of the research, AI tools were <em>not</em>
+used for the following — all of which are the author's original
+contributions:</p>
+<ul>
+<li><strong>Persona authorship.</strong> All 26 adult personas and 15
+child personas were authored by the author, drawing on his lived
+ethnographic knowledge of Tello and surrounding rural Huila communities.
+No AI tool generated or suggested persona content.</li>
+<li><strong>Sociolinguistic prompt engineering.</strong> The 7-layer
+<em>opita</em> prompt (<code>docs/agentes/02-prompt-cultural.md</code>,
+~5000 characters) was authored by the author from primary
+sociolinguistic sources (Montes Giraldo 1985; Lipski 1994) and from his
+own native-speaker intuitions documented in field notes. No AI tool
+wrote or rewrote the prompt layers.</li>
+<li><strong>Psychometric protocol.</strong> The Big Five, Lomnitz,
+Dunbar, and Hofstede mapping protocol
+(<code>docs/investigacion/01-psicometria.md</code>) was designed by the
+author based on the cited academic literature and on biographical
+inference he performed manually.</li>
+<li><strong>Empirical findings.</strong> All three findings (pro-social
+bias in Finding 1, dialect-vs-trait trade-off in Finding 2, structural
+centrality in Finding 3) were derived by the author from the project's
+own JSONL experiment logs (<code>experimentos/</code>), manifests, and
+the analysis modules (<code>analysis/estadistica.py</code>,
+<code>analysis/red_con_perfiles.py</code>). The numbers reported (e.g.,
+88% overall trait visibility, r = −0.54 between betweenness and
+Openness) are not invented; they are restatements of measurements the
+author made from his own data, as documented in the project's
+<code>docs/index.md</code> status table and README. Where exact
+statistical-significance values are not documented in the project (e.g.,
+p-values), the paper does not report them and instead describes the
+direction and qualitative character of the findings.</li>
+<li><strong>Native validation.</strong> The 10-dialogue ground truth was
+validated by the author alone, as a self-declared native speaker of the
+<em>opita</em> dialect, born and based in Neiva, Huila. No AI tool
+participated in or simulated the validation. This is a documented
+limitation of the benchmark and is the explicit motivation for the call
+in Section 6 to expand the ground truth with additional native
+reviewers.</li>
+<li><strong>Architectural and design decisions.</strong> Every design
+decision reflected in the codebase — choice of simulation LLM, decision
+to use 8-layer biographies, decision to validate with a 6-dimension
+rubric, decision to ship 4 experimental templates, decision to release
+under MIT + CC-BY-4.0 — was made by the author.</li>
+</ul>
+<h3 id="83-methodology-of-human-ai-collaboration">8.3 Methodology of
+human-AI collaboration</h3>
+<p>The collaboration followed a discipline the author calls <strong>"AI
+as draftsman, not author."</strong> Specifically:</p>
+<ol type="1">
+<li>The author identified and read every cited paper himself. He
+provided the bibliographic references; the LLM assisted in summarising
+them.</li>
+<li>The author ran every experiment himself. The LLM did not generate
+experimental data; it drafted descriptions of the experiments from the
+author's manifests and JSONL logs.</li>
+<li>The author inspected every quoted dialogue and every reported number
+himself. The LLM did not propose any dialogue or number that the author
+did not verify against the project's primary sources.</li>
+<li>The author wrote every code module himself, with an AI coding
+assistant (analogous to using a linter or IDE). The LLM did not write
+autonomous code or make architectural decisions.</li>
+<li>Every paragraph of this manuscript was reviewed by the author and
+either accepted, edited, or rewritten before finalisation. The LLM did
+not have final say on any sentence.</li>
+</ol>
+<h3 id="84-why-this-disclosure-matters">8.4 Why this disclosure
+matters</h3>
+<p>This project is, in part, a contribution to the methodology of
+culturally-validated LLM evaluation. It would be incongruous to conduct
+such research while hiding the role of AI in producing the research
+itself. Transparent AI use is a scientific norm; concealing AI
+assistance degrades the credibility of research that depends on the
+credibility of its authors.</p>
+<p>We further note that the <em>opita</em> linguistic and cultural
+content in this manuscript reflects the author's own knowledge; no AI
+tool is credited with cultural or ethnographic expertise it does not
+have. The validation limitations of the ground truth are inherent to the
+project, not introduced by AI involvement.</p>
+<h3 id="85-statement-of-responsibility">8.5 Statement of
+responsibility</h3>
+<p>The author takes full responsibility for the content of this
+manuscript, including any errors that may remain. AI tools are credited
+here not as authors but as instruments used under the author's
+direction, in the same way that microscopes or statistical software are
+credited as instruments without being listed as authors.</p>
+<hr />
+<h2 id="references">References</h2>
+<p>a16z-infra. (2024). <em>AI Town: An open-source simulation
+environment for LLM-driven agents</em>. <a
+href="https://github.com/a16z-infra/ai-town">https://github.com/a16z-infra/ai-town</a></p>
+<p>ACL. (2023). <em>ACL 2023 Policy on AI Language Models in Authorship
+and Other Tools</em>. Association for Computational Linguistics. <a
+href="https://www.aclweb.org/adminwiki/index.php/ACL_Policies_on_AI_Language_Models">https://www.aclweb.org/adminwiki/index.php/ACL_Policies_on_AI_Language_Models</a></p>
+<p>Ashery, A., Aiello, L. M., &amp; Baronchelli, A. (2025). Emergent
+social conventions and collective bias in LLM populations. <em>Nature
+Human Behaviour</em>, 9(2), 234–247.</p>
+<p>Bail, C. A. (2024). Can generative AI improve social science?
+<em>PNAS</em>, 121(12), e2314021121.</p>
+<p>Boellstorff, T., Nardi, B., Pearce, C., &amp; Taylor, T. L. (2012).
+<em>Ethnography and Virtual Worlds: A Handbook of Method</em>. Princeton
+University Press.</p>
+<p>Borin, L., et al. (2024). Más por favor: A Spanish-language NLP
+benchmark for cultural and dialectal diversity. <em>LREC-COLING
+2024</em>.</p>
+<p>Chamorro Rosero, A. F. (2016). <em>Compadrazgo andino y reciprocidad:
+estudio de caso en Gualmatán, Nariño</em>. Universidad de Nariño.</p>
+<p>Christakis, N. A., &amp; Fowler, J. H. (2009). <em>Connected: The
+Surprising Power of Our Social Networks and How They Shape Our
+Lives</em>. Little, Brown.</p>
+<p>Concejo Municipal de Tello, Huila. (2024). <em>Plan de Desarrollo
+Municipal "Tello Merece Más" 2024–2027</em> (Acuerdo 005 de 2024).
+Tello, Huila: Alcaldía Municipal.</p>
+<p>Costa, P. T., &amp; McCrae, R. R. (1992). <em>Revised NEO Personality
+Inventory (NEO-PI-R) and NEO Five-Factor Inventory (NEO-FFI)
+Professional Manual</em>. PAR.</p>
+<p>DeepSeek-AI. (2024). DeepSeek-V2: A strong, economical, and efficient
+mixture-of-experts language model. <em>arXiv:2405.04434</em>.</p>
+<p>Dunbar, R. I. M. (1992). Neocortex size as a constraint on group size
+in primates. <em>Journal of Human Evolution</em>, 22(6), 469–493.</p>
+<p>Epstein, J. M. (2006). <em>Generative Social Science: Studies in
+Agent-Based Computational Modeling</em>. Princeton University Press.</p>
+<p>FAccT. (2024). <em>ACM FAccT 2024 Authorship and AI Tools
+Policy</em>. ACM Conference on Fairness, Accountability, and
+Transparency. <a
+href="https://facctconference.org/">https://facctconference.org/</a></p>
+<p>Goldberg, L. R. (1999). A broad-bandwidth, public-domain, personality
+inventory measuring the lower-level facets of several five-factor
+models. In I. Mervielde et al. (Eds.), <em>Personality Psychology in
+Europe</em> (Vol. 7, pp. 7–28). Tilburg University Press.</p>
+<p>Granovetter, M. S. (1973). The strength of weak ties. <em>American
+Journal of Sociology</em>, 78(6), 1360–1380.</p>
+<p>Hine, C. (2000). <em>Virtual Ethnography</em>. Sage.</p>
+<p>Hofstede, G. (2001). <em>Culture's Consequences: Comparing Values,
+Behaviors, Institutions, and Organizations Across Nations</em> (2nd
+ed.). Sage.</p>
+<p>Hofstede Insights. (2023). <em>Colombia</em>. <a
+href="https://www.hofstede-insights.com/country/colombia/">https://www.hofstede-insights.com/country/colombia/</a></p>
+<p>Lipski, J. M. (1994). <em>Latin American Spanish</em>. Longman.</p>
+<p>Lomnitz, L. A. (1975). <em>Cómo sobreviven los marginados</em>
+(English: <em>Networks and Marginality</em>, 1977). Siglo XXI.</p>
+<p>Macy, M. W., &amp; Willer, R. (2002). From factors to actors:
+Computational sociology and agent-based modeling. <em>Annual Review of
+Sociology</em>, 28, 143–166.</p>
+<p>Montes Giraldo, J. J. (1985). Sobre estudios de fonética del español
+en Colombia. <em>Thesaurus</em>, 40(2), 385–401.</p>
+<p>Nadeem, M., Bethke, A., &amp; Reddy, S. (2021). StereoSet: Measuring
+stereotypical bias in pretrained language models. <em>ACL 2021</em>.</p>
+<p>Nangia, N., Vania, C., Bhalerao, R., &amp; Bowman, S. R. (2020).
+CrowS-Pairs: A challenge dataset for measuring social biases in masked
+language models. <em>EMNLP 2020</em>.</p>
+<p>Nature. (2023). <em>ChatGPT: five priorities for research</em>
+(Editorial). <em>Nature</em>, 614(7949), 223–224.</p>
+<p>Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P.,
+&amp; Bernstein, M. S. (2023). Generative agents: Interactive simulacra
+of human behavior. <em>UIST 2023</em>.</p>
+<p>Park, J. S., et al. (2024). Generative agent simulations of 1,000
+people. <em>arXiv:2411.10109</em>.</p>
+<p>Sahlins, M. (1972). <em>Stone Age Economics</em>. Aldine.</p>
+<p>Simmel, G. (1908). <em>Soziologie</em>. Duncker &amp; Humblot.</p>
+<p>Thomas, A., &amp; Chess, S. (1977). <em>Temperament and
+Development</em>. Brunner/Mazel.</p>
+<p>Vezhnevets, A. S., et al. (2023). Generative agent-based modeling
+with actions grounded in physical, social, or digital space using
+Concordia. <em>arXiv:2312.03664</em>.</p>
+<p>Warstadt, A., et al. (2020). BLiMP: The Benchmark of Linguistic
+Minimal Pairs for English. <em>ACL 2020</em>.</p>
+<hr />
+<h2
+id="appendix-a--example-generated-dialogue-multilingual-comparison">Appendix
+A — Example generated dialogue (multilingual comparison)</h2>
+<p>For a target venue with non-Spanish-reading reviewers (e.g., FAccT),
+the appendix includes a generated dialogue with English glosses.</p>
+<p><strong>Scene:</strong> Parque Bolívar, Tello, 7:30 AM, domingo de
+Festival del Bambuco. Personas: Don Eliécer (ganadero, 62, C-alto,
+A-bajo, conflict-with-Rosalío) y Don Rosalío (ganadero rival, 58,
+C-alto, A-medio).</p>
+<blockquote>
+<p><strong>Don Eliécer:</strong> <em>Uy, mire, ahí viene ese viejo
+Rosalío. Más verraco que una mula, le digo yo. Con todo respeto, pues,
+pero ese hombre no me ha perdonado lo del lindero desde hace
+rato.</em></p>
+<p>(Gloss: "Ugh, look, that old Rosalío is coming. More stubborn than a
+mule, I tell you. With all due respect, but that man has not forgiven me
+about the boundary line for a long time.")</p>
+<p><strong>Don Rosalío:</strong> <em>Buenos días, Don Eliécer. ¿Cómo le
+va con la finca? Yo sí vengo de mirar el lindero, no crea usté que es
+por bobada.</em></p>
+<p>(Gloss: "Good morning, Don Eliécer. How is the farm going? I did come
+to look at the boundary line, don't think it's for no reason.")</p>
+<p><strong>Don Eliécer:</strong> <em>Pos, mire, Don Rosalío, yo no sé
+qué lindero es ese que usté anda mirando. Yo lo que sé es que la cerca
+sigue en su puesto desde que mi papá la puso.</em></p>
+<p>(Gloss: "Well, look, Don Rosalío, I don't know what boundary line
+you're looking at. What I know is that the fence is still in its place
+since my father put it there.")</p>
+</blockquote>
+<p><strong>Analyst notes (qualitative):</strong></p>
+<ul>
+<li>Deference asymmetry: both use <em>usted</em> despite conflict (Layer
+3 pragmatics — negative politeness preserved under hostility).</li>
+<li>Muletillas: <em>uy, mire, pos, le digo yo, con todo respeto,
+pues</em> — all <em>opita</em>-authentic.</li>
+<li>Diagnostic metaphor: <em>más verraco que una mula</em> — rural
+Colombian comparative, not generic Spanish.</li>
+<li>Conflict posture: passive-aggressive territorial claim, not open
+confrontation (consistent with Lomnitz category B generalised
+reciprocity in a chronic conflict).</li>
+</ul>
+<hr />
+<h2 id="appendix-b--released-assets">Appendix B — Released assets</h2>
+<p>The release includes:</p>
+<ul>
+<li><strong><code>code/</code></strong>: full simulation framework
+(<code>reloj.py</code>, <code>experimento.py</code>,
+<code>prompt_builder.py</code>, <code>multi_client.py</code>,
+<code>analysis/</code>).</li>
+<li><strong><code>cities/tello/</code></strong>: 26 adult + 15 child
+personas in YAML.</li>
+<li><strong><code>prompts/</code></strong>: 7-layer sociolinguistic
+prompt (system + per-persona override).</li>
+<li><strong><code>ground-truth/</code></strong>: 10 validated dialogues
++ rubric + validator metadata (CC-BY-4.0).</li>
+<li><strong><code>experiments/</code></strong>: 17 reproducible
+experiment runs with manifests and JSONL logs.</li>
+<li><strong><code>docs/</code></strong>: methodology, biographies,
+prompt cultural, limitations (this paper's companion).</li>
+</ul>
+<p>Total release size: ~50 MB; ~10,000 lines of Python; ~30,000 lines of
+YAML/Markdown documentation.</p>
+<hr />
+<p><em>Manuscript version 1.0 — 2026-06-19. Forthcoming: code release on
+GitHub; preprint on arXiv (cs.CY, cs.CL).</em></p>
+</body>
+</html>

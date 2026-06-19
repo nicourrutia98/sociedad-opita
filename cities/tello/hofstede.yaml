@@ -1,0 +1,13 @@
+# Hofstede calibrado para Tello, Huila
+# Calibración al alza vs Colombia base (Schmitt 2007 + Chamorro Rosero 2016):
+# - PDI más alto (sociedad jerárquica, compadrazgo asimétrico)
+# - IDV más bajo (colectivismo profundo)
+# - UAI más alto (apego a la tradición)
+# - IND más alto (gratificación en fiestas patronales)
+
+PDI: 75      # Colombia base 67
+IDV: 10      # Colombia base 13 (más colectivista)
+MAS: 60      # Colombia base 64
+UAI: 85      # Colombia base 80
+IND: 75      # Colombia base 13 (fiestas patronales son indulgence peak)
+LTO: 13      # Colombia base 13

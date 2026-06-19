@@ -1,0 +1,85 @@
+# ===================================================================
+# Sociedad Opita — gitignore for public repo
+# Excludes: secrets, build artifacts, internal deployment files
+# ===================================================================
+
+# Secrets — never commit
+.env
+.env.local
+auth.json
+*.key
+*.pem
+.DEEPSEEK_API_KEY
+
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+darkmarkitdown-venv/
+*-venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs and runtime artifacts
+*.log
+logs/
+*.out
+*.tmp
+.cache/
+
+# Internal deployment + commercial docs (NOT for publication)
+deploy/
+api/
+docs/deployment/
+docs/research/
+docs/PLAN-SIMULACION-NEIVA.md
+docs/index.md
+
+# Internal legacy scripts (superseded by clean versions)
+simulacion_2026.py
+simulacion_v2.py
+simulacion_sociedad_completa.py
+hello_tello_completo.py
+ninos_tello.py
+visualizar_mapa_tello.py
+visualizar_red_social.py
+red_social_tello.png
+demo.py
+dashboard_reloj.py
+panel_control.py
+perfiles_psicometricos.py
+
+# Web build artifacts
+web/game/_build/
+node_modules/
+*.min.js
+*.min.css
+
+# OS
+.DS_Store
+desktop.ini
+
+# Local-only data
+*.bak
+*.orig

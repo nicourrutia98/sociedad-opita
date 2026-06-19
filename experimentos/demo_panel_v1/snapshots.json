@@ -1,0 +1,18 @@
+{
+  "despues_seed": {
+    "t": "2026-06-19T08:00:00",
+    "etiqueta": "despues_seed",
+    "reloj_estado": {
+      "t_virtual": "2026-06-19T08:00:00",
+      "t0": "2026-06-19T06:00:00",
+      "velocidad": 1.0,
+      "pausado": false,
+      "segundos_transcurridos": 7200.0,
+      "cambios_realizados": 1
+    },
+    "n_log_entries": 6,
+    "n_gossip_edges": 1,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  }
+}

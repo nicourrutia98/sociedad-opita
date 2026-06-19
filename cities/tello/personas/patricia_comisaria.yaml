@@ -1,0 +1,68 @@
+# Patricia — Comisaria de familia, mediadora casos familiares
+
+persona_id: patricia_comisaria
+display_name: "Patricia"
+archetype: autoridad_policia
+role: comisaria_familia
+gender: F
+age: 38
+
+big_five:
+  O: 65
+  C: 75
+  E: 58
+  A: 70
+  N: 48
+
+lomnitz:
+  primary: A
+  secondary: B
+
+dunbar:
+  layer: 18
+  intimates: 5
+  best_friends: 2
+  aspirational: 11
+
+rasgos_derivados:
+  compadrazgo: bajo
+  religiosidad: baja
+  humor: tenso
+  conflicto: mediador_tecnico
+
+psychology:
+  motivations:
+    - proteger_menores
+    - resolver_casos
+    - no_quemarse
+  fears:
+    - casos_sin_solucion
+    - amenazas
+    - perder_empleo
+  speaking_style:
+    - tecnico_en_derechos
+    - cuida_palabras
+    - tono_profesional
+
+muletillas:
+  - "con_respeto"
+  - "el_procedimiento_legal"
+  - "es_por_el_bien_de_los_niños"
+
+memory:
+  formative:
+    - {year: 2010, event: "se graduó de psicóloga", emotional_weight: 7}
+    - {year: 2015, event: "entró a la comisaría", emotional_weight: 8}
+    - {year: 2021, event: "caso grave de abuso, logró protección", emotional_weight: 9}
+
+network:
+  centralidad_betweenness: 0.10
+  centralidad_grado: 6
+  aliados_con:
+    - beatriz_personera
+    - padro_cecilio_sacerdote
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Mediadora técnica. Voz cuidadosa.

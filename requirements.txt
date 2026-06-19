@@ -1,0 +1,32 @@
+# Sociedad Opita — API Serverless
+# Dependencias para AWS Lambda + desarrollo local
+
+# Core
+PyYAML>=6.0
+python-dateutil>=2.8.2
+
+# AWS Lambda Powertools (logging, tracing, metrics)
+aws-lambda-powertools[aws-sdk]>=2.30.0
+boto3>=1.34.0
+mangum>=0.17.0
+
+# LLM clients (solo lo que se use)
+openai>=1.30.0          # OpenAI-compatible (DeepSeek, OpenRouter)
+
+# Validación y utilidad
+pydantic>=2.6.0
+
+# HTTP (para uvicorn local)
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+httpx>=0.27.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+moto[dynamodb,apigateway,lambda]>=5.0.0
+
+# Dev tools
+ruff>=0.3.0
+black>=24.0.0

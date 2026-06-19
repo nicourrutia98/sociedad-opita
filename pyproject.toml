@@ -1,0 +1,64 @@
+[project]
+name = "sociedad-opita"
+version = "1.0.0"
+description = "Multi-city agent-based simulation with DeepSeek LLM"
+requires-python = ">=3.11"
+authors = [{ name = "Sociedad Opita Team" }]
+license = { text = "MIT" }
+
+dependencies = [
+    "PyYAML>=6.0",
+    "openai>=1.30.0",
+    "aws-lambda-powertools[aws-sdk]>=2.30.0",
+    "boto3>=1.34.0",
+    "mangum>=0.17.0",
+    "pydantic>=2.6.0",
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "moto[dynamodb,apigateway,lambda]>=5.0.0",
+    "ruff>=0.3.0",
+    "black>=24.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["demo_output", "build", "dist", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM"]
+ignore = ["E501"]  # line too long (manejado por formatter)
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+markers = [
+    "slow: marca tests lentos (>5s)",
+    "integration: requiere red real",
+    "aws: requiere credenciales AWS",
+]
+
+[tool.coverage.run]
+source = ["core", "city_factory", "api"]
+omit = ["tests/*", "demo_output/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

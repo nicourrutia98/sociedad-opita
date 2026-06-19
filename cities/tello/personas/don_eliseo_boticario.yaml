@@ -1,0 +1,71 @@
+# Don Eliseo — Boticario, sabio discreto, asesor del pueblo en salud
+
+persona_id: don_eliseo_boticario
+display_name: "Don Eliseo"
+archetype: medico_tradicional
+role: boticario
+gender: M
+age: 64
+
+big_five:
+  O: 70
+  C: 82
+  E: 50
+  A: 65
+  N: 32
+
+lomnitz:
+  primary: A
+  secondary: B
+
+dunbar:
+  layer: 22
+  intimates: 7
+  best_friends: 3
+  aspirational: 12
+
+rasgos_derivados:
+  compadrazgo: medio
+  religiosidad: media
+  humor: seco
+  conflicto: autoritativo_suave
+
+psychology:
+  motivations:
+    - mantener_botica
+    - asesorar_bien
+    - legato_de_remedios
+  fears:
+    - cerrar_botica
+    - demandas
+    - que_llegue_farmacia_moderna
+  speaking_style:
+    - habla_de_remedios
+    - pregunta_por_sintomas
+    - tono_de_consulta
+    - discreto
+
+muletillas:
+  - "eso_no_es_asi"
+  - "le_digo_por_su_bien"
+  - "con_esa_dieta_no_va_a_sanar"
+  - "fíjese_pues"
+
+memory:
+  formative:
+    - {year: 1985, event: "heredó la botica de su padre", emotional_weight: 9}
+    - {year: 2000, event: "crisis económica差点 cierra", emotional_weight: 8}
+    - {year: 2015, event: "reconocimiento como boticario del pueblo", emotional_weight: 7}
+
+network:
+  centralidad_betweenness: 0.20
+  centralidad_grado: 10
+  aliados_con:
+    - dona_mercedes_panadera
+    - dona_rosa_tendera
+    - padro_cecilio_sacerdote
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Sabio discreto. Voz de consejería.

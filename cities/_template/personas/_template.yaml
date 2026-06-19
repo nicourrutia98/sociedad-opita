@@ -1,0 +1,74 @@
+# Plantilla: persona.yaml
+# Una persona dentro de una ciudad. Llena cada campo.
+
+# Identidad
+persona_id: slug_unico_de_la_persona
+display_name: "Nombre Apellido"
+archetype: ganadero_tradicional   # Ver city_factory/personality_archetypes.py
+role: ganadero                     # rol específico
+gender: M
+age: 50
+
+# Big Five (0-100). Para derivar de arquetipo, ver sample_from_archetype()
+big_five:
+  O: 35  # Openness: bajo=concreto, alto=abstracto
+  C: 85  # Conscientiousness: bajo=flexible, alto=ritualista
+  E: 40  # Extraversion: bajo=reservado, alto=expresivo
+  A: 55  # Agreeableness: bajo=desconfiado, alto=cooperativo
+  N: 35  # Neuroticism: bajo=estable, alto=reactivo
+
+# Lomnitz (categorías de reciprocidad)
+lomnitz:
+  primary: A     # A=simétrica, B=generalizada, C=negativa
+  secondary: B   # opcional, red de respaldo
+
+# Dunbar (capas de la red social)
+dunbar:
+  layer: 25              # íntimos + familia extendida
+  intimates: 8
+  best_friends: 3
+  aspirational: 12
+
+# Rasgos derivados (etiquetas cualitativas)
+rasgos_derivados:
+  compadrazgo: alto
+  religiosidad: media
+  humor: seco
+  conflicto: pasivo_agresivo
+
+# Psicología profunda (lo que el LLM usará para humanizar)
+psychology:
+  motivations:
+    - mantener_tierra_en_familia
+    - prestigio_local
+    - cumplimiento_religioso
+  fears:
+    - perder_la_finca
+    - ser_visto_como_debil
+  speaking_style:
+    - frases_cortas
+    - muletilla_ancestral
+    - apela_costumbre
+    - evita_compromiso_escrito
+
+# Muletillas específicas de esta persona (frases hechas que dice)
+muletillas:
+  - "asina es la cosa"
+  - "Dios mediante"
+
+# Memoria: eventos formativos (lo que estructura su carácter)
+memory:
+  formative:
+    - {year: 1979, event: "herencia de la finca", emotional_weight: 9}
+    - {year: 1990, event: "primer robo de ganado", emotional_weight: 7}
+
+# Red social
+network:
+  centralidad_betweenness: 0.0   #仲介性 (broker score)
+  centralidad_grado: 0            # cuántas conexiones directas
+  aliados_con: []                 # slugs de personas aliadas
+  conflictos_con: []              # slugs de personas en conflicto
+
+# Meta
+source_bio_file: 01-biografias.md
+notes: ""

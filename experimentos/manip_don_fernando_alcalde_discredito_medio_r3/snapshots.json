@@ -1,0 +1,34 @@
+{
+  "pre_campana": {
+    "t": "2026-06-22T06:00:00",
+    "etiqueta": "pre_campana",
+    "reloj_estado": {
+      "t_virtual": "2026-06-22T06:00:00",
+      "t0": "2026-06-22T06:00:00",
+      "velocidad": 1.0,
+      "pausado": false,
+      "segundos_transcurridos": 0.0,
+      "cambios_realizados": 1
+    },
+    "n_log_entries": 23,
+    "n_gossip_edges": 0,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  },
+  "post_campana": {
+    "t": "2026-06-29T06:00:00",
+    "etiqueta": "post_campana",
+    "reloj_estado": {
+      "t_virtual": "2026-06-29T06:00:00",
+      "t0": "2026-06-22T06:00:00",
+      "velocidad": 1.0,
+      "pausado": false,
+      "segundos_transcurridos": 604800.0,
+      "cambios_realizados": 1
+    },
+    "n_log_entries": 47,
+    "n_gossip_edges": 21,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  }
+}

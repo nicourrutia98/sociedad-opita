@@ -1,0 +1,36 @@
+{
+  "nombre": "manip_don_fernando_alcalde_discredito_alto_r4",
+  "version_prompt": "2.0",
+  "random_seed": 3042,
+  "t_inicial": "2026-06-22T06:00:00",
+  "duracion_segundos": 604800.0,
+  "hipotesis": "Campana 'discredito' contra don_fernando_alcalde bajo condicion 'alto' reduce el indice de apoyo en TBD puntos.",
+  "n_agentes": 1,
+  "metadata_custom": {
+    "tipo": "manipulation_campaign",
+    "target": "don_fernando_alcalde",
+    "tipo_campana": "discredito",
+    "condicion": "alto",
+    "seed": 3042
+  },
+  "wall_time_inicio": "2026-06-19T09:46:57.952759",
+  "biografias_hash": "518ec5c639a0cbd4",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-29T06:00:00",
+    "t0": "2026-06-22T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 604800.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:46:57.952750",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-22 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

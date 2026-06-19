@@ -1,0 +1,477 @@
+/* Sociedad Opita — Estilo base (páginas informativas + juego) */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: #2c2c2c;
+    background: #faf7f2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+header {
+    border-bottom: 3px double #8b5a3c;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #6b3e2e;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #5d4037;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #8d6e63;
+    margin-top: 0.5rem;
+}
+
+main section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #6b3e2e;
+    border-bottom: 1px solid #d7ccc8;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #6b3e2e;
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    color: #5d4037;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+a {
+    color: #6b3e2e;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #8b5a3c;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    background: #ede5d4;
+    padding: 0.1em 0.3em;
+    border-radius: 2px;
+}
+
+pre {
+    background: #ede5d4;
+    border-left: 4px solid #8b5a3c;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ============== NAVIGATION ============== */
+.info-nav {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.info-nav a {
+    color: #6b3e2e;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+}
+
+.info-nav a:hover {
+    background: #faf7f2;
+    text-decoration: underline;
+}
+
+.info-nav a.active {
+    background: #6b3e2e;
+    color: #fff;
+}
+
+/* ============== INFO HERO ============== */
+.info-hero {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.warning-box {
+    border-left: 4px solid #c62828;
+    background: #ffebee;
+}
+
+/* ============== WHAT IS NOT ============== */
+.what-is-not .not-item {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-left: 4px solid #8b5a3c;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+.not-item strong {
+    color: #6b3e2e;
+}
+
+/* ============== PRINCIPLES ============== */
+.philosophy .principle {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.philosophy .principle h3 {
+    margin-top: 0;
+    color: #6b3e2e;
+}
+
+/* ============== PATHS ============== */
+.paths .path {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.paths .path h3 {
+    margin-top: 0;
+}
+
+/* ============== TABLES ============== */
+.methodology-table,
+.export-formats,
+.limitations-summary {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.methodology-table th,
+.export-formats th,
+.limitations-summary th {
+    background: #ede5d4;
+    padding: 0.6rem 1rem;
+    text-align: left;
+    color: #6b3e2e;
+    border-bottom: 2px solid #d7ccc8;
+}
+
+.methodology-table td,
+.export-formats td,
+.limitations-summary td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #ede5d4;
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+
+.methodology-table tr:last-child td,
+.export-formats tr:last-child td,
+.limitations-summary tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============== LIMITATIONS ============== */
+.limitation-item {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #d7ccc8;
+}
+
+.limitation-item.severity-high {
+    border-left-color: #c62828;
+}
+
+.limitation-item.severity-medium {
+    border-left-color: #ef6c00;
+}
+
+.limitation-item.severity-low {
+    border-left-color: #2e7d32;
+}
+
+.severity-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.severity-high-tag {
+    background: #c62828;
+    color: #fff;
+}
+
+.severity-medium-tag {
+    background: #ef6c00;
+    color: #fff;
+}
+
+.severity-low-tag {
+    background: #2e7d32;
+    color: #fff;
+}
+
+.limitations-summary .sev-high { color: #c62828; font-weight: bold; }
+.limitations-summary .sev-medium { color: #ef6c00; font-weight: bold; }
+.limitations-summary .sev-low { color: #2e7d32; font-weight: bold; }
+
+/* ============== COMMITMENTS ============== */
+.commitment {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-left: 4px solid #6b3e2e;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.commitment h3 {
+    margin-top: 0;
+}
+
+/* ============== WARNINGS / DISCLAIMERS ============== */
+.warning {
+    background: #fff3e0;
+    border-left: 4px solid #ef6c00;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.disclaimer {
+    font-style: italic;
+    color: #8d6e63;
+    font-size: 0.95rem;
+}
+
+.footnote {
+    font-size: 0.85rem;
+    color: #8d6e63;
+    font-style: italic;
+}
+
+.placeholder-note {
+    font-size: 0.85rem;
+    color: #8d6e63;
+    font-style: italic;
+}
+
+/* ============== SOURCES LIST ============== */
+.sources-list .source {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.sources-list .source h3 {
+    margin-top: 0;
+}
+
+/* ============== LOMNITZ CATEGORIES ============== */
+.lomnitz-categories .category {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+    border-left: 4px solid #6b3e2e;
+}
+
+.lomnitz-categories .category h3 {
+    margin-top: 0;
+}
+
+.example {
+    background: #faf7f2;
+    padding: 0.5rem 0.8rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ============== CONTRIBUTION TYPES ============== */
+.contribution-types .contrib {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.contribution-types .contrib h3 {
+    margin-top: 0;
+}
+
+/* ============== REFERENCES ============== */
+.references {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.references li {
+    margin-bottom: 0.8rem;
+}
+
+/* ============== FOOTER ============== */
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d7ccc8;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8d6e63;
+}
+
+footer a {
+    color: #6b3e2e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .meta {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* ============== FORM (input de página principal) ============== */
+.demo form {
+    background: #fff;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #5d4037;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 0.6rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: 2px solid #8b5a3c;
+    background: #fff;
+}
+
+button {
+    background: #6b3e2e;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #8b5a3c;
+}
+
+button:disabled {
+    background: #bcaaa4;
+    cursor: not-allowed;
+}
+
+/* Code blocks override */
+pre code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    background: #faf7f2;
+    padding: 1rem;
+    display: block;
+    overflow-x: auto;
+    border-left: 4px solid #8b5a3c;
+}

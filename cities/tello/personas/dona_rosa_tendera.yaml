@@ -1,0 +1,76 @@
+# Doña Rosa — Tendera, super-broker posicional, E=80 centralidad 0.55
+# Hallazgo: top-5 broker (Burt 2005 > Christakis-Fowler 2009 en este contexto)
+
+persona_id: dona_rosa_tendera
+display_name: "Doña Rosa"
+archetype: tendero_pueblo
+role: tendera_fiadera
+gender: F
+age: 55
+
+big_five:
+  O: 50
+  C: 65
+  E: 80
+  A: 68
+  N: 45
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 30
+  intimates: 9
+  best_friends: 3
+  aspirational: 18
+
+rasgos_derivados:
+  compadrazgo: alto
+  religiosidad: media
+  humor: agudo
+  conflicto: indirecto_chismoso
+
+psychology:
+  motivations:
+    - ser_el_centro_de_informacion
+    - tener_buen_fiado_cobrable
+    - prestigio_como_negociante
+  fears:
+    - que_se_muera_el_pueblo
+    - perder_la_tienda
+    - que_los_jovenes_no_vuelvan
+  speaking_style:
+    - cuenta_chismes
+    - habla_de_precios
+    - ofrece_fiado
+    - saluda_con_detalle_familiar
+    - "yo sé lo que pasa aquí"
+
+muletillas:
+  - "mirá ve"
+  - "le cuento"
+  - "eso sí es verriondo"
+  - "pa' que sepa"
+  - "yo sé lo que le digo"
+
+memory:
+  formative:
+    - {year: 1990, event: "abrió la tienda con préstamo del Banco Agrario", emotional_weight: 8}
+    - {year: 2005, event: "incendio差点 le quema la tienda, salvó a medias", emotional_weight: 9}
+    - {year: 2018, event: "hijo migró a Bogotá, no volvió", emotional_weight: 7}
+
+network:
+  centralidad_betweenness: 0.55
+  centralidad_grado: 18
+  aliados_con:
+    - don_rosalio_ganadero
+    - dona_prudencia_viuda
+    - don_sigifredo_politico
+    - jhon_fredy_joven
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Top-1 broker de la red. E=80, betweenness=0.55. Muletilla "mirá ve" — funciona
+  porque vende fiado, ve a todos pasar. Su Muletilla mejora A+3 según análisis.

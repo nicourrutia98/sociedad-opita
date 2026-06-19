@@ -1,0 +1,11 @@
+[
+  {
+    "t": "2026-06-19T10:00:00",
+    "origen": "dona_rosa_tendera",
+    "topic": "Don Rosalío movio el alambre otra vez",
+    "audiencia": "vecinos",
+    "veracidad": 0.5,
+    "intensidad": 2.0,
+    "propagado_a": []
+  }
+]

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tello — Sociedad Opita (Mapa Forense)</title>
+    <meta name="description" content="Mapa interactivo de Tello, Huila. 29 personas documentadas con Big Five + Lomnitz + Dunbar. Herramienta forense de estudio social.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game/style_map.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="map-page">
+    <header class="map-header">
+        <div class="header-left">
+            <h1>Tello, Huila</h1>
+            <p class="subtitle">Sociedad Opita · Mapa forense · 29 personas documentadas</p>
+        </div>
+        <nav class="header-nav">
+            <a href="index.html">← Inicio</a>
+            <a href="about.html">Acerca</a>
+            <a href="methodology.html">Metodología</a>
+            <a href="limitations.html">Limitaciones</a>
+            <a href="ethics.html">Ética</a>
+            <a href="for-researchers.html">Citar</a>
+            <button id="export-btn" class="btn-secondary">Exportar</button>
+        </nav>
+    </header>
+
+    <main class="map-layout">
+        <!-- El mapa 2D -->
+        <div id="map-container" class="map-container">
+            <canvas id="map-canvas"></canvas>
+            <div id="map-tooltip" class="map-tooltip hidden"></div>
+
+            <!-- HUD inferior: discoveries -->
+            <div class="map-hud">
+                <div class="hud-section">
+                    <span class="hud-label">Vistas:</span>
+                    <span id="hud-viewed">0/29</span>
+                </div>
+                <div class="hud-section">
+                    <span class="hud-label">Comparaciones:</span>
+                    <span id="hud-comparisons">0</span>
+                </div>
+                <div class="hud-section">
+                    <span class="hud-label">Tiempo explorando:</span>
+                    <span id="hud-time">0:00</span>
+                </div>
+                <div class="hud-section">
+                    <span class="hud-label">Insights generados:</span>
+                    <span id="hud-insights">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel lateral con datos de la persona -->
+        <aside id="info-panel" class="info-panel hidden">
+            <button id="panel-close" class="panel-close" aria-label="Cerrar">×</button>
+
+            <div class="panel-header">
+                <h2 id="persona-name">—</h2>
+                <p id="persona-role" class="persona-role">—</p>
+            </div>
+
+            <section class="panel-section">
+                <h3>Psicometría (Big Five)</h3>
+                <div id="big-five" class="big-five-bars"></div>
+                <p class="footnote">Derivado de marcadores biográficos. No inventariado.</p>
+            </section>
+
+            <section class="panel-section">
+                <h3>Reciprocidad (Lomnitz)</h3>
+                <div id="lomnitz-info"></div>
+            </section>
+
+            <section class="panel-section">
+                <h3>Red social (Dunbar)</h3>
+                <div id="dunbar-info"></div>
+            </section>
+
+            <section class="panel-section">
+                <h3>Muletillas y voz</h3>
+                <div id="muletillas-info"></div>
+            </section>
+
+            <section class="panel-section">
+                <h3>Motivaciones y miedos</h3>
+                <div id="psychology-info"></div>
+            </section>
+
+            <section class="panel-section">
+                <h3>Red</h3>
+                <div id="network-info"></div>
+            </section>
+
+            <section class="panel-section">
+                <h3>Acciones</h3>
+                <div class="actions">
+                    <button id="btn-simulate" class="btn-primary">Simular escena</button>
+                    <button id="btn-compare" class="btn-secondary">Comparar con otra</button>
+                    <button id="btn-export-person" class="btn-secondary">Exportar esta persona</button>
+                </div>
+                <div id="simulation-result" class="simulation-result hidden"></div>
+            </section>
+        </aside>
+
+        <!-- Panel de comparación -->
+        <aside id="compare-panel" class="compare-panel hidden">
+            <button id="compare-close" class="panel-close">×</button>
+            <h2>Comparación</h2>
+            <div id="compare-content"></div>
+            <div class="actions">
+                <button id="btn-export-compare" class="btn-primary">Exportar comparación</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Modal de exportación -->
+    <div id="export-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="panel-close" id="export-close">×</button>
+            <h2>Exportar</h2>
+            <p class="modal-intro">Descarga artefactos de tu exploración. Todos los formatos son abiertos.</p>
+
+            <div class="export-grid">
+                <button class="export-btn" data-format="json">
+                    <strong>JSON</strong>
+                    <span>Datos estructurados (grafo + psicometría)</span>
+                </button>
+                <button class="export-btn" data-format="bibtex">
+                    <strong>BibTeX</strong>
+                    <span>Para citar en papers académicos</span>
+                </button>
+                <button class="export-btn" data-format="csv">
+                    <strong>CSV</strong>
+                    <span>Para análisis estadístico</span>
+                </button>
+                <button class="export-btn" data-format="markdown">
+                    <strong>Markdown</strong>
+                    <span>Informe narrativo</span>
+                </button>
+                <button class="export-btn" data-format="pdf">
+                    <strong>PDF</strong>
+                    <span>Informe con metodología citada</span>
+                </button>
+                <button class="export-btn" data-format="graph">
+                    <strong>Grafo</strong>
+                    <span>JSON para Obsidian/Roam</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer con información honesta -->
+    <footer class="map-footer">
+        <p>
+            <strong>Sociedad Opita</strong> — herramienta forense de estudio social.
+            100% transparente: <a href="#methodology">cómo se hizo</a> ·
+            <a href="#limitations">qué limitaciones tiene</a> ·
+            <a href="#ethics">cómo nos comprometemos éticamente</a>.
+        </p>
+        <p class="footer-small">
+            No hay login. No hay tracking invasivo. No hay paywalls. Tus datos son tuyos.
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="game/engine.js"></script>
+    <script src="game/data_loader.js"></script>
+    <script src="game/info_panel.js"></script>
+    <script src="game/compare.js"></script>
+    <script src="game/export.js"></script>
+    <script src="game/hud.js"></script>
+    <script src="game/main.js"></script>
+</body>
+</html>

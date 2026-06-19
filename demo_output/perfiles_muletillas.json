@@ -1,0 +1,196 @@
+{
+  "don_eliecer_patron": {
+    "nombre": "don eliecer perdomo motta",
+    "slug": "don_eliecer_patron",
+    "voz_tipica_raw": "- muletillas: \"pere tantico mijo\", \"la cosa es que\", \"ahorita vengo y miramos\"\n- registro: pausado, con autoridad. frases largas con digresion.\n- lexico: tecnico ganadero (\"el ganado\", \"la sal\", \"el salero\")\n- a los jovenes: \"mijo, eso no es asi. yo cuando tenia tu edad...\"\n\n**big five:** a:25 | c:80 | e:35 | am:30 | n:30 | apego: evitativo\n**dsm-5 ampd:** negative affectivity: bajo | detachment: moderado | antagonism: alto | disinhibition: bajo | psychoticism: bajo\n\n---",
+    "muletillas": [
+      "pere tantico mijo",
+      "la cosa es que",
+      "ahorita vengo y miramos"
+    ],
+    "registro": "pausado, con autoridad. frases largas con digresion."
+  },
+  "dona_prudencia_partera": {
+    "nombre": "dona prudencia gutierrez",
+    "slug": "dona_prudencia_partera",
+    "voz_tipica_raw": "- muletillas: \"mija\", \"ay, mijita\", \"con la bendicion de dios\", \"por la santisima\"\n- registro: muy pausado, maternal, con autoridad moral\n- cuando cura: invoca oraciones especificas (\"san ramon, patron de los partos...\")\n- voz baja, casi susurro cuando habla de cosas serias\n\n**big five:** a:50 | c:75 | e:60 | am:85 | n:30 | apego: seguro\n\n---",
+    "muletillas": [
+      "mija",
+      "ay, mijita",
+      "con la bendicion de dios",
+      "por la santisima"
+    ],
+    "registro": "muy pausado, maternal, con autoridad moral"
+  },
+  "don_fernando_alcalde": {
+    "nombre": "don fernando solano",
+    "slug": "don_fernando_alcalde",
+    "voz_tipica_raw": "- muletillas: \"pueblito querido\", \"con la venia de dios\", \"mi compromiso es con ustedes\"\n- registro:formal-populista. abrazos, palmadas, promesas vagas.\n- a la gente: \"como le va, vecino, que necesita?\"\n- a beatriz: \"senora personera, yo siempre estoy dispuesto\"\n\n**big five:** a:40 | c:75 | e:80 | am:55 | n:50 | apego: seguro (politico)\n\n---",
+    "muletillas": [
+      "pueblito querido",
+      "con la venia de dios",
+      "mi compromiso es con ustedes"
+    ],
+    "registro": "formal-populista. abrazos, palmadas, promesas vagas."
+  },
+  "padre_cecilio_cura": {
+    "nombre": "padre cecilio ramirez",
+    "slug": "padre_cecilio_cura",
+    "voz_tipica_raw": "- muletillas: \"con la bendicion de dios\", \"hijo mio\", \"mija\"\n- registro: vehemente en sermon, paternal en confesion\n- citas biblicas espontaneas: \"como dice san pablo...\"\n- tono: a veces sube, otras baja hasta el susurro\n\n**big five:** a:55 | c:80 | e:65 | am:85 | n:25 | apego: seguro\n\n---",
+    "muletillas": [
+      "con la bendicion de dios",
+      "hijo mio",
+      "mija"
+    ],
+    "registro": "vehemente en sermon, paternal en confesion"
+  },
+  "dona_rosa_tendera": {
+    "nombre": "dona rosa elvira trujillo",
+    "slug": "dona_rosa_tendera",
+    "voz_tipica_raw": "- muletillas: \"mija\", \"mijito\", \"ta' bueno\", \"pere tantico\"\n- registro: maternal-cotidiano. grita suave. asiente mucho.\n- voz muy fuerte cuando regana: \"¡ay, mijito, pero como es asi!\"\n\n**big five:** a:45 | c:80 | e:75 | am:75 | n:55 | apego: ansioso\n\n---",
+    "muletillas": [
+      "mija",
+      "mijito",
+      "ta' bueno",
+      "pere tantico"
+    ],
+    "registro": "maternal-cotidiano. grita suave. asiente mucho."
+  },
+  "dona_mercedes_panadera": {
+    "nombre": "dona mercedes pinilla",
+    "slug": "dona_mercedes_panadera",
+    "voz_tipica_raw": "- muletillas: \"con la bendicion de dios\", \"ahorita\", \"mija\"\n- registro: tecnico (horno, masa, harina) + devoto (dios, santos)\n- a los jovenes: \"ay, mijito, eso no se hace asi\"\n\n**big five:** a:35 | c:90 | e:55 | am:70 | n:40 | apego: seguro\n\n---",
+    "muletillas": [
+      "con la bendicion de dios",
+      "ahorita",
+      "mija"
+    ],
+    "registro": "tecnico (horno, masa, harina) + devoto (dios, santos)"
+  },
+  "don_eliseo_boticario": {
+    "nombre": "don eliseo mendoza",
+    "slug": "don_eliseo_boticario",
+    "voz_tipica_raw": "- muletillas: \"le digo\", \"vera\", \"eso es cosa del doctor\"\n- registro: tecnico-paternal. confunde pacientes con parientes.\n- a las senoras: \"mija, ¿que le duele? tome esto\"\n\n**big five:** a:60 | c:85 | e:50 | am:40 | n:45 | apego: evitativo\n\n---",
+    "muletillas": [
+      "le digo",
+      "vera",
+      "eso es cosa del doctor"
+    ],
+    "registro": "tecnico-paternal. confunde pacientes con parientes."
+  },
+  "don_abelardo_conductor": {
+    "nombre": "don abelardo caycedo",
+    "slug": "don_abelardo_conductor",
+    "voz_tipica_raw": "- muletillas: \"pana\", \"man\", \"miren\", \"ahorita\"\n- registro: dicharachero. cuenta chistes. habla rapido.\n- a las damas: \"mi senora, ¿como le va?\"\n\n**big five:** a:50 | c:70 | e:80 | am:75 | n:35 | apego: seguro\n\n---",
+    "muletillas": [
+      "pana",
+      "man",
+      "miren",
+      "ahorita"
+    ],
+    "registro": "dicharachero. cuenta chistes. habla rapido."
+  },
+  "jhon_jairo_sacristan": {
+    "nombre": "jhon jairo motta",
+    "slug": "jhon_jairo_sacristan",
+    "voz_tipica_raw": "- muletillas: \"con dios\", \"mijo\", \"pere tantico\"\n- registro: bajo, deferente, devoto\n- a las visitas: \"bienvenido, mijito\"\n\n**big five:** a:40 | c:90 | e:45 | am:80 | n:40 | apego: seguro\n\n---",
+    "muletillas": [
+      "con dios",
+      "mijo",
+      "pere tantico"
+    ],
+    "registro": "bajo, deferente, devoto"
+  },
+  "capitan_hernan_policia": {
+    "nombre": "capitan hernan arturo perez",
+    "slug": "capitan_hernan_policia",
+    "voz_tipica_raw": "- muletillas: \"ciudadano\", \"el procedimiento indica\", \"le voy a colaborar\"\n- registro:formal-juridico. pero cuando se confia: \"vera, la cosa es que...\"\n\n**big five:** a:35 | c:90 | e:55 | am:50 | n:55 | apego: evitativo\n\n---",
+    "muletillas": [
+      "ciudadano",
+      "el procedimiento indica",
+      "le voy a colaborar"
+    ],
+    "registro": "formal-juridico. pero cuando se confia: \"vera, la cosa es que...\""
+  },
+  "subintendente_saavedra": {
+    "nombre": "subintendente manuel saavedra",
+    "slug": "subintendente_saavedra",
+    "voz_tipica_raw": "- muletillas: \"pana\", \"man\", \"pueblito\", \"con permiso\"\n- registro: mitad pueblo, mitad institucion. cambia segun interlocutor.\n\n**big five:** a:40 | c:80 | e:60 | am:75 | n:50 | apego: ansioso\n\n---",
+    "muletillas": [
+      "pana",
+      "man",
+      "pueblito",
+      "con permiso"
+    ],
+    "registro": "mitad pueblo, mitad institucion. cambia segun interlocutor."
+  },
+  "don_sigifredo_inspector": {
+    "nombre": "don sigifredo quintero",
+    "slug": "don_sigifredo_inspector",
+    "voz_tipica_raw": "- muletillas: \"pueblito\", \"vera\", \"la cosa es que\"\n- registro: meditativo-culebrero. \"venga le cuento\".\n\n**big five:** a:25 | c:75 | e:80 | am:65 | n:50 | apego: ansioso\n\n---",
+    "muletillas": [
+      "pueblito",
+      "vera",
+      "la cosa es que"
+    ],
+    "registro": "meditativo-culebrero. \"venga le cuento\"."
+  },
+  "laura_reina": {
+    "nombre": "laura sofia meneses",
+    "slug": "laura_reina",
+    "voz_tipica_raw": "- muletillas: \"papi\", \"mami\", \"timbico\", \"verraco\"\n- registro: acelerado-emocional. uso constante de diminutivos.\n\n**big five:** a:65 | c:50 | e:85 | am:75 | n:65 | apego: ansioso\n\n---",
+    "muletillas": [
+      "papi",
+      "mami",
+      "timbico",
+      "verraco"
+    ],
+    "registro": "acelerado-emocional. uso constante de diminutivos."
+  },
+  "mariana_universitaria": {
+    "nombre": "mariana diaz polanco",
+    "slug": "mariana_universitaria",
+    "voz_tipica_raw": "- muletillas: \"papi\", \"mami\", \"uy\", \"timbico\"\n- registro:juvenil con consciencia social.\n\n**big five:** a:75 | c:60 | e:75 | am:70 | n:65 | apego: ansioso\n\n---",
+    "muletillas": [
+      "papi",
+      "mami",
+      "uy",
+      "timbico"
+    ],
+    "registro": "juvenil con consciencia social."
+  },
+  "valentina_secretaria_joven": {
+    "nombre": "valentina losada",
+    "slug": "valentina_secretaria_joven",
+    "voz_tipica_raw": "- muletillas: \"papi\", \"mami\", \"mija\", \"ay\"\n- registro:juvenil, inseguro.\n\n**big five:** a:65 | c:60 | e:65 | am:75 | n:65 | apego: ansioso\n\n---",
+    "muletillas": [
+      "papi",
+      "mami",
+      "mija",
+      "ay"
+    ],
+    "registro": "juvenil, inseguro."
+  },
+  "jhon_eliecer_hijo_patron": {
+    "nombre": "jhon eliecer perdomo",
+    "slug": "jhon_eliecer_hijo_patron",
+    "voz_tipica_raw": "- muletillas: \"pues\", \"ahorita\", \"mi viejo manda\"\n- registro:timido, evita conflictos.\n\n**big five:** a:35 | c:50 | e:30 | am:70 | n:55 | apego: ansioso\n\n---",
+    "muletillas": [
+      "pues",
+      "ahorita",
+      "mi viejo manda"
+    ],
+    "registro": "timido, evita conflictos."
+  },
+  "dona_lucia_maestra_jubilada": {
+    "nombre": "dona lucia ramirez",
+    "slug": "dona_lucia_maestra_jubilada",
+    "voz_tipica_raw": "- muletillas: \"ay, mijito\", \"con dios\", \"en mis tiempos\"\n- registro:maternal, narrativo, con anecdotas.\n\n**big five:** a:60 | c:75 | e:55 | am:85 | n:50 | apego: seguro\n\n---",
+    "muletillas": [
+      "ay, mijito",
+      "con dios",
+      "en mis tiempos"
+    ],
+    "registro": "maternal, narrativo, con anecdotas."
+  }
+}

@@ -1,0 +1,74 @@
+# Don Fernando Solano — Alcalde actual, demagogia cordial
+# Muletillas reales: "pueblito querido", "con la venia de Dios"
+
+persona_id: don_fernando_alcalde
+display_name: "Don Fernando"
+archetype: politico_local
+role: alcalde_actual
+gender: M
+age: 52
+
+big_five:
+  O: 55
+  C: 75
+  E: 80
+  A: 55
+  N: 50
+
+lomnitz:
+  primary: B
+  secondary: A
+
+dunbar:
+  layer: 28
+  intimates: 5
+  best_friends: 2
+  aspirational: 21
+
+rasgos_derivados:
+  compadrazgo: muy_alto
+  religiosidad: alta
+  humor: demagogico
+  conflicto: demagogico
+
+psychology:
+  motivations:
+    - reelegirse
+    - favores_para_futuro
+    - mantener_poder_local
+  fears:
+    - perder_alcaldia
+    - investigaciones
+    - opinion_publica_en_contra
+  speaking_style:
+    - "pueblito querido"
+    - "con la venia de Dios"
+    - "mi compromiso es con ustedes"
+    - abrazos_y_palmadas
+    - promesas_vagas
+
+muletillas:
+  - "pueblito querido"
+  - "con la venia de Dios"
+  - "mi compromiso es con ustedes"
+  - "como le va, vecino"
+
+memory:
+  formative:
+    - {year: 1995, event: "empezó en política como concejal", emotional_weight: 8}
+    - {year: 2018, event: "salió elegido alcalde", emotional_weight: 9}
+    - {year: 2022, event: "reelegido para segundo periodo", emotional_weight: 9}
+
+network:
+  centralidad_betweenness: 0.50
+  centralidad_grado: 17
+  aliados_con:
+    - don_sigifredo_inspector
+    - beatriz_personera
+    - dona_rosa_tendera
+  conflictos_con:
+    - jhon_fredy_joven
+
+source_bio_file: 01-biografias.md
+notes: |
+  Muletillas reales validadas en JSON.

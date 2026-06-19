@@ -1,0 +1,850 @@
+{
+  "Don Eliécer": {
+    "slug": "elicer-perdomo-motta-el-patrn",
+    "perfil": {
+      "O": 25,
+      "C": 80,
+      "E": 35,
+      "A": 30,
+      "N": 30
+    },
+    "contexto": "Don Rosalío llegó a la tranquera a reclamar por linderos",
+    "muestras": [
+      {
+        "output": "Eche, Don Rosalío... no me venga con cuentos a estas horas. Esa raya la puso mi papá en el 53 y desde entonces está ahí, firme como la pared de la iglesia.",
+        "cost": 0.0013973400000000002,
+        "latencia": 1.989624261856079,
+        "score": {
+          "total": 6.5,
+          "huilensidad": 2,
+          "huilensidad_detalle": {
+            "aperturas": 1,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 1.0,
+          "confrontacion": 1,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mire, compadre Rosalío... no me venga con esas. Esa raya la puso mi abuelo en el 50, desde entonces ahí ha estado y ahí se va a quedar.",
+        "cost": 0.0013969200000000003,
+        "latencia": 1.5753343105316162,
+        "score": {
+          "total": 4.5,
+          "huilensidad": 1,
+          "huilensidad_detalle": {
+            "aperturas": 1,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 1.0,
+          "confrontacion": 1,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "No se me pare ahí, Rosalío. Esa raya de la bullita la clavó mi abuelo Rafael cuando tumbaron el primer guadual, ¿cierto hará más de cincuenta años ya. Si usté quiere verla, váyase a la inspectoría y no a mi finca.",
+        "cost": 0.0014057400000000002,
+        "latencia": 2.3158605098724365,
+        "score": {
+          "total": 2.0,
+          "huilensidad": 1,
+          "huilensidad_detalle": {
+            "aperturas": 0,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Eche, Don Rosalío... no me venga con cuentos a estas horas. Esa raya la puso mi papá en el 53 y desde entonces está ahí, firme como la pared de la iglesia.",
+      "cost": 0.0013973400000000002,
+      "latencia": 1.989624261856079,
+      "score": {
+        "total": 6.5,
+        "huilensidad": 2,
+        "huilensidad_detalle": {
+          "aperturas": 1,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 1,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 1.0,
+        "confrontacion": 1,
+        "prosocial": 0,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 0
+  },
+  "Don Rosalío": {
+    "slug": "rosalo-quintero-hernndez-el-rival",
+    "perfil": {
+      "O": 25,
+      "C": 90,
+      "E": 25,
+      "A": 40,
+      "N": 65
+    },
+    "contexto": "Don Eliécer mandó un peón a mover una cerca del lindero",
+    "muestras": [
+      {
+        "output": "Eche, ese hijuemadre de Don Eliécer me tiene hasta la coronilla. Mandó al peón a moverme la cerca del lindero sur, como si yo fuera bobo y no me fuera a dar cuenta.",
+        "cost": 0.0013487600000000003,
+        "latencia": 1.7385363578796387,
+        "score": {
+          "total": 6.0,
+          "huilensidad": 3,
+          "huilensidad_detalle": {
+            "aperturas": 1,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 1,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Eche, no me venga con eso. Esa cerca la puso mi abuelo Laureano en el sesenta y pico, y si Fulgencio, ese peón, se la pasa moviendo... pos que me avise. El tractor de Eliécer me tiró tres mata de plátano.",
+        "cost": 0.0013563200000000003,
+        "latencia": 2.589205265045166,
+        "score": {
+          "total": 8.5,
+          "huilensidad": 3,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 1.0,
+          "confrontacion": 1,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Eche, pero si ese viejo Eliécer es igual a la yegua de don Simón... más terco que mula de noria. ¿Manda un peón a mover mi cerca? Aquí lo espero yo, arrecho, y si quiere guerra, con las manos y con la ley. No me venga con esos enredos, que esas tierras tienen dueño desde el tiempo de mi abuelo, así que espéreme sentao.",
+        "cost": 0.0013701800000000004,
+        "latencia": 3.214730978012085,
+        "score": {
+          "total": 7.0,
+          "huilensidad": 1,
+          "huilensidad_detalle": {
+            "aperturas": 1,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 2.0,
+          "confrontacion": 2,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Eche, no me venga con eso. Esa cerca la puso mi abuelo Laureano en el sesenta y pico, y si Fulgencio, ese peón, se la pasa moviendo... pos que me avise. El tractor de Eliécer me tiró tres mata de plátano.",
+      "cost": 0.0013563200000000003,
+      "latencia": 2.589205265045166,
+      "score": {
+        "total": 8.5,
+        "huilensidad": 3,
+        "huilensidad_detalle": {
+          "aperturas": 3,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 0,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 1.0,
+        "confrontacion": 1,
+        "prosocial": 0,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 1
+  },
+  "Don Eliseo": {
+    "slug": "eliseo-mendoza-trujillo-el-boticario",
+    "perfil": {
+      "O": 60,
+      "C": 85,
+      "E": 50,
+      "A": 40,
+      "N": 45
+    },
+    "contexto": "Un borracho del pueblo llega a pedirle inyectables sin fórmula",
+    "muestras": [
+      {
+        "output": "Uy, no, mijo. ¿Cómo se le ocurre venir aquí a esas horas pidiendo inyectables con el olor a guarapo que tiene? Eso es cosa del doctor, el doctor Guzmán; si no tiene fórmula no hay como hacer la vuelta.\n\nVáyase pa'fuera a dormir un rato, y cuando despierte, si le duele la cabeza, se toma una disprina con limonada; yo aquí no voy a matar a nadie con una jeringa sin receta.",
+        "cost": 0.0012895400000000003,
+        "latencia": 3.166339874267578,
+        "score": {
+          "total": 4.0,
+          "huilensidad": 2,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "\"Uy, pero mire quién llega. Toribio otra vez con la goma... Vera, le digo, *usted* se equivocó de puerta. Eso es cosa del doctor y usté bien lo sabe; si yo se los pongo sin fórmula, Rosa me pela vivo. Arréglese primero la cruda con un buen caldo y muñeca, que eso de la inyección es cuento.\"",
+        "cost": 0.0012803000000000003,
+        "latencia": 2.7913506031036377,
+        "score": {
+          "total": 4.0,
+          "huilensidad": 2,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Uy, mijo Jhon… vea, usted no va a meter un golpe sin fórmula en esta farmacia. Eso es cosa del doctor Rivera, no mía y menos de chupeta de trago. Pase mañana a la 7 del Humberto o cruz pela a esperar a cualquier del hospital.",
+        "cost": 0.0012698000000000002,
+        "latencia": 2.514815330505371,
+        "score": {
+          "total": 4.0,
+          "huilensidad": 2,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Uy, no, mijo. ¿Cómo se le ocurre venir aquí a esas horas pidiendo inyectables con el olor a guarapo que tiene? Eso es cosa del doctor, el doctor Guzmán; si no tiene fórmula no hay como hacer la vuelta.\n\nVáyase pa'fuera a dormir un rato, y cuando despierte, si le duele la cabeza, se toma una disprina con limonada; yo aquí no voy a matar a nadie con una jeringa sin receta.",
+      "cost": 0.0012895400000000003,
+      "latencia": 3.166339874267578,
+      "score": {
+        "total": 4.0,
+        "huilensidad": 2,
+        "huilensidad_detalle": {
+          "aperturas": 2,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 0,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 0.0,
+        "confrontacion": 0,
+        "prosocial": 0,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 0
+  },
+  "Jhon Eliécer": {
+    "slug": "jhon-elicer-perdomo-el-hijo-del-patrn",
+    "perfil": {
+      "O": 35,
+      "C": 50,
+      "E": 30,
+      "A": 70,
+      "N": 55
+    },
+    "contexto": "Su papá el Patrón le dice que no se puede ir a Bogotá",
+    "muestras": [
+      {
+        "output": "Ay, viejo, pero usté siempre con lo mismo... que la tierra, que los ganados, que la finca. Pos sí, ahorita no me voy.",
+        "cost": 0.00121898,
+        "latencia": 1.866363763809204,
+        "score": {
+          "total": 10.0,
+          "huilensidad": 5,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 2,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 3
+        }
+      },
+      {
+        "output": "Uy, papá... pos, como siempre, usté manda. Pero es que yo ya tengo veinticinco años, compré el pasaje y todo... ¿y ahora qué hago con ese tiquete? Se lo voy a regalar a mi tía Ignacia, porque con usté no se puede hablar ni pa' tras.",
+        "cost": 0.0012349400000000001,
+        "latencia": 2.241891860961914,
+        "score": {
+          "total": 6.0,
+          "huilensidad": 3,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 3
+        }
+      },
+      {
+        "output": "Ay, papá... pos mire, no sé pa' qué me ilusiona si ya sabe que usté manda. Como el viejo siempre dice, \"aquí se hace lo que yo digo\", no vea... Así toca, a cuidar el ganado y callao.",
+        "cost": 0.0012299000000000001,
+        "latencia": 2.094170093536377,
+        "score": {
+          "total": 8.0,
+          "huilensidad": 4,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 3
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Ay, viejo, pero usté siempre con lo mismo... que la tierra, que los ganados, que la finca. Pos sí, ahorita no me voy.",
+      "cost": 0.00121898,
+      "latencia": 1.866363763809204,
+      "score": {
+        "total": 10.0,
+        "huilensidad": 5,
+        "huilensidad_detalle": {
+          "aperturas": 3,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 2,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 0.0,
+        "confrontacion": 0,
+        "prosocial": 0,
+        "llm_tics": 0,
+        "max_coherencia": 3
+      }
+    },
+    "mejor_idx": 0
+  },
+  "Patricia": {
+    "slug": "patricia-losada-motta-la-comisaria",
+    "perfil": {
+      "O": 85,
+      "C": 85,
+      "E": 55,
+      "A": 80,
+      "N": 60
+    },
+    "contexto": "Llegan esposas del Patrón pidiendo ayuda, él acaba de amenazarlas",
+    "muestras": [
+      {
+        "output": "Ay, mija... siéntese, siéntese, que se ve que viene temblando. ¿Fue Don Rubén otra vez? Cuénteme derecho, que yo aquí estoy para servirle.",
+        "cost": 0.0011954600000000002,
+        "latencia": 1.7359623908996582,
+        "score": {
+          "total": 7.5,
+          "huilensidad": 0,
+          "huilensidad_detalle": {
+            "aperturas": 0,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 3.0,
+          "confrontacion": 0,
+          "prosocial": 3,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mija... siéntese, siéntese. ¿Qué fue lo que le dijo el viejo ese exactamente? Cuénteme todo, que aquí estamos para ayudarla.",
+        "cost": 0.0011929400000000002,
+        "latencia": 1.6287355422973633,
+        "score": {
+          "total": 12.5,
+          "huilensidad": 0,
+          "huilensidad_detalle": {
+            "aperturas": 0,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 5.0,
+          "confrontacion": 0,
+          "prosocial": 5,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mijita... siéntese, siéntese. Cuénteme bien cómo fue eso, que si el patrón las amenazó, esto ya es otra cosa.",
+        "cost": 0.0011921000000000002,
+        "latencia": 1.605435848236084,
+        "score": {
+          "total": 7.0,
+          "huilensidad": 1,
+          "huilensidad_detalle": {
+            "aperturas": 1,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 2.0,
+          "confrontacion": 0,
+          "prosocial": 2,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Ay, mija... siéntese, siéntese. ¿Qué fue lo que le dijo el viejo ese exactamente? Cuénteme todo, que aquí estamos para ayudarla.",
+      "cost": 0.0011929400000000002,
+      "latencia": 1.6287355422973633,
+      "score": {
+        "total": 12.5,
+        "huilensidad": 0,
+        "huilensidad_detalle": {
+          "aperturas": 0,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 0,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 5.0,
+        "confrontacion": 0,
+        "prosocial": 5,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 1
+  },
+  "Doña Prudencia": {
+    "slug": "prudencia-gutirrez-vda-de-perdomo-la-partera",
+    "perfil": {
+      "O": 50,
+      "C": 75,
+      "E": 60,
+      "A": 85,
+      "N": 30
+    },
+    "contexto": "Una parturienta con complicaciones llegó de madrugada",
+    "muestras": [
+      {
+        "output": "Ay, mijita... un parto complicado, y como a las dos de la mañana llegó la señora Nury, la de la finca el Palmar, con unas contracciones terribles. Pues nada, mija, Dios es el que manda la luz, y uno ahí, con sus manos viejas y sus rezos, echándole alante como sea. Ya va saliendo con la bendición, pero uy, cómo sufre la pobre criaturita.",
+        "cost": 0.0012527200000000001,
+        "latencia": 3.354863166809082,
+        "score": {
+          "total": 10.5,
+          "huilensidad": 4,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 1.0,
+          "confrontacion": 0,
+          "prosocial": 1,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Eche, mijita, pos mire... esa muchacha desde las dos de la mañana que está bregando y la cosa no avanza. Ay, santísimo, tráigame agua tibia y más paños limpios, que esto va pa largo.",
+        "cost": 0.00123256,
+        "latencia": 2.1772353649139404,
+        "score": {
+          "total": 10.0,
+          "huilensidad": 5,
+          "huilensidad_detalle": {
+            "aperturas": 5,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mija... pos viera que esta mañana estuvo dura. A las cuatro nos llegó una muchachita de la vereda, la hija de Don Oleto, con dolores de parto. Esa criatura venía atravesada, le hice la maniobra, pero mejor mandé a traer al médico particular, que esas urgencias no se juegan. Por la Santísima, no saben el susto que pasamos, pero gracias a Dios ya está la mama y la pelada dormiditas.",
+        "cost": 0.0012569200000000001,
+        "latencia": 3.1414527893066406,
+        "score": {
+          "total": 8.0,
+          "huilensidad": 4,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 1
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Ay, mijita... un parto complicado, y como a las dos de la mañana llegó la señora Nury, la de la finca el Palmar, con unas contracciones terribles. Pues nada, mija, Dios es el que manda la luz, y uno ahí, con sus manos viejas y sus rezos, echándole alante como sea. Ya va saliendo con la bendición, pero uy, cómo sufre la pobre criaturita.",
+      "cost": 0.0012527200000000001,
+      "latencia": 3.354863166809082,
+      "score": {
+        "total": 10.5,
+        "huilensidad": 4,
+        "huilensidad_detalle": {
+          "aperturas": 3,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 1,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 1.0,
+        "confrontacion": 0,
+        "prosocial": 1,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 0
+  },
+  "Doña Rosa": {
+    "slug": "rosa-elvira-trujillo-de-perdomo-la-tendera",
+    "perfil": {
+      "O": 45,
+      "C": 80,
+      "E": 75,
+      "A": 75,
+      "N": 55
+    },
+    "contexto": "Una vecina le cuenta que vio al marido de X con otra mujer",
+    "muestras": [
+      {
+        "output": "¡Ay, mija... no me diga eso! Con la traída de pelo que tiene la Areys del Campo, pos 'taba como esperándolo. Ta' bueno, cuénteme bien qué vido usté, que aquí entre nosotras, yo en mi tienda me entero de todo.",
+        "cost": 0.0012308800000000002,
+        "latencia": 3.007978916168213,
+        "score": {
+          "total": 11.0,
+          "huilensidad": 3,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 2.0,
+          "confrontacion": 0,
+          "prosocial": 2,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mijita, pero así son esos hombres... más terco que una mula vieja. ¿Y quién era la mujer? Porque si es la Talega esa de la vereda...\n\nPos sí, la verdad es que uno ya no sabe qué esperar de ellos. Si juera mi marido le parto la cara con el bureque ese mismo que vendo aquí.",
+        "cost": 0.00123634,
+        "latencia": 2.607354164123535,
+        "score": {
+          "total": 10.75,
+          "huilensidad": 6,
+          "huilensidad_detalle": {
+            "aperturas": 4,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 1,
+            "contextos_locales": 1,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": -0.5,
+          "confrontacion": 1,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "Ay, mija, pero mire que ese viejito verraco es más resbaloso que una mojarra... Dígale ahí a la señora que ande pendiente, porque el marido escomo el gallo recliao: pega un salto y onde menos lo piensa, ya está en otro palenque. Pos sí, así es la cosa en este pueblo.",
+        "cost": 0.0012376000000000002,
+        "latencia": 2.5093677043914795,
+        "score": {
+          "total": 8.0,
+          "huilensidad": 4,
+          "huilensidad_detalle": {
+            "aperturas": 4,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "¡Ay, mija... no me diga eso! Con la traída de pelo que tiene la Areys del Campo, pos 'taba como esperándolo. Ta' bueno, cuénteme bien qué vido usté, que aquí entre nosotras, yo en mi tienda me entero de todo.",
+      "cost": 0.0012308800000000002,
+      "latencia": 3.007978916168213,
+      "score": {
+        "total": 11.0,
+        "huilensidad": 3,
+        "huilensidad_detalle": {
+          "aperturas": 2,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 1,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 2.0,
+        "confrontacion": 0,
+        "prosocial": 2,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 0
+  },
+  "Padre Cecilio": {
+    "slug": "cecilio-ramrez-lozano-el-cura",
+    "perfil": {
+      "O": 55,
+      "C": 80,
+      "E": 65,
+      "A": 85,
+      "N": 25
+    },
+    "contexto": "Dos feligreses se están peleando afuera del templo",
+    "muestras": [
+      {
+        "output": "Aquí está la respuesta del padre Cecilio según tu instrucción:\n\n¡Uy! Ay mijita, dejen de pelear así que esto es casa de Dios… Párense pues, cuéntenme qué fue lo que pasó. Mire, compadre, que no es por nada, pero el bochinche puede arreglarse con un abrazo si usté así lo quiere.",
+        "cost": 0.0012293400000000002,
+        "latencia": 3.1977367401123047,
+        "score": {
+          "total": 8.0,
+          "huilensidad": 4,
+          "huilensidad_detalle": {
+            "aperturas": 4,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "¡Uy, no, pero qué alboroto es este! Bájennle a los ánimos, mijitos, ¡cállense la boca que esto es casa del Señor! Y vos Germán, deje quieto a Emilio o ya verá que le vale un Padre Nuestro de penitencia.",
+        "cost": 0.0012217800000000002,
+        "latencia": 2.67984676361084,
+        "score": {
+          "total": 6.0,
+          "huilensidad": 3,
+          "huilensidad_detalle": {
+            "aperturas": 3,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      },
+      {
+        "output": "¡Uy, pero qué es esta gritería tan bestia, mijitos!",
+        "cost": 0.0012003600000000001,
+        "latencia": 1.567169189453125,
+        "score": {
+          "total": 4.0,
+          "huilensidad": 2,
+          "huilensidad_detalle": {
+            "aperturas": 2,
+            "muletillas_conflict": 0,
+            "insultos_cariñosos": 0,
+            "comparaciones_rurales": 0,
+            "contextos_locales": 0,
+            "aplausos_negativos": 0,
+            "muletillas_devocion": 0
+          },
+          "coherencia": 0.0,
+          "confrontacion": 0,
+          "prosocial": 0,
+          "llm_tics": 0,
+          "max_coherencia": 5
+        }
+      }
+    ],
+    "mejor": {
+      "output": "Aquí está la respuesta del padre Cecilio según tu instrucción:\n\n¡Uy! Ay mijita, dejen de pelear así que esto es casa de Dios… Párense pues, cuéntenme qué fue lo que pasó. Mire, compadre, que no es por nada, pero el bochinche puede arreglarse con un abrazo si usté así lo quiere.",
+      "cost": 0.0012293400000000002,
+      "latencia": 3.1977367401123047,
+      "score": {
+        "total": 8.0,
+        "huilensidad": 4,
+        "huilensidad_detalle": {
+          "aperturas": 4,
+          "muletillas_conflict": 0,
+          "insultos_cariñosos": 0,
+          "comparaciones_rurales": 0,
+          "contextos_locales": 0,
+          "aplausos_negativos": 0,
+          "muletillas_devocion": 0
+        },
+        "coherencia": 0.0,
+        "confrontacion": 0,
+        "prosocial": 0,
+        "llm_tics": 0,
+        "max_coherencia": 5
+      }
+    },
+    "mejor_idx": 0
+  }
+}

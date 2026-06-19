@@ -1,0 +1,69 @@
+# Don Rosalío (rival) — Otro Don Rosalío, vecino rival del anterior
+# Diferente del don_rosalio_ganadero — versión rival del conflicto de linderos
+
+persona_id: don_rosalio_rival
+display_name: "Don Rosalío (rival)"
+archetype: ganadero_tradicional
+role: ganadero_rival
+gender: M
+age: 65
+
+big_five:
+  O: 30
+  C: 85
+  E: 35
+  A: 48
+  N: 42
+
+lomnitz:
+  primary: A
+  secondary: C
+
+dunbar:
+  layer: 18
+  intimates: 5
+  best_friends: 2
+  aspirational: 11
+
+rasgos_derivados:
+  compadrazgo: alto
+  religiosidad: alta
+  humor: muy_seco
+  conflicto: confrontativo_directo
+
+psychology:
+  motivations:
+    - ganar_litigio_lindero
+    - mantener_dignidad
+    - que_no_pasen_la_alambrada
+  fears:
+    - perder_tierra
+    - que_se_rían_de_él
+    - violencia
+  speaking_style:
+    - frases_muy_cortas
+    - confrontativo
+    - no_perdona
+
+muletillas:
+  - "eso_no_se_hace"
+  - "ni_muerto"
+  - "le_digo_yo"
+
+memory:
+  formative:
+    - {year: 1975, event: "compró finca colindante", emotional_weight: 9}
+    - {year: 2002, event: "primer conflicto serio por alambrada", emotional_weight: 9}
+    - {year: 2018, event: "casi llegan a manos", emotional_weight: 10}
+
+network:
+  centralidad_betweenness: 0.10
+  centralidad_grado: 6
+  aliados_con:
+    - don_eliecer_patron
+  conflictos_con:
+    - don_rosalio_ganadero
+
+source_bio_file: 01-biografias.md
+notes: |
+  Gemelo rival — fuente de conflicto de linderos.

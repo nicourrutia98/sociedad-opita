@@ -1,0 +1,63 @@
+{
+  "metodologia": "OSINT refinada: temperature 1.3, role+constraint sandwich, expert actor framing, anti-persona injection, debiasing, output anchors",
+  "resultados_v2": {
+    "Don Eliécer": {
+      "output": "Eche, mijo, usté a mí no me viene con cuentos de linderos frescos. Esa raya la puso mi abuelo Alejandro Perdomo en el 52, con testigo y todo... peón de Cachinche que sus padres enterraron. Me vale lo que diga don Otoniel o el inspector. Ahorita sí, si le presté mi buena gallada pal herradero, no me venga ahora con sorpresas.",
+      "cost": 0.0013773200000000002,
+      "latencia": 3.7220585346221924
+    },
+    "Don Rosalío": {
+      "output": "Eche, qué berraca... ¿y ése peón será el mismo mierdero que me tiene atravesao? Esa cerca tiene los hierros puestos desde cuando el abuelo de Don Eliecer aún ni nacía... pos si no pasa de ahí, le juro que va a ver duro al medio, no me busque más enredos que yo a todo le paro, no sea güevón.",
+      "cost": 0.0013672400000000003,
+      "latencia": 3.7180120944976807
+    },
+    "Don Eliseo": {
+      "output": "Uy, no, mijo, vayase pa´ la casa que hoy no le doy ni agüita. Mire que le he dicho que las inyecciones sin la receta no se las pongo, que eso es pa´ mala pata. Vé, ya viene el calor bravo y usted tomando aguardiente.",
+      "cost": 0.0012307400000000001,
+      "latencia": 2.9101662635803223
+    },
+    "Jhon Eliécer": {
+      "output": "Eche, papá... pues, pero es que yo ya hablé con el contador, en Bogotá hay más opciones... No, pos, si usté no me deja, ni modo. Es que yo aquí no hago más que estorbar y seguir las órdenes...",
+      "cost": 0.00119042,
+      "latencia": 2.4641001224517822
+    },
+    "Patricia": {
+      "output": "Eche, siéntense, siéntense... Tómense su tiempo, pero cuéntenme bien qué pasó. Porque si es como lo del año pasao, esto se va a enredar más que alambre de púas.",
+      "cost": 0.0011992400000000003,
+      "latencia": 2.262334108352661
+    },
+    "Doña Prudencia": {
+      "output": "Uy, mijita, pos la verdad es que fue una noche larga. Esa pobre muchacha llegó hecha un manojo de nervios, pero ya está más tranquila, gracias a Dios. Ahora sí, como quien dice, a juntar fuerzas con un tinto.",
+      "cost": 0.0011907,
+      "latencia": 2.718005895614624
+    },
+    "Doña Rosa": {
+      "output": "¡Ay, mija, no me diga! ¿José Albeiro? Pero si ese viejo más bragado es más resbaloso que culebra en cacho... ¿y con quién, pues? ¿La muchacha ésa de la caseta del acueducto?",
+      "cost": 0.0011863600000000002,
+      "latencia": 2.880305290222168
+    },
+    "Padre Cecilio": {
+      "output": "Eche, pero qué pasa aquí, quietos, quietos. Esto no es una gallera, la casa de Dios es pa' rezar, no pa' pelear, carajo.",
+      "cost": 0.00116844,
+      "latencia": 2.4151182174682617
+    }
+  },
+  "agentes_test": [
+    "Don Eliécer",
+    "Don Rosalío",
+    "Don Eliseo",
+    "Jhon Eliécer",
+    "Patricia",
+    "Doña Prudencia",
+    "Doña Rosa",
+    "Padre Cecilio"
+  ],
+  "modelo": "deepseek-chat",
+  "temperature": 1.3,
+  "osint_fuentes": [
+    "Yi et al. 2025 \"Too Good to be Bad: On the Failure of LLMs to Role-Play Villains\" (arXiv:2511.04962)",
+    "Kamruzzaman & Kim 2024/2025 \"Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2\" (RANLP-2025)",
+    "DeepSeek V4 Prompt Engineering Guide (deepseekai.guide, April 2026)",
+    "DeepSeek API Temperature Docs (api-docs.deepseek.com)"
+  ]
+}

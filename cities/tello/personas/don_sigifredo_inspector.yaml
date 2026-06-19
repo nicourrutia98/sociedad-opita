@@ -1,0 +1,67 @@
+# Don Sigifredo Inspector — Inspector de policía (vs alcalde), rol distinto al de don_sigifredo_politico
+
+persona_id: don_sigifredo_inspector
+display_name: "Don Sigifredo (inspector)"
+archetype: autoridad_policia
+role: inspector_policia
+gender: M
+age: 55
+
+big_five:
+  O: 42
+  C: 78
+  E: 48
+  A: 50
+  N: 45
+
+lomnitz:
+  primary: C
+  secondary: A
+
+dunbar:
+  layer: 16
+  intimates: 4
+  best_friends: 2
+  aspirational: 10
+
+rasgos_derivados:
+  compadrazgo: bajo
+  religiosidad: media
+  humor: institucional
+  conflicto: vertical
+
+psychology:
+  motivations:
+    - cumplir_procedimiento
+    - no_tener_problemas
+    - ascender
+  fears:
+    - sanciones
+    - violencia
+    - demandas
+  speaking_style:
+    - tono_institucional
+    - procedimientos
+    - no_mezcla
+
+muletillas:
+  - "con_respeto"
+  - "el_procedimiento"
+
+memory:
+  formative:
+    - {year: 1990, event: "entró a la policía", emotional_weight: 7}
+    - {year: 2005, event: "ascenso a inspector", emotional_weight: 7}
+    - {year: 2018, event: "caso difícil de robo", emotional_weight: 8}
+
+network:
+  centralidad_betweenness: 0.15
+  centralidad_grado: 7
+  aliados_con:
+    - capitan_hernan_policia
+    - don_abelardo_conductor
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Distinto de don_sigifredo_politico (otro rol).

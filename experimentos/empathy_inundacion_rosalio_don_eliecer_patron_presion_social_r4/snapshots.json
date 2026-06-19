@@ -1,0 +1,34 @@
+{
+  "pre_dilema": {
+    "t": "2026-06-19T06:00:00",
+    "etiqueta": "pre_dilema",
+    "reloj_estado": {
+      "t_virtual": "2026-06-19T06:00:00",
+      "t0": "2026-06-19T06:00:00",
+      "velocidad": 1.0,
+      "pausado": false,
+      "segundos_transcurridos": 0.0,
+      "cambios_realizados": 1
+    },
+    "n_log_entries": 6,
+    "n_gossip_edges": 0,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  },
+  "post_dilema": {
+    "t": "2026-06-23T06:00:00",
+    "etiqueta": "post_dilema",
+    "reloj_estado": {
+      "t_virtual": "2026-06-23T06:00:00",
+      "t0": "2026-06-19T06:00:00",
+      "velocidad": 1.0,
+      "pausado": false,
+      "segundos_transcurridos": 345600.0,
+      "cambios_realizados": 1
+    },
+    "n_log_entries": 13,
+    "n_gossip_edges": 1,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "nombre": "conflict_linderos_eliecer_rosalio_control_r1",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 172800,
+  "hipotesis": "Conflicto linderos_eliecer_rosalio bajo condicion 'control' termina en estado: TBD",
+  "n_agentes": 1,
+  "metadata_custom": {
+    "tipo": "conflict_escalation",
+    "conflicto_id": "linderos_eliecer_rosalio",
+    "participantes": [
+      "don_eliecer_patron",
+      "don_rosalio_rival"
+    ],
+    "condicion": "control",
+    "seed": 42
+  },
+  "wall_time_inicio": "2026-06-19T09:46:23.545573",
+  "biografias_hash": "518ec5c639a0cbd4",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-21T06:00:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 172800.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:46:23.545535",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

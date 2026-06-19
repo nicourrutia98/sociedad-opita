@@ -1,0 +1,111 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Entorno de deploy"
+        required: true
+        default: "prod"
+        type: choice
+        options: [dev, staging, prod]
+      tag:
+        description: "Tag de la imagen Docker"
+        required: true
+        default: "latest"
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # para OIDC
+      contents: read
+
+    environment:
+      name: ${{ github.event.inputs.environment || 'prod' }}
+      url: ${{ steps.deploy.outputs.endpoint }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/github-actions-deploy
+          aws-region: us-east-1
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests (smoke)
+        run: pytest tests/ -v --tb=short
+
+      - name: Build Docker image
+        run: |
+          IMAGE_TAG=${{ github.event.inputs.tag || github.sha }}
+          ENV=${{ github.event.inputs.environment || 'prod' }}
+          docker build \
+            -t ${{ steps.login-ecr.outputs.registry }}/sociedad-opita-${ENV}:${IMAGE_TAG} \
+            -t sociedad-opita:${IMAGE_TAG} \
+            .
+
+      - name: Push to ECR
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          IMAGE_TAG=${{ github.event.inputs.tag || github.sha }}
+          ENV=${{ github.event.inputs.environment || 'prod' }}
+          docker push ${{ steps.login-ecr.outputs.registry }}/sociedad-opita-${ENV}:${IMAGE_TAG}
+
+      - name: Update Lambda function
+        id: deploy
+        run: |
+          IMAGE_TAG=${{ github.event.inputs.tag || github.sha }}
+          ENV=${{ github.event.inputs.environment || 'prod' }}
+          FUNCTION_NAME="sociedad-opita-${ENV}-simulate"
+          IMAGE_URI="${{ steps.login-ecr.outputs.registry }}/sociedad-opita-${ENV}:${IMAGE_TAG}"
+
+          aws lambda update-function-code \
+            --function-name "$FUNCTION_NAME" \
+            --image-uri "$IMAGE_URI"
+
+          # Wait until function is updated
+          aws lambda wait function-updated --function-name "$FUNCTION_NAME"
+
+          # Get endpoint from CloudFormation
+          ENDPOINT=$(aws cloudformation describe-stacks \
+            --stack-name "sociedad-opita-${ENV}" \
+            --query "Stacks[0].Outputs[?OutputKey=='ApiEndpoint'].OutputValue" \
+            --output text)
+
+          echo "endpoint=$ENDPOINT" >> $GITHUB_OUTPUT
+
+      - name: Smoke test
+        run: |
+          ENDPOINT="${{ steps.deploy.outputs.endpoint }}"
+          curl -sS "$ENDPOINT/health" | jq .
+
+          # Test con un POST simple
+          curl -sS -X POST "$ENDPOINT/v1/simulate" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: ${{ secrets.TEST_API_KEY }}" \
+            -d '{
+              "city_id": "tello",
+              "persona_id": "don_rosalio_ganadero",
+              "scene": {"time": "07:00", "place": "Parque"}
+            }' | jq '.metadata.cost_usd, .text' | head -3

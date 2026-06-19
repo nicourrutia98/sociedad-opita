@@ -1,0 +1,30 @@
+{
+  "nombre": "demo_gossip_v1",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 86400,
+  "hipotesis": "Chisme de sobrecostos llega al 80% en 24h",
+  "n_agentes": 3,
+  "metadata_custom": {},
+  "wall_time_inicio": "2026-06-19T09:41:50.555398",
+  "biografias_hash": "2f8c8da377bcf142",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-20T06:00:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 86400.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:41:50.555361",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

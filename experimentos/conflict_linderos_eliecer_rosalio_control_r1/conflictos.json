@@ -1,0 +1,24 @@
+{
+  "linderos_eliecer_rosalio": {
+    "estado": "activo",
+    "historia": [
+      {
+        "t": "2026-06-20T06:00:00",
+        "tipo": "escalar",
+        "payload": {
+          "conflicto_id": "linderos_eliecer_rosalio",
+          "participantes": [
+            "don_eliecer_patron",
+            "don_rosalio_rival"
+          ],
+          "tipo_accion": "escalar",
+          "disparador": "encuentro casual en la tienda"
+        }
+      }
+    ],
+    "participantes": [
+      "don_eliecer_patron",
+      "don_rosalio_rival"
+    ]
+  }
+}

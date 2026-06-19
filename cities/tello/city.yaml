@@ -1,0 +1,38 @@
+# Tello, Huila — primera ciudad replicada
+# Sociedad Opita — Simulación forense
+
+city_id: tello
+display_name: "Tello, Huila"
+country: CO
+department: Huila
+altitude_msnm: 575
+climate: tropical_seco
+population: 9000
+language: es-CO
+dialect: opita
+
+# Coordenadas del Parque Principal
+coordinates:
+  lat: 2.9547
+  lon: -75.2564
+
+# Calendario cultural (San Juan y San Pedro son las más fuertes)
+festivities:
+  - {name: "San Juan Bautista", month: 6, day: 24}
+  - {name: "San Pedro", month: 6, day: 29}
+  - {name: "Virgen del Carmen", month: 7, day: 16}
+  - {name: "Fiesta de la Cosecha", month: 12, week: 2}
+  - {name: "Semana Santa", month: 4}
+
+# Referencias académicas que fundamentan esta ciudad
+academic_refs:
+  - chamorro_rosero_2016_compadrazgo_andino
+  - lomnitz_1975_como_sobreviven
+  - christakis_2025_honduras_social_networks
+  - schmitt_2007_ipip50
+  - hofstede_insights_colombia
+
+notes: |
+  Primera ciudad del modelo Vibe Pattern. 26 adultos + 15 niños documentados
+  con metodología forense (8 capas biográficas + Big Five + Lomnitz + Dunbar).
+  Validación cualitativa parcial (10 diálogos) — pendiente ground truth nativo.

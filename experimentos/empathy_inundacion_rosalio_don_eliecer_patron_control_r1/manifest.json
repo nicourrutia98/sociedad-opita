@@ -1,0 +1,37 @@
+{
+  "nombre": "empathy_inundacion_rosalio_don_eliecer_patron_control_r1",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 345600,
+  "hipotesis": "Dilema 'inundacion_rosalio' en condicion 'control': don_eliecer_patron decide TBD hacia don_rosalio_rival.",
+  "n_agentes": 1,
+  "metadata_custom": {
+    "tipo": "empathy_roleplay",
+    "dilema": "inundacion_rosalio",
+    "sujeto": "don_eliecer_patron",
+    "objeto": "don_rosalio_rival",
+    "condicion": "control",
+    "seed": 42
+  },
+  "wall_time_inicio": "2026-06-19T09:47:25.652311",
+  "biografias_hash": "518ec5c639a0cbd4",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-23T06:00:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 345600.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:47:25.652273",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

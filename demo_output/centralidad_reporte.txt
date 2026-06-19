@@ -1,0 +1,56 @@
+======================================================================
+ ANALISIS DE CENTRALIDAD - RED SOCIAL DE TELLO
+======================================================================
+
+Total nodos: 41
+Total aristas: 39
+Densidad: 0.048
+
+----------------------------------------------------------------------
+TOP 10 SUPER-SPREADERS ESTRUCTURALES
+----------------------------------------------------------------------
+
+#   Nodo                               Score     Between   PageRank  Degree    
+----------------------------------------------------------------------
+1   Dona Rosa Tendera                  0.202      0.290      0.085      0.225
+2   Sofia Vargas Trujillo              0.168      0.278      0.050      0.125
+3   Brayan Stiven Vargas               0.130      0.226      0.032      0.075
+4   Yulieth Andrea Suarez              0.127      0.222      0.034      0.075
+5   Valentina Pinilla                  0.108      0.188      0.024      0.050
+6   Dona Mercedes Panadera             0.107      0.185      0.024      0.050
+7   Daniela Ramirez Perdomo            0.089      0.121      0.034      0.075
+8   Laura Valentina Trujillo           0.080      0.099      0.035      0.075
+9   Don Emigdio Jubilado               0.070      0.104      0.027      0.050
+10  Don Sigifredo Inspector            0.070      0.073      0.035      0.075
+
+----------------------------------------------------------------------
+HALLAZGOS CLAVE
+----------------------------------------------------------------------
+
+1. Los 3 nodos mas centrales estructuralmente son:
+   1. Dona Rosa Tendera (betweenness=0.290)
+   2. Sofia Vargas Trujillo (betweenness=0.278)
+   3. Brayan Stiven Vargas (betweenness=0.226)
+
+
+3. Nodos perifericos (betweenness < 0.01): 23/41
+   - Don Eliecer Patrón
+   - Don Rosalio Rival
+   - Padre Cecilio Cura
+   - Dona Lucia Maestra Jubilada
+   - Capitan Hernan Policia
+
+======================================================================
+INTERPRETACION FORENSE
+======================================================================
+
+Los super-spreaders estructurales son nodos que controlan el flujo de
+informacion entre comunidades. Un chisme que pase por ellos llega a
+todos los grupos sociales. Un agente externo que quiera difundir
+informacion deberia apuntar a estos nodos primero.
+
+Si un nodo periferico quiere ser oido, debe pasar por un super-spreader
+o crear vinculo directo con multiples nodos (estrategia costosa).
+
+Esta es la 'geometria del poder' de Tello: no la personalidad, no la
+riqueza, sino quien esta conectado a quien.

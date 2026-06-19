@@ -1,0 +1,32 @@
+{
+  "nombre": "gossip_acueducto",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 86400,
+  "hipotesis": "Chisme llega al 80% de adultos en 24h. Super-spreaders: dona_rosa_tendera, padre_cecilio_cura.",
+  "n_agentes": 26,
+  "metadata_custom": {
+    "escenario_nombre": "gossip_acueducto"
+  },
+  "wall_time_inicio": "2026-06-19T09:44:23.562851",
+  "biografias_hash": "fc292518edc0bdbb",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-19T09:00:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 10800.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:44:23.562784",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

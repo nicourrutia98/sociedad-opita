@@ -1,0 +1,70 @@
+# Capitán Hernán — Capitán de policía, autoridad estatal distante
+
+persona_id: capitan_hernan_policia
+display_name: "Capitán Hernán"
+archetype: autoridad_policia
+role: capitan_policia
+gender: M
+age: 45
+
+big_five:
+  O: 45
+  C: 75
+  E: 55
+  A: 42
+  N: 50
+
+lomnitz:
+  primary: C
+  secondary: A
+
+dunbar:
+  layer: 14
+  intimates: 3
+  best_friends: 1
+  aspirational: 10
+
+rasgos_derivados:
+  compadrazgo: bajo
+  religiosidad: baja
+  humor: institucional
+  conflicto: vertical
+
+psychology:
+  motivations:
+    - mantener_orden
+    - ascender
+    - cumplir_procedimiento
+  fears:
+    - demandas
+    - sanciones_institucionales
+    - violencia
+  speaking_style:
+    - formalismos
+    - institucional
+    - no_tutea
+    - procedimientos
+
+muletillas:
+  - "con_respeto"
+  - "el_procedimiento"
+  - "no_es_mi_competencia"
+  - "de_manera_formal"
+
+memory:
+  formative:
+    - {year: 2000, event: "entró a la policía", emotional_weight: 7}
+    - {year: 2010, event: "ascenso a capitán", emotional_weight: 8}
+    - {year: 2018, event: "llegó a Tello como comandante", emotional_weight: 7}
+
+network:
+  centralidad_betweenness: 0.10
+  centralidad_grado: 5
+  aliados_con:
+    - subintendente_saavedra
+    - don_fernando_alcalde
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  C-lomnitz. Estado distante.

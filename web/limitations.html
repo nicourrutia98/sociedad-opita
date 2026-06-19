@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitaciones — Sociedad Opita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Limitaciones</h1>
+        <p class="subtitle">Lo que este producto NO puede hacer, NO sabe, NO garantiza</p>
+    </header>
+
+    <nav class="info-nav">
+        <a href="index.html">← Inicio</a>
+        <a href="index_game.html">Explorar mapa</a>
+        <a href="about.html">Acerca</a>
+        <a href="methodology.html">Metodología</a>
+        <a href="limitations.html" class="active">Limitaciones</a>
+        <a href="ethics.html">Ética</a>
+        <a href="for-researchers.html">Para investigadores</a>
+    </nav>
+
+    <main>
+        <section class="info-hero warning-box">
+            <h2>Por qué esta página existe</h2>
+            <p>
+                La mayoría de productos de simulación social no declaran sus limitaciones.
+                Esta página es nuestra respuesta a eso. <strong>Listamos todo lo que
+                este producto NO hace bien, NO hace, o NO puede hacer</strong>.
+            </p>
+            <p>
+                Si encuentras una limitación que no listamos, es un bug — repórtalo.
+            </p>
+        </section>
+
+        <!-- ============== 1. BIG FIVE ============== -->
+        <section>
+            <h2>1. Big Five son DERIVADOS, no inventariados</h2>
+            <div class="limitation-item severity-high">
+                <span class="severity-tag severity-high-tag">Alta</span>
+                <h3>No se administraron inventarios psicométricos</h3>
+                <p>
+                    Los puntajes Big Five (O, C, E, A, N) que aparecen en cada persona
+                    <strong>no provienen de un inventario administrado</strong>
+                    (IPIP-NEO, NEO-PI-R, BFI, etc.). Son inferencias cualitativas del
+                    autor basadas en observación cultural y conocimiento del contexto.
+                </p>
+                <p>
+                    <strong>Implicación</strong>: no use estos puntajes como si fueran
+                    medidas válidas de personalidad para fines clínicos, psicológicos
+                    o forenses legales. Son <em>descriptores cualitativos</em>, no
+                    mediciones.
+                </p>
+                <p>
+                    <strong>Cómo lo mitigamos parcialmente</strong>: los valores se
+                    calibraron contra el promedio latinoamericano (Schmitt 2007) y se
+                    documentaron los marcadores cualitativos usados. La validación
+                    con nativo huilense cubrió 10 de las 29 personas (~35%).
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 2. SESGO LLM ============== -->
+        <section>
+            <h2>2. Sesgo pro-social del LLM, parcialmente mitigado</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>El LLM suaviza los conflictos</h3>
+                <p>
+                    Los modelos de lenguaje grandes tienen un sesgo documentado
+                    (Yi 2025, Kamruzzaman 2024) hacia respuestas <em>moralmente
+                    aceptables</em>, cooperativas y "agradables". Esto significa que:
+                </p>
+                <ul>
+                    <li>Don Rosalío con A=52 (baja amabilidad) podría sonar
+                        más cooperativo en la simulación de lo que lo haría en realidad.</li>
+                    <li>Los conflictos pueden suavizarse: si Don Rosalío rival está
+                        A=48, podría sonar confrontativo "moderado" cuando en realidad
+                        sería muy directo.</li>
+                    <li>Las decisiones morales se alinean con el consenso del LLM,
+                        no con la lógica interna del personaje.</li>
+                </ul>
+                <p>
+                    <strong>Mitigaciones implementadas</strong>:
+                </p>
+                <ul>
+                    <li>Few-shot antagónico con 4 ramas de personalidad</li>
+                    <li>Debiasing explícito en el prompt</li>
+                    <li>Muletillas reales inyectadas (mejoran A-altos hasta +3 puntos)</li>
+                    <li>Best-of-N (N=3) con scoring objetivo multi-criterio</li>
+                    <li>Temperatura 1.3 (más variación que 0.7)</li>
+                </ul>
+                <p>
+                    <strong>Lo que NO mitigamos</strong>: el sesgo de fondo. Cualquier
+                    simulación debe leerse como <em>"lo que un LLM produciría si
+                    tratara de sonar como esta persona"</em>, no como
+                    <em>"lo que esta persona diría"</em>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 3. VALIDACIÓN ============== -->
+        <section>
+            <h2>3. Validación nativa huilense parcial</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Solo 10 de 29 personas validadas</h3>
+                <p>
+                    La validación cualitativa con nativo huilense cubrió
+                    <strong>10 diálogos</strong> sobre ~10 personas distintas. El resto
+                    (19 personas, ~65%) no ha sido validado por un nativo.
+                </p>
+                <p>
+                    <strong>Hallazgos de la validación parcial</strong>:
+                </p>
+                <ul>
+                    <li>Don Rosalío BoN: "asina es la cosa, le digo yo... ¡Ni muerto lo dejo pasar ese alambrado nuevo, así se me meta el ejercito encima!" — validado como auténtico.</li>
+                    <li>Jhon Eliécer BoN: "la tierra es un cacho y usté el bozal haciendo ver que tengo fuerza" — validado como auténtico.</li>
+                    <li>Doña Prudencia BoN: "Dios es el que manda la luz, y uno ahí con sus manos viejas y sus rezos" — validado.</li>
+                    <li>Padre Cecilio: tono devoto correcto, pero el nativo sugirió
+                        más referencias a "la misericordia" en lugar de "Dios es el que sabe".</li>
+                </ul>
+                <p>
+                    <strong>Lo que falta validar</strong>: las 19 personas restantes
+                    tienen solo inferencia cualitativa. La validación con 1 nativo es
+                    <em>necesaria pero no suficiente</em>: requiere al menos 3 nativos
+                    con diferentes relaciones con cada persona.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 4. SESGO DE SELECCIÓN ============== -->
+        <section>
+            <h2>4. Sesgo de selección del autor</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Las 29 personas NO son una muestra representativa</h3>
+                <p>
+                    Tello tiene ~9000 habitantes. Las 29 personas documentadas son
+                    <strong>un muestreo intencional</strong> del autor, basado en:
+                </p>
+                <ul>
+                    <li>Accesibilidad: personas que el autor conoce directa o indirectamente</li>
+                    <li>Representatividad de roles: cubrir 12 arquetipos distintos</li>
+                    <li>Centralidad social: incluir personas con roles visibles en la dinámica del pueblo</li>
+                </ul>
+                <p>
+                    <strong>Implicación</strong>: las personas documentadas tienden a ser
+                    más visibles, más activas socialmente, más "representativas" del pueblo
+                    que la persona promedio. Hay un sesgo hacia lo público.
+                </p>
+                <p>
+                    <strong>Lo que falta</strong>: las personas rurales menos visibles
+                    (jóvenes que migraron totalmente, ancianos recluidos, personas en
+                    conflicto social severo) están subrepresentadas.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 5. N = 29 ============== -->
+        <section>
+            <h2>5. n=29 limita el análisis estadístico</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Las correlaciones son orientativas, no concluyentes</h3>
+                <p>
+                    Con 29 personas:
+                </p>
+                <ul>
+                    <li>Bootstrap con 1000 muestras da intervalos de confianza útiles pero amplios.</li>
+                    <li>Correlaciones pueden ser significativas por azar (3 de 5 correlaciones Big Five caen fuera de rangos teóricos).</li>
+                    <li>No se puede hacer análisis multivariado robusto (PCA, clustering).</li>
+                    <li>Test de Mann-Whitney entre subgrupos tiene potencia baja.</li>
+                </ul>
+                <p>
+                    <strong>Implicación</strong>: los hallazgos estadísticos (r=-0.54 entre
+                    Openness y betweenness, 49% de relaciones unidireccionales) son
+                    <em>direccionales</em>, no concluyentes. Replicar con n&gt;100 es
+                    necesario para validar.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 6. NO TRABAJO DE CAMPO SISTEMÁTICO ============== -->
+        <section>
+            <h2>6. NO hubo trabajo de campo sistemático</h2>
+            <div class="limitation-item severity-high">
+                <span class="severity-tag severity-high-tag">Alta</span>
+                <h3>La documentación depende fuertemente del conocimiento del autor</h3>
+                <p>
+                    Este proyecto <strong>no realizó entrevistas formales, observación
+                    participante, ni encuestas</strong> con las personas documentadas.
+                    La información proviene de:
+                </p>
+                <ul>
+                    <li>Conocimiento del autor (nativo huilense)</li>
+                    <li>Conversaciones informales con familiares y conocidos</li>
+                    <li>Literatura académica sobre la región</li>
+                    <li>Generalización razonable desde arquetipos</li>
+                </ul>
+                <p>
+                    <strong>Implicación</strong>: este producto NO debe usarse como
+                    sustituto del trabajo de campo. Cualquier investigación seria basada
+                    en este producto debe incluir trabajo de campo propio con la
+                    comunidad real.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 7. NO DATOS TEMPORALES ============== -->
+        <section>
+            <h2>7. No hay datos longitudinales</h2>
+            <div class="limitation-item severity-low">
+                <span class="severity-tag severity-low-tag">Baja</span>
+                <h3>Las 29 personas son una "foto" estática</h3>
+                <p>
+                    No hay datos de cómo han evolucionado las relaciones, los Big Five,
+                    o los roles a lo largo del tiempo. La simulación con escenas a
+                    distintas horas del día (06:00, 07:00, 12:00, etc.) NO es dinámica:
+                    es <em>una inferencia plausible</em> basada en patrones generales.
+                </p>
+                <p>
+                    <strong>Implicación</strong>: el producto es una fotografía etnográfica
+                    aproximada, no una simulación dinámica de procesos sociales.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 8. NO INFERENCIA CAUSAL ============== -->
+        <section>
+            <h2>8. No se hicieron análisis causales</h2>
+            <div class="limitation-item severity-low">
+                <span class="severity-tag severity-low-tag">Baja</span>
+                <h3>Las correlaciones son descriptivas, no causales</h3>
+                <p>
+                    El hallazgo "r(O, betweenness) = -0.54" NO significa que
+                    <em>"tener Openness bajo CAUSA ser broker"</em>. Es una correlación
+                    observacional. Las explicaciones causales posibles son muchas:
+                </p>
+                <ul>
+                    <li>Selección: las personas concretas son elegidas para roles de coordinación</li>
+                    <li>Socialización: el rol de broker enseña a ser concreto</li>
+                    <li>Confundición: el ambiente rural premia la concreción en general</li>
+                </ul>
+                <p>
+                    Para hacer inferencia causal se necesitaría un diseño longitudinal
+                    o experimental, que este proyecto no realizó.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 9. NO PRIVACIDAD ============== -->
+        <section>
+            <h2>9. Privacidad de las personas representadas</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Las personas pueden ser identificables</h3>
+                <p>
+                    Aunque usamos nombres genéricos (Don Rosalío, Doña Rosa), las
+                    descripciones biográficas (rol, edad, finca, conflictos) podrían
+                    permitir identificación por parte de quien conoce el pueblo.
+                </p>
+                <p>
+                    <strong>Decisión</strong>: las personas son <em>mezcla de observación
+                    cultural + generalización + invención razonable</em>. Ningún
+                    "Don Rosalío" del producto corresponde 1-a-1 con un Rosalío real
+                    específico, pero las descripciones podrían sugerir a quien conoce.
+                </p>
+                <p>
+                    Si alguna persona real se siente identificada y ofendida, tiene
+                    derecho a pedir modificación o eliminación de su perfil. Ver
+                    <a href="ethics.html">Ética</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 10. DEPENDENCIA DEL AUTOR ============== -->
+        <section>
+            <h2>10. Dependencia del autor único</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Un solo autor, un solo nativo, un solo punto de vista</h3>
+                <p>
+                    Este proyecto es obra de un solo autor (nativo huilense). Su
+                    visión de Tello es UNA visión. Otros nativos del pueblo podrían
+                    tener:
+                </p>
+                <ul>
+                    <li>Perspectivas diferentes sobre las mismas personas</li>
+                    <li>Conocimiento de personas no documentadas aquí</li>
+                    <li>Discrepancias sobre los roles atribuidos</li>
+                    <li>Conocimiento de conflictos que no aparecen</li>
+                </ul>
+                <p>
+                    <strong>Implicación</strong>: el modelo es una versión, no la versión.
+                    La validez externa depende de la validación por múltiples actores.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 11. NO ANÁLISIS DE SESGO ============== -->
+        <section>
+            <h2>11. No se hizo análisis cuantitativo de sesgo del LLM</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>No medimos cuánto se desvía el LLM del Ground Truth</h3>
+                <p>
+                    Para medir formalmente el sesgo pro-social del LLM, necesitaríamos:
+                </p>
+                <ul>
+                    <li>Un corpus de respuestas "ground truth" de personas reales en escenas reales</li>
+                    <li>Métricas de divergencia entre LLM y ground truth</li>
+                    <li>Análisis por rasgo Big Five (¿se suaviza más a personas con A alto?)</li>
+                </ul>
+                <p>
+                    <strong>Implicación</strong>: nuestras mitigaciones son heurísticas,
+                    no validadas empíricamente. La afirmación "el sesgo pro-social está
+                    parcialmente mitigado" es cualitativa, no cuantitativa.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== 12. NO REPLICACIÓN ============== -->
+        <section>
+            <h2>12. No se ha replicado en otra ciudad</h2>
+            <div class="limitation-item severity-medium">
+                <span class="severity-tag severity-medium-tag">Media</span>
+                <h3>Los hallazgos son específicos a Tello</h3>
+                <p>
+                    Los hallazgos psicométricos y de red son específicos a Tello, Huila.
+                    Replicar en Neiva, Garzón o Pitalito podría:
+                </p>
+                <ul>
+                    <li>Confirmar hallazgos generales</li>
+                    <li>Mostrar diferencias regionales</li>
+                    <li>Validar la transferibilidad del marco metodológico</li>
+                </ul>
+                <p>
+                    <strong>Estado</strong>: la arquitectura está lista para replicar
+                    (Vibe Pattern), pero aún no se ha hecho. La primera replicación
+                    es el siguiente paso del proyecto.
+                </p>
+            </div>
+        </section>
+
+        <!-- ============== SUMMARY ============== -->
+        <section>
+            <h2>Resumen de limitaciones por severidad</h2>
+            <table class="limitations-summary">
+                <thead>
+                    <tr>
+                        <th>Severidad</th>
+                        <th>Limitación</th>
+                        <th>Implicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="sev-high">Alta</td><td>Big Five derivados, no inventariados</td><td>No usar como medida clínica</td></tr>
+                    <tr><td class="sev-high">Alta</td><td>No hubo trabajo de campo sistemático</td><td>No sustituye etnografía</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Sesgo pro-social del LLM</td><td>Simulación es aproximación</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Validación nativa parcial (35%)</td><td>19 personas sin validar</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Sesgo de selección del autor</td><td>Personas visibles sobrerrepresentadas</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>n=29 limita estadística</td><td>Hallazgos direccionales</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Privacidad / identificabilidad</td><td>Derecho a pedir eliminación</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Dependencia del autor único</td><td>Una versión, no LA versión</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Sin análisis cuantitativo de sesgo LLM</td><td>Mitigaciones heurísticas</td></tr>
+                    <tr><td class="sev-medium">Media</td><td>Sin replicación en otra ciudad</td><td>Hallazgos son específicos a Tello</td></tr>
+                    <tr><td class="sev-low">Baja</td><td>No hay datos longitudinales</td><td>Foto estática, no proceso dinámico</td></tr>
+                    <tr><td class="sev-low">Baja</td><td>No se hicieron análisis causales</td><td>Correlaciones descriptivas</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>¿Encontraste una limitación no listada?</h2>
+            <p>
+                Si encuentras algo que este producto dice que hace pero no hace bien,
+                o algo que omite declarar, repórtalo. Es un bug del producto.
+            </p>
+            <p>
+                Ver <a href="ethics.html">Ética</a> para cómo contribuir.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="methodology.html">← Metodología</a> ·
+           <a href="ethics.html">Ética →</a></p>
+        <p class="meta">Sociedad Opita — herramienta forense · Sin fines de lucro · Datos abiertos</p>
+    </footer>
+</body>
+</html>

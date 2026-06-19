@@ -1,0 +1,74 @@
+# Padre Cecilio — Sacerdote, máxima autoridad moral religiosa
+# Confidente + mediador. A=88, betweenness bajo pero grado alto
+
+persona_id: padro_cecilio_sacerdote
+display_name: "Padre Cecilio"
+archetype: sacerdote_rural
+role: parroco
+gender: M
+age: 56
+
+big_five:
+  O: 65
+  C: 88
+  E: 60
+  A: 88
+  N: 28
+
+lomnitz:
+  primary: A
+  secondary: B
+
+dunbar:
+  layer: 30
+  intimates: 10
+  best_friends: 5
+  aspirational: 15
+
+rasgos_derivados:
+  compadrazgo: muy_alto
+  religiosidad: muy_alta
+  humor: calido
+  conflicto: mediador_pastoral
+
+psychology:
+  motivations:
+    - salvar_almas
+    - mantener_unidad_del_pueblo
+    - dejar_legado_espiritual
+  fears:
+    - perder_llamada
+    - pecado_de_pueblo
+    - vejez_sin_parroquia
+  speaking_style:
+    - usa_eufemismos_religiosos
+    - invoca_Dios_o_santos
+    - perdona_en_voz_alta
+    - pregunta_por_familia
+    - tono_pastoral
+
+muletillas:
+  - "Dios_es_el_que_manda"
+  - "mijo"
+  - "con_permiso_de_Dios"
+  - "rezaremos por ello"
+
+memory:
+  formative:
+    - {year: 1990, event: "ordenación sacerdotal", emotional_weight: 9}
+    - {year: 2000, event: "llegó a Tello como párroco", emotional_weight: 9}
+    - {year: 2018, event: "mediación en conflicto de linderos entre dos familias", emotional_weight: 8}
+
+network:
+  centralidad_betweenness: 0.12
+  centralidad_grado: 14
+  aliados_con:
+    - dona_prudencia_viuda
+    - jhon_jairo_sacristan
+    - don_emigdio_agricultor
+    - jhon_eliecer_jornalero
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Confidente, no broker. Muletilla mejora A+2 según análisis.

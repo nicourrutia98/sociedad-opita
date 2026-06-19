@@ -1,0 +1,39 @@
+{
+  "nombre": "gossip_r1_v0.5_i1.0",
+  "version_prompt": "2.0",
+  "random_seed": 42,
+  "t_inicial": "2026-06-19T06:00:00",
+  "duracion_segundos": 28800.0,
+  "hipotesis": "Rumor 'Don Fernando se robo la plata' (v=0.5, i=1.0) plantado por dona_rosa_tendera en 2026-06-19 08:00. Replicas: 2.",
+  "n_agentes": 26,
+  "metadata_custom": {
+    "tipo": "gossip_propagation",
+    "replica_id": 1,
+    "seed": 42,
+    "topico": "Don Fernando se robo la plata",
+    "veracidad": 0.5,
+    "intensidad": 1.0,
+    "origen": "dona_rosa_tendera",
+    "t_seed": "2026-06-19 08:00"
+  },
+  "wall_time_inicio": "2026-06-19T09:45:51.444173",
+  "biografias_hash": "59826a674813e4d7",
+  "reloj_estado_final": {
+    "t_virtual": "2026-06-19T14:00:00",
+    "t0": "2026-06-19T06:00:00",
+    "velocidad": 1.0,
+    "pausado": false,
+    "segundos_transcurridos": 28800.0,
+    "cambios_realizados": 1
+  },
+  "reloj_historial_cambios": [
+    {
+      "wall_time": "2026-06-19T09:45:51.444132",
+      "accion": "init",
+      "payload": {
+        "t0": "2026-06-19 06:00:00",
+        "velocidad": 1.0
+      }
+    }
+  ]
+}

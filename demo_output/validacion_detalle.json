@@ -1,0 +1,606 @@
+[
+  {
+    "nombre": "Don Eliécer Perdomo Motta (El Patrón)",
+    "slug": "don_eliecer_patron",
+    "big_five": {
+      "O": 25,
+      "C": 80,
+      "E": 35,
+      "A": 30,
+      "N": 30
+    },
+    "output": "Ay, Don Rosalío... usté siempre tan cumplido con sus reclamos. Pero mire, el lindero de la manga está donde estaba desde que su abuelo y mi papá lo pusieron. Si quiere, mañana vamos con el inspector y un tirabuzón a medirlo.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": true,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "C alto (80) -> planif"
+    ],
+    "predicciones_fail": [
+      "A bajo (30) PERO sin confront/recelo",
+      "E bajo (35) PERO sin hedges"
+    ]
+  },
+  {
+    "nombre": "Doña Prudencia Gutiérrez Vda. de Perdomo (La Partera)",
+    "slug": "dona_prudencia_partera",
+    "big_five": {
+      "O": 50,
+      "C": 75,
+      "E": 60,
+      "A": 85,
+      "N": 30
+    },
+    "output": "Eche, pues mire... la muchacha llegó como a las cuatro de la mañana, con dolores cada tres minutos y el bebé atravesado. Ya le hice la maniobra de versión, pero esa criatura no se quiere acomodar, más terco que burro viejo.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": true,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "C alto (75) -> planif"
+    ],
+    "predicciones_fail": [
+      "A alto (85) PERO sin prosocial"
+    ]
+  },
+  {
+    "nombre": "Don Rosalío Quintero Hernández (El Rival)",
+    "slug": "don_rosalio_rival",
+    "big_five": {
+      "O": 25,
+      "C": 90,
+      "E": 25,
+      "A": 40,
+      "N": 65
+    },
+    "output": "Pos, mire... eso no me gusta ni tantico. Ese peón de Don Eliécer ya está moviendo la cerca sin avisar, como si la tierra fuera de él. Esa gente es más metida que gusano en queso.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": true,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "A bajo (40) -> confront/recelo",
+      "E bajo (25) -> taciturno"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Padre Cecilio Ramírez Lozano (El Cura)",
+    "slug": "padre_cecilio_cura",
+    "big_five": {
+      "O": 55,
+      "C": 80,
+      "E": 65,
+      "A": 85,
+      "N": 25
+    },
+    "output": "Eche, mijitos, pero qué es esa gritadera tan fea en la casa del Señor. Cálmense, pues, que esto no es una gallera. Vamos a sentarnos a hablar como cristianos, si me entiende.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A alto (85) PERO sin prosocial"
+    ]
+  },
+  {
+    "nombre": "Don Fernando Solano Gómez (El Alcalde)",
+    "slug": "don_fernando_alcalde",
+    "big_five": {
+      "O": 40,
+      "C": 75,
+      "E": 80,
+      "A": 55,
+      "N": 50
+    },
+    "output": "Ay, mijo... pos, la cosa es que ya llegaron los de la Contraloría, preguntando por esos sobrecostos del acueducto. Como quien dice, ahora sí me van a poner a bailar con la más fea. Pero veremos, pues, si me entiende.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "E alto (80) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Doña Rosa Elvira Trujillo de Perdomo (La Tendera)",
+    "slug": "dona_rosa_tendera",
+    "big_five": {
+      "O": 45,
+      "C": 80,
+      "E": 75,
+      "A": 75,
+      "N": 55
+    },
+    "output": "Ay, mijita... pero ¿con quién dice que lo vieron? ¿Con la muchacha esa de la tienda de Don Rosalío? No, pues, si ese hombre es más enredado que pelo de negro en luna, y la pobre de la mujer no sabe ni por dónde le viene el agua.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A alto (75) PERO sin prosocial",
+      "E alto (75) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Doña Mercedes Pinilla (La Panadera)",
+    "slug": "dona_mercedes_panadera",
+    "big_five": {
+      "O": 35,
+      "C": 90,
+      "E": 55,
+      "A": 70,
+      "N": 40
+    },
+    "output": "¡Ay, mija, gracias a Dios que me llama! Es que el muchacho… pos, está mejorcito, pero el médico dice que toca esperar. Yo ahorita salgo pa’l hospital, si Dios quiere, en la camioneta de Don Eliécer.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Don Eliseo Mendoza Trujillo (El Boticario)",
+    "slug": "don_eliseo_boticario",
+    "big_five": {
+      "O": 60,
+      "C": 85,
+      "E": 50,
+      "A": 40,
+      "N": 45
+    },
+    "output": "Eche, mijo, y ¿qué es lo que trae ahí? ¿Otra vez con el cuento de la inyección \"pa'l dolor\"? Sin fórmula no le puedo dar nada, y menos a usté que ya viene como garza vieja.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A bajo (40) PERO sin confront/recelo"
+    ]
+  },
+  {
+    "nombre": "Profesora Aurora Losada Motta (La Maestra)",
+    "slug": "aurora_maestra",
+    "big_five": {
+      "O": 80,
+      "C": 85,
+      "E": 60,
+      "A": 75,
+      "N": 50
+    },
+    "output": "Ay, mija... ¿cómo es eso? Venga, siéntese aquí cerquita y cuénteme bien despacio, que yo la escucho con calma. No tenga miedo, que aquí nadie la va a juzgar.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "A alto (75) -> prosocial"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Sra. Edilma Campos Trujillo (La Secretaria)",
+    "slug": "edilma_secretaria",
+    "big_five": {
+      "O": 50,
+      "C": 90,
+      "E": 50,
+      "A": 65,
+      "N": 60
+    },
+    "output": "Ay, mijita Beatriz... mire, usté disculpe, pero esos papeles del alcalde están más enredados que pelo de negro en luna. Ahorita le busco, pero es que Don Fernando salió a las siete y no dejó ni una instrucción clara.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Don Abelardo Caycedo Perdomo (El Conductor)",
+    "slug": "don_abelardo_conductor",
+    "big_five": {
+      "O": 50,
+      "C": 70,
+      "E": 80,
+      "A": 75,
+      "N": 35
+    },
+    "output": "Ay, mijo Pipe, usté sí es más berriondo que chivo sin cabresto. Mire que yo ya estoy viejo pa’ esas rumbas de viernes, a las cinco de la mañana tengo que estar jalando la chiva. Pos, verá, si es pa’ una pola calladita en la tienda de Doña Rosa, capaz y lo acompaño, pero de rumba ni loco.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": true,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A alto (75) PERO sin prosocial",
+      "E alto (80) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Jhon Jairo Motta Perdomo (El Sacristán)",
+    "slug": "jhon_jairo_sacristan",
+    "big_five": {
+      "O": 40,
+      "C": 90,
+      "E": 45,
+      "A": 80,
+      "N": 40
+    },
+    "output": "Ay, mire... el padre está como nervioso desde que colgó el teléfono. Pos, no sé, pero esa llamada del obispo no fue por cualquier cosa, no.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": true,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "E bajo (45) -> taciturno"
+    ],
+    "predicciones_fail": [
+      "A alto (80) PERO sin prosocial"
+    ]
+  },
+  {
+    "nombre": "Capitán Hernán Arturo Pérez Lozano (El Comandante)",
+    "slug": "capitan_hernan_policia",
+    "big_five": {
+      "O": 35,
+      "C": 90,
+      "E": 55,
+      "A": 50,
+      "N": 55
+    },
+    "output": "Ay, Don Rosalío, no sea tan necio. Ciudadano, aquí los procedimientos son claros, el comparendo se paga en la alcaldía, no conmigo. Yo no resuelvo esas cosas, si me entiende, eso es más enredado que alambre de púas.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A bajo (50) PERO sin confront/recelo"
+    ]
+  },
+  {
+    "nombre": "Doña Beatriz Vallejo Losada (La Personera)",
+    "slug": "beatriz_personera",
+    "big_five": {
+      "O": 80,
+      "C": 85,
+      "E": 55,
+      "A": 70,
+      "N": 55
+    },
+    "output": "Ay, mijo, siéntese un ratico, cuénteme con calma cómo fue la cosa allá en la finca. No tenga miedo que pa' eso estoy yo, la Personera, pa' ponerle el cascabel al gato. ¿Quién fue el que le pegó o le gritó, dígame sin pena?",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Don Sigifredo Quintero Perdomo (El Inspector)",
+    "slug": "don_sigifredo_inspector",
+    "big_five": {
+      "O": 25,
+      "C": 75,
+      "E": 80,
+      "A": 65,
+      "N": 50
+    },
+    "output": "Mire, compadre... la cosa es que esa denuncia ya tiene firma y sello. No es tan fácil como hacerla desaparecer, si me entiende.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "E alto (80) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Patricia Losada Motta (La Comisaria)",
+    "slug": "patricia_comisaria",
+    "big_five": {
+      "O": 85,
+      "C": 85,
+      "E": 55,
+      "A": 80,
+      "N": 60
+    },
+    "output": "Ay, mija... mire, siéntese un momento, que esto hay que hablarlo con calma. ¿El patrón las amenazó? Dígame exactamente qué fue lo que dijo, sin miedo, que aquí estamos entre nosotras.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": true,
+      "chisme_o_discrecion": true,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "A alto (80) -> prosocial",
+      "C alto (85) -> planif"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Laura Sofía Meneses (La Reina del Pueblo)",
+    "slug": "laura_reina",
+    "big_five": {
+      "O": 65,
+      "C": 50,
+      "E": 85,
+      "A": 75,
+      "N": 65
+    },
+    "output": "Ay, mami... ¿qué quiere que haga? Si ese hombre es más pajizo que guadua vieja, ya me tiene harta. Pero los pelaos necesitan, y yo no puedo dejar que se me vayan a morir de hambre. Pos... ahorita veremos, la cosa es que no me va a tener así toda la vida.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": true,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A alto (75) PERO sin prosocial",
+      "E alto (85) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Andrés Felipe \"Pipe\" Ospina (El Hincha)",
+    "slug": "pipe_hincha",
+    "big_five": {
+      "O": 50,
+      "C": 40,
+      "E": 90,
+      "A": 65,
+      "N": 65
+    },
+    "output": "Ay, Caliche... no joda, papi. ¿Oro de la mina? Usté sabe que eso es más enredado que alambre de púas, y el patrón Eliécer ya me tiene el ojo encima desde que supe lo de la tubería rota. Pos, deme chance, pero si es plata fácil, mejor me cuenta bien cómo es la vuelta, no vaya a ser que terminemos los dos en el calabozo.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": true,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "E alto (90) PERO muchos hedges"
+    ]
+  },
+  {
+    "nombre": "Mariana Díaz Polanco (La Universitaria)",
+    "slug": "mariana_universitaria",
+    "big_five": {
+      "O": 75,
+      "C": 60,
+      "E": 75,
+      "A": 70,
+      "N": 65
+    },
+    "output": "Ay, mija... es que no sé qué hacer. Me ofrecieron la beca en Bogotá, pero mi mamá está malita, con eso de la presión y todo. Y uno acá en Tello, viajando diario a Neiva, ya ni sé si aguanto más.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": true,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "E alto (75) -> sin hedges (extrovertido)"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Carlos Andrés \"Caliche\" Vargas (El Minero Ilegal)",
+    "slug": "caliche_minero",
+    "big_five": {
+      "O": 40,
+      "C": 25,
+      "E": 70,
+      "A": 55,
+      "N": 70
+    },
+    "output": "Ay, mijo... los milicos me tumbaron too. Se llevaron el mercurio, las bateas, hasta la bareta que tenía guardá pa'l rato. No me quedó ni pa' un tinto.",
+    "matches": {
+      "taciturno_o_hedges": false,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Valentina Losada (La Secretaria Joven)",
+    "slug": "valentina_secretaria_joven",
+    "big_five": {
+      "O": 65,
+      "C": 60,
+      "E": 65,
+      "A": 75,
+      "N": 65
+    },
+    "output": "Ay, doña Edilma... pos sí, ya estoy aquí desde las seis, como siempre. Pero es que usté me trata como si yo fuera una niña chiquita y eso me tiene más enredada que pelo de negro en luna.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [],
+    "predicciones_fail": [
+      "A alto (75) PERO sin prosocial"
+    ]
+  },
+  {
+    "nombre": "Jhon Eliécer Perdomo (El Hijo del Patrón)",
+    "slug": "jhon_eliecer_hijo_patron",
+    "big_five": {
+      "O": 35,
+      "C": 50,
+      "E": 30,
+      "A": 70,
+      "N": 55
+    },
+    "output": "Pos, papá... usté sabe que yo ya llevo rato pensando en eso. Pero si usté dice que no, pos no, así es la cosa.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": false,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "E bajo (30) -> taciturno"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Doña Lucía Ramírez (La Maestra Jubilada)",
+    "slug": "dona_lucia_maestra_jubilada",
+    "big_five": {
+      "O": 60,
+      "C": 75,
+      "E": 55,
+      "A": 85,
+      "N": 50
+    },
+    "output": "Ay, mijo, pos mire... a esta hora yo debía estar en el salón de clases, dictando matemáticas. Pero ya ve, aquí estoy, más perdida que gusano en queso, viendo pasar el tiempo.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "A alto (85) -> prosocial"
+    ],
+    "predicciones_fail": []
+  },
+  {
+    "nombre": "Don Emigdio Suárez (El Jubilado Que No Sirve)",
+    "slug": "don_emigdio_jubilado",
+    "big_five": {
+      "O": 25,
+      "C": 40,
+      "E": 35,
+      "A": 55,
+      "N": 65
+    },
+    "output": "Pos, mija, es que usté sabe bien que yo ya no sirvo pa' esas cosas. Me manda a llevar la harina y se me riega la mitad en el camino, como el año pasao. No, mejor dejemos así, no sea que le vaya a embarrar más el negocio.",
+    "matches": {
+      "taciturno_o_hedges": true,
+      "confrontacional": false,
+      "prosocial": true,
+      "planificador": false,
+      "chisme_o_discrecion": false,
+      "receloso": false,
+      "tradicional": false
+    },
+    "predicciones_ok": [
+      "E bajo (35) -> taciturno"
+    ],
+    "predicciones_fail": []
+  }
+]

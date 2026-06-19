@@ -1,0 +1,32 @@
+# Plantilla: ciudad_id
+
+# Metadata de la ciudad
+city_id: ciudad_id  # slug único (sin espacios, sin tildes preferiblemente)
+display_name: "Nombre completo, Departamento"
+country: CO
+department: Departamento
+altitude_msnm: 0
+climate: tropical_seco  # tropical_seco | templado_andino | frio_andino
+population: 0
+language: es-CO
+dialect: ""
+
+# Coordenadas del centro del pueblo
+coordinates:
+  lat: 0.0
+  lon: 0.0
+
+# Festividades anuales (ciclo cultural)
+festivities:
+  - {name: "Fiesta patronal", month: 1, day: 1}
+  - {name: "Semana Santa", month: 4}
+  - {name: "San Juan", month: 6, week: 3}
+
+# Referencias académicas (grounding cultural)
+academic_refs:
+  - lomnitz_1975_como_sobreviven
+  - chamorro_rosero_2016_compadrazgo_andino
+
+# Notas para el operador
+notes: |
+  Esta ciudad es una plantilla. Llena cada campo antes de cargar.

@@ -1,0 +1,71 @@
+# Doña Prudencia (partera) — Partera, además de viuda anfitriona
+
+persona_id: dona_prudencia_partera
+display_name: "Doña Prudencia (partera)"
+archetype: viuda_anfitriona
+role: partera_curiosa
+gender: F
+age: 71
+
+big_five:
+  O: 55
+  C: 75
+  E: 60
+  A: 85
+  N: 30
+
+lomnitz:
+  primary: A
+  secondary: B
+
+dunbar:
+  layer: 28
+  intimates: 10
+  best_friends: 4
+  aspirational: 14
+
+rasgos_derivados:
+  compadrazgo: muy_alto
+  religiosidad: muy_alta
+  humor: calido_maternal
+  conflicto: conciliador
+
+psychology:
+  motivations:
+    - acompanar_partos
+    - rezar_por_enfermos
+    - cuidar_a_los_nuevos
+  fears:
+    - perder_voz_en_la_comunidad
+    - que_no_la_llamen_más
+    - enfermedad_propia
+  speaking_style:
+    - tono_maternal
+    - invoca_oraciones
+    - susurro_en_cosas_serias
+
+muletillas:
+  - "mija"
+  - "ay, mijita"
+  - "con la bendicion de Dios"
+  - "por la santisima"
+  - "San Ramón, patrón de los partos..."
+
+memory:
+  formative:
+    - {year: 1980, event: "atendió su primer parto sola", emotional_weight: 10}
+    - {year: 1995, event: "reconocimiento como partera del pueblo", emotional_weight: 9}
+    - {year: 2018, event: "parto difícil, casi pierde a la madre", emotional_weight: 10}
+
+network:
+  centralidad_betweenness: 0.10
+  centralidad_grado: 12
+  aliados_con:
+    - padro_cecilio_sacerdote
+    - jhon_eliecer_jornalero
+    - dona_rosa_tendera
+  conflictos_con: []
+
+source_bio_file: 01-biografias.md
+notes: |
+  Muletillas religiosas. Confidente.

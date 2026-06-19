@@ -1,0 +1,34 @@
+{
+  "inicio": {
+    "t": "2026-06-19T06:00:00",
+    "etiqueta": "inicio",
+    "reloj_estado": {
+      "t_virtual": "2026-06-19T06:00:00",
+      "t0": "2026-06-19T06:00:00",
+      "velocidad": 60.0,
+      "pausado": false,
+      "segundos_transcurridos": 0.0,
+      "cambios_realizados": 2
+    },
+    "n_log_entries": 2,
+    "n_gossip_edges": 0,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  },
+  "final": {
+    "t": "2026-06-19T06:50:00",
+    "etiqueta": "final",
+    "reloj_estado": {
+      "t_virtual": "2026-06-19T06:50:00",
+      "t0": "2026-06-19T06:00:00",
+      "velocidad": 60.0,
+      "pausado": false,
+      "segundos_transcurridos": 3000.0,
+      "cambios_realizados": 8
+    },
+    "n_log_entries": 117,
+    "n_gossip_edges": 0,
+    "n_conflictos": 0,
+    "conflicto_estados": []
+  }
+}

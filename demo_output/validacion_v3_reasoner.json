@@ -1,0 +1,60 @@
+{
+  "metodologia": "Comparar deepseek-chat (v2) vs deepseek-reasoner (v3) con mismo prompt OSINT refinado",
+  "resultados_v3_reasoner": {
+    "Don Eliécer": {
+      "output": "Eche, mire, Don Rosalío... esa raya la puso mi abuelo en el 50 y desde entonces ahí ha estado. Usté es más terco que una mula, venga a enredar linderos como si no hubiera na' que hacer.",
+      "cost": 0.0031151300000000002,
+      "latencia": 4.83689546585083
+    },
+    "Don Rosalío": {
+      "output": "Pos, mire, la cosa es que ese Don Eliecer ya se pasó de la raya, como quien dice. Mandar un peón a moverme la cerca sin avisar, eso no se hace. Y usté sabe, esa raya la puso mi abuelo, y desde entonces ahí ha estado. Si se le ocurre pasarse, le voy a armar el escándalo, porque conmigo no se juega.",
+      "cost": 0.0033395600000000005,
+      "latencia": 7.5293614864349365
+    },
+    "Don Eliseo": {
+      "output": "Uy, mijo, ¿otra vez con eso? Ya le dije que sin receta no le pongo nada. Váyase a dormir la borrachera y vuelva cuando esté más presentable.",
+      "cost": 0.0028172,
+      "latencia": 4.594937086105347
+    },
+    "Jhon Eliécer": {
+      "output": "Ay, papá... pos ya ve, otra vez la misma historia. Uno aquí aguantando calor, y usté siempre con la misma cantaleta. No, pos, tan bacano todo... pa' qué carajos sueño.",
+      "cost": 0.0028776500000000007,
+      "latencia": 5.217733144760132
+    },
+    "Patricia": {
+      "output": "Ay, mija... siéntese, siéntese. Cuénteme bien qué fue lo que pasó con ese hombre. Pero es que don... bueno, ya sabe cómo es la cosa aquí, entre todos nos conocemos, y el patrón no es cualquiera.",
+      "cost": 0.0030447500000000006,
+      "latencia": 6.118366956710815
+    },
+    "Doña Prudencia": {
+      "output": "Ay, mire, comadre, la cosa es que esa muchachita llegó ya casi sin fuerzas. Le hice lo que pude, pero la criatura venía atravesada... tocará llevarla pal hospital, porque esto ya no es cosa de una partera.",
+      "cost": 0.00332715,
+      "latencia": 8.884627103805542
+    },
+    "Doña Rosa": {
+      "output": "Ay, mija, no me diga... ¿Y quién es la sinvergüenza esa? Porque si es la misma que yo pienso, ese hombre es más pendejo que un burro viejo.",
+      "cost": 0.00294769,
+      "latencia": 6.2769341468811035
+    },
+    "Padre Cecilio": {
+      "output": "Eche, pero qué es esa gritería... cálmense, que el templo no es plaza de mercado. Vengan pa' cá, les voy a hacer entrar en razón.",
+      "cost": 0.00271767,
+      "latencia": 4.775725364685059
+    }
+  },
+  "agentes_test": [
+    "Don Eliécer",
+    "Don Rosalío",
+    "Don Eliseo",
+    "Jhon Eliécer",
+    "Patricia",
+    "Doña Prudencia",
+    "Doña Rosa",
+    "Padre Cecilio"
+  ],
+  "modelo_v3": "deepseek-reasoner (R1 thinking mode)",
+  "osint_fuentes": [
+    "Yi et al. 2025 Moral RolePlay (arXiv:2511.04962): reasoning NO ayuda para villanos Level 4 pero podría para Level 2-3",
+    "DeepSeek API Thinking Mode docs (api-docs.deepseek.com/guides/thinking_mode)"
+  ]
+}
