@@ -43,7 +43,7 @@ The paper is accompanied by the project repository containing:
 - 17 reproducible experiment runs (`experiments/`)
 - Methodology documentation (`docs/`)
 
-The public GitHub release is forthcoming under the author's account (`nicourrutia98`).
+The public GitHub release is available at: **https://github.com/nicourrutia98/sociedad-opita**
 
 ## AI Assistance Summary
 

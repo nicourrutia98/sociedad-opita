@@ -1,8 +1,8 @@
-# Reviewer Invitation Texts — Sociedad Opita
+﻿# Reviewer Invitation Texts — Sociedad Opita
 
 > Templates listos para copiar y enviar. Cada uno incluye PDF adjunto + invitación al repo GitHub.
-> URL del repo (placeholder): **https://github.com/nicourrutia98/sociedad-opita**
-> Reemplazá `[REPO_URL]` con la URL real cuando el repo esté público.
+> URL del repo: **https://github.com/nicourrutia98/sociedad-opita** ✅ (público)
+> Reemplazá `https://github.com/nicourrutia98/sociedad-opita` con la URL real en cada template antes de enviar.
 
 ---
 
@@ -26,7 +26,7 @@ Resumen rápido:
 • 3 hallazgos empíricos: sesgo pro-social, trade-off dialecto-vs-rasgo, centralidad estructural
 
 Adjunto: paper.pdf (10 pp)
-Repo con código + data + ground-truth: [REPO_URL]
+Repo con código + data + ground-truth: https://github.com/nicourrutia98/sociedad-opita
 Licencia: MIT (código) + CC-BY-4.0 (data)
 
 Si tenés 30-45 minutos para leerlo y mandarme feedback antes de
@@ -75,7 +75,7 @@ Tres hallazgos que pueden ser de su interés:
 
 Adjunto el manuscrito (paper.pdf, ~10 páginas).
 Código, datos, ground-truth y bitácoras experimentales están en
-[REPO_URL] bajo licencia MIT (código) y CC-BY-4.0 (datos).
+https://github.com/nicourrutia98/sociedad-opita bajo licencia MIT (código) y CC-BY-4.0 (datos).
 
 Si pudiera leerlo y enviarme comentarios antes del [fecha tentativa,
 ej. 2026-07-05], sería invaluable. Estoy particularmente
@@ -137,7 +137,7 @@ dominant predictor of information-diffusion super-spreaders
 
 The manuscript is attached (paper.pdf, ~10 pages).
 Code, data, ground-truth, and experimental logs are public at:
-[REPO_URL]
+https://github.com/nicourrutia98/sociedad-opita
 License: MIT (code), CC-BY-4.0 (data).
 
 **Requested feedback**
@@ -186,7 +186,7 @@ Three empirical findings:
 • Structural centrality > psychology for predicting super-spreaders
   (r = -0.54, betweenness vs Openness)
 
-Paper + code + data: [REPO_URL]
+Paper + code + data: https://github.com/nicourrutia98/sociedad-opita
 
 Would value feedback from anyone working on cultural NLP,
 agent-based simulation, or AI fairness. Replies welcome.
@@ -201,7 +201,7 @@ agent-based simulation, or AI fairness. Replies welcome.
 native-validated benchmark for LLM-driven social simulation in a
 Latin American rural Spanish dialect (opita, Huila, Colombia).
 
-Paper + code + data: [REPO_URL]
+Paper + code + data: https://github.com/nicourrutia98/sociedad-opita
 
 2/ Why this matters: existing LLM social-simulation benchmarks
 (Stanford Generative Agents, AI Town, Concordia) are structurally
@@ -247,7 +247,7 @@ Feedback welcome: nicourrutia98.
 
 - [ ] PDF final revisado (paper.pdf, 222 KB)
 - [ ] Repo público creado en github.com/nicourrutia98/sociedad-opita
-- [ ] URL del repo pegada en cada template donde dice [REPO_URL]
+- [ ] URL del repo pegada en cada template donde dice https://github.com/nicourrutia98/sociedad-opita
 - [ ] ORCID registrado y link en footer
 - [ ] Lista de 5-10 candidatos a reviewer (ver outreach-day4.md)
 - [ ] Personalizar campos [nombre], [tema específico suyo], [fecha tentativa]

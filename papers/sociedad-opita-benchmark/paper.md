@@ -3,10 +3,10 @@
 **Author:** Juan Nicolás Urrutia Salcedo
 **Affiliation:** Independent Researcher · Founder & CEO, Opita Code · Neiva, Huila, Colombia
 **Contact:** GitHub @nicourrutia98 · Instagram @nico98urrutia · https://developer.opitacode.com
-**ORCID:** forthcoming
+**ORCID:** [forthcoming — registered at https://orcid.org/register] (16-digit iD added upon completion)
 **Date:** 2026-06-19
 **Target venues:** arXiv preprint (cs.CY primary, cs.CL/cs.MA secondary; immediate), CSCW 2026 (late-breaking work), IC2S2 2027, FAccT 2027, ACL 2027 cultural-NLP track
-**Code & data:** https://github.com/nicourrutia98 (forthcoming public release)
+**Code & data:** https://github.com/nicourrutia98/sociedad-opita
 **License:** MIT for code; CC-BY-4.0 for dialogue corpora and biographical data
 
 **Authorship statement.** Juan Nicolás Urrutia Salcedo is the sole author of this manuscript. He is Founder & CEO of Opita Code, a software studio in Neiva, Huila (Colombia) that builds production software for the Colombian and Latin American markets. He graduated from Universidad Surcolombiana and is a native speaker of the *opita* dialect of rural Huila. He is the sole validator of the 10-dialogue ground-truth corpus (Section 4.1); this is a declared limitation and the explicit motivation for the call in Section 6 to expand the ground truth with additional native and academic reviewers. AI tools were used as assistance under his direction in three roles (simulation LLM, software-development assistant, manuscript-preparation assistant); their role is disclosed categorically in Section 8 (*AI Assistance Disclosure*).
