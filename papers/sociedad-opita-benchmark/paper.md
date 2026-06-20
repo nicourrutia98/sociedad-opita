@@ -2,8 +2,8 @@
 
 **Author:** Juan Nicolás Urrutia Salcedo
 **Affiliation:** Independent Researcher · Founder & CEO, Opita Code · Neiva, Huila, Colombia
-**Contact:** GitHub @nicourrutia98 · Instagram @nico98urrutia · https://developer.opitacode.com
-**ORCID:** [forthcoming — registered at https://orcid.org/register] (16-digit iD added upon completion)
+**Contact:** GitHub @nicourrutia98 · Instagram @nico98urrutia · https://developer.opitacode.com · arXiv `Opitadev`
+**ORCID:** [0009-0009-5808-479X](https://orcid.org/0009-0009-5808-479X)
 **Date:** 2026-06-19
 **Target venues:** arXiv preprint (cs.CY primary, cs.CL/cs.MA secondary; immediate), CSCW 2026 (late-breaking work), IC2S2 2027, FAccT 2027, ACL 2027 cultural-NLP track
 **Code & data:** https://github.com/nicourrutia98/sociedad-opita
