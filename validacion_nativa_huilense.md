@@ -20,7 +20,7 @@ Estos 10 diálogos son ahora la **línea base validada**. Los nuevos diálogos g
 ## Cómo usar este archivo
 
 1. Si vas a modificar el prompt cultural o los perfiles de agentes, primero mira estos 10 diálogos.
-2. Genera nuevos diálogos con el script `simulacion_sociedad_completa.py`.
+2. Genera nuevos diálogos con el script `simulacion_v3_geografica.py` (es el generador activo; las versiones `simulacion_v2.py`, `simulacion_2026.py` y `simulacion_sociedad_completa.py` están deprecadas y archivadas como referencia histórica).
 3. Compara los nuevos con estos 10. Si divergen significativamente, vuelve a validar.
 4. Para registrar una nueva validación, edita `VALIDATION_LOG.md`.
 

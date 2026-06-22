@@ -27,8 +27,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests with coverage
+        # Camino B: pytest --cov sin argumentos toma source del pyproject.toml,
+        # que ya apunta solo a código commiteado (api/, core/, deploy/ no entran).
         run: |
-          pytest tests/ -v --cov=core --cov=city_factory --cov=api --cov-report=xml --cov-report=term-missing
+          pytest tests/ -v --cov --cov-report=xml --cov-report=term-missing
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4

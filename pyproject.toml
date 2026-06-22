@@ -53,8 +53,22 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["core", "city_factory", "api"]
-omit = ["tests/*", "demo_output/*"]
+# Camino B: medir SOLO código commiteado. Los módulos internos (api/, deploy/,
+# panel_control, demo, dashboard_reloj, perfiles_psicometricos, ninos_tello, las
+# 3 simulaciones deprecated) viven en .gitignore y no entran en coverage.
+source = [
+    "city_factory",
+    "analysis",
+    "experimentos",
+    "geo_tello",
+    "motor_simulacion",
+    "multi_client",
+    "prompt_builder",
+    "reloj",
+    "experimento",
+    "simulacion_v3_geografica",
+]
+omit = ["tests/*", "demo_output/*", "run_all_tests.py"]
 
 [tool.coverage.report]
 exclude_lines = [

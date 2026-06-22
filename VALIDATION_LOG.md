@@ -78,10 +78,10 @@ Cuando se agreguen:
 ## Relación con otros archivos
 
 - `validacion_nativa_huilense.md` — Contiene los 10 diálogos validados como referencia
-- `docs/PLAN-SIMULACION-NEIVA.md` — Documento maestro (referencia histórica)
+- `docs/PLAN-SIMULACION-NEIVA.md` — Documento maestro (referencia histórica; NO commiteado — interno)
 - `docs/agentes/01-biografias.md` — Perfiles (8 capas forenses)
 - `docs/agentes/02-prompt-cultural.md` — Prompt cultural
-- `simulacion_sociedad_completa.py` — Generador de diálogos comparables
+- `simulacion_v3_geografica.py` — **Generador activo de diálogos comparables** (las 3 simulaciones deprecated — `simulacion_v2.py`, `simulacion_2026.py`, `simulacion_sociedad_completa.py` — están archivadas como referencia histórica y NO se commitean)
 
 ---
 
