@@ -254,15 +254,19 @@ class TestDistribucionLomnitz:
         total = sum(result[k]["pct"] for k in ["A", "B", "C"])
         assert total == pytest.approx(100.0, abs=0.01)
 
-    def test_empty_distribution_raises_division_by_zero(self):
-        """BUG DOCUMENTADO: distribucion_lomnitz() crashea con n=0
-        (división por cero). El código no valida n>0 antes de calcular pct.
-        Test verifica el comportamiento actual (que es un bug latente).
+    def test_empty_distribution_retorna_ceros_sin_crash(self):
+        """distribucion_lomnitz() debe manejar n=0 sin division por cero.
+
+        Si PERFILES_ADULTOS esta vacio, retorna las 3 categorias con
+        n=0 y pct=0.0. Antes del fix (s1-cimientos), lanzaba ZeroDivisionError.
         """
         mock_empty = SimpleNamespace(PERFILES_ADULTOS={})
         with patch("analysis.estadistica.pp", mock_empty):
-            with pytest.raises(ZeroDivisionError):
-                distribucion_lomnitz()
+            result = distribucion_lomnitz()
+
+        for cat in ("A", "B", "C"):
+            assert result[cat]["n"] == 0
+            assert result[cat]["pct"] == 0.0
 
 
 # ======================================================================

@@ -280,7 +280,9 @@ def generar_best_of_n(nombres_agentes, n=3, escena_fn=None, output_dir=None):
 
     # Guardar
     if output_dir is None:
-        output_dir = Path(r'C:\Users\nicou\Documents\IA\AGENTE\generative\demo_output')
+        # Path portable: directorio raiz del repo / demo_output
+        # (best_of_n.py vive en analysis/, asi que subimos un nivel)
+        output_dir = Path(__file__).resolve().parent.parent / "demo_output"
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 

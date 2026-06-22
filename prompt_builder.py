@@ -29,7 +29,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
-PROJECT_ROOT = Path(r"C:\Users\nicou\Documents\IA\AGENTE\generative")
+# Rutas portables basadas en la ubicacion del archivo, no hardcodeadas.
+# PROJECT_ROOT = directorio raiz del repo (donde vive este archivo).
+PROJECT_ROOT = Path(__file__).resolve().parent
 BIOGRAFIAS_PATH = PROJECT_ROOT / "docs" / "agentes" / "01-biografias.md"
 CULTURAL_PROMPT_PATH = PROJECT_ROOT / "docs" / "agentes" / "02-prompt-cultural.md"
 ENGRAM_PROJECT = "generative"  # match opencode's project detection
@@ -50,7 +52,7 @@ except ImportError:
 # en el few-shot para cada perfil especifico.
 try:
     import json as _json
-    _MULETILLAS_PATH = Path(r"C:\Users\nicou\Documents\IA\AGENTE\generative\demo_output\perfiles_muletillas.json")
+    _MULETILLAS_PATH = PROJECT_ROOT / "demo_output" / "perfiles_muletillas.json"
     if _MULETILLAS_PATH.exists():
         _VOICES_DATA = _json.loads(_MULETILLAS_PATH.read_text(encoding='utf-8'))
     else:
@@ -113,6 +115,32 @@ class Agent:
         return f"agent/{self.slug()}/identity"
 
     def slug(self) -> str:
+        """Convierte el nombre legible en un identificador URL-safe.
+
+        Reglas:
+          1. lowercase.
+          2. Remueve titulos al inicio: don, doña/dona, maestro/a, padre,
+             madre, profesor/a.
+          3. Regex `[^a-z0-9\\s-]` elimina TODO lo que no sea ASCII,
+             INCLUIDAS tildes y acentos (no son ASCII). Esto significa
+             que 'Don Eliécer' se convierte en 'elicer' (no 'elicer'),
+             porque 'é' se filtra antes del join con guiones.
+          4. Espacios colapsados a un guion.
+
+        QUIRK CONOCIDO: el orden de las operaciones hace que el titulo
+        NO aparezca en el slug. Ejemplos:
+
+            Don Fabio             -> fabio
+            Don Eliécer           -> elicer    (NO don-elicer NI elicer)
+            Don Eliécer (el patrón) -> elicer-el-patrn
+                                        (sin tildes, sin parentesis)
+
+        Si necesitas preservar el titulo, usa un campo `name_alias`
+        explicito en vez de regenerar el slug. Ver tests/test_prompt_builder.py
+        TestAgent::test_slug para los casos canónicos.
+
+        Ver tambien: regex `[^a-z0-9\\s-]` (no incluye acentos).
+        """
         # Don Fabio -> don-fabio, Jhon Fredy -> jhon-fredy
         s = self.name.lower()
         # remover títulos
@@ -131,7 +159,13 @@ class EngramStore:
 
     def __init__(self, db_path: str = None):
         if db_path is None:
-            db_path = r"C:\Users\nicou\.engram\engram.db"
+            # Path portable: ~/.engram/engram.db (directorio home del usuario)
+            # Override con variable de entorno ENGRAM_DB_PATH si se necesita.
+            import os
+            db_path = os.environ.get(
+                "ENGRAM_DB_PATH",
+                str(Path.home() / ".engram" / "engram.db"),
+            )
         self.db_path = db_path
         # verificar
         Path(db_path).touch()  # no-op si existe
@@ -186,8 +220,8 @@ class EngramStore:
         con = self._conn()
         try:
             import datetime
-            now = datetime.datetime.utcnow().isoformat() + "Z"
-            sync_id = f"obs-neiva-{agent.slug()}-{int(datetime.datetime.utcnow().timestamp())}"
+            now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+            sync_id = f"obs-neiva-{agent.slug()}-{int(datetime.datetime.now(datetime.timezone.utc).timestamp())}"
             cur = con.execute("""
                 INSERT INTO observations
                   (sync_id, session_id, type, title, content, project, scope,

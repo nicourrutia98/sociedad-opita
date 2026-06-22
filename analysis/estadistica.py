@@ -104,14 +104,21 @@ def estadistica_descriptiva():
 
 
 def distribucion_lomnitz():
-    """Cuenta agentes por categoria Lomnitz default."""
+    """Cuenta agentes por categoria Lomnitz default.
+
+    Si PERFILES_ADULTOS esta vacio, retorna las 3 categorias con n=0 y
+    pct=0 (sin division por cero). Caso real: si un perfil psicometrico
+    nuevo no incluye ningun adulto, el reporte sigue funcionando.
+    """
     perfiles = pp.PERFILES_ADULTOS
     cats = Counter(p["lomnitz_default"] for p in perfiles.values())
     n = len(perfiles)
+    # Evitar division por cero cuando n=0 (sin perfiles cargados).
+    divisor = n if n > 0 else 1
     return {
-        "A": {"n": cats.get("A", 0), "pct": cats.get("A", 0) / n * 100},
-        "B": {"n": cats.get("B", 0), "pct": cats.get("B", 0) / n * 100},
-        "C": {"n": cats.get("C", 0), "pct": cats.get("C", 0) / n * 100},
+        "A": {"n": cats.get("A", 0), "pct": cats.get("A", 0) / divisor * 100},
+        "B": {"n": cats.get("B", 0), "pct": cats.get("B", 0) / divisor * 100},
+        "C": {"n": cats.get("C", 0), "pct": cats.get("C", 0) / divisor * 100},
     }
 
 
