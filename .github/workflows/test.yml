@@ -27,10 +27,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests with coverage
-        # Camino B: pytest --cov sin argumentos toma source del pyproject.toml,
-        # que ya apunta solo a código commiteado (api/, core/, deploy/ no entran).
+        # Camino B: coverage corre directamente, no via pytest-cov, para
+        # evitar incompatibilidades entre pytest-cov 5+ (que requiere
+        # `display_covered` de coverage 7.1+) y coverage 6.x.
+        # La lista de modulos se toma del pyproject.toml [tool.coverage.run].
+        # Ver pyproject.toml dev-deps para mas detalle.
         run: |
-          pytest tests/ -v --cov --cov-report=xml --cov-report=term-missing
+          coverage run --source=city_factory,analysis,experimentos,geo_tello,motor_simulacion,multi_client,prompt_builder,reloj,experimento,simulacion_v3_geografica -m pytest tests/ -v
+          coverage report -m
+          coverage xml -o coverage.xml
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
