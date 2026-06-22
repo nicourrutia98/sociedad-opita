@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora del proyecto — Sociedad Opita</title>
+    <meta name="description" content="Memoria pública del proyecto Sociedad Opita. Qué cambió, por qué, y qué aprendimos. 1 entrada por sprint cerrado, en orden inverso.">
+    <meta name="author" content="Juan Nicolás Urrutia Salcedo">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ============== BITACORA-SPECIFIC STYLES ============== */
+        .version-block {
+            background: #fff;
+            border: 1px solid #d7ccc8;
+            border-left: 4px solid #6b3e2e;
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .version-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            background: #ede5d4;
+            color: #6b3e2e;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-family: 'Courier New', monospace;
+            margin-right: 0.5rem;
+        }
+        .version-badge.actual {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .version-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.4rem;
+            margin-bottom: 0.3rem;
+        }
+        .version-header h2 {
+            margin: 0;
+            font-size: 1.35rem;
+        }
+        .version-subtitle {
+            font-size: 0.95rem;
+            color: #5d4037;
+            margin: 0 0 0.6rem 0;
+        }
+        .version-metrics {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #5d4037;
+            background: #ede5d4;
+            padding: 0.4rem 0.7rem;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+        .outcome-humano {
+            background: #faf7f2;
+            border-left: 3px solid #6b3e2e;
+            padding: 0.7rem 0.9rem;
+            margin: 0.8rem 0;
+            font-size: 1rem;
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+        .audience-card {
+            background: #faf7f2;
+            border: 1px solid #d7ccc8;
+            border-radius: 4px;
+            padding: 0.9rem 1rem;
+        }
+        .audience-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            font-size: 1.05rem;
+            color: #6b3e2e;
+        }
+        .audience-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        .bitacora-category {
+            margin: 0.8rem 0;
+        }
+        .bitacora-category h3 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            color: #5d4037;
+        }
+        .bitacora-category ul {
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+        }
+        .bitacora-category li {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+        .pre-version-block {
+            background: #faf7f2;
+            border: 1px solid #d7ccc8;
+            border-radius: 4px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .pre-version-block h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        .pre-version-block li {
+            margin-bottom: 0.7rem;
+            font-size: 0.97rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bitácora del proyecto</h1>
+        <p class="subtitle">Qué ha cambiado desde que empezamos. En orden inverso.</p>
+        <p class="meta">1 entrada por sprint · sin spam · sin marketing · solo lo que pasó</p>
+    </header>
+
+    <nav class="info-nav">
+        <a href="index.html">← Inicio</a>
+        <a href="index_game.html">Explorar mapa</a>
+        <a href="about.html">Acerca</a>
+        <a href="methodology.html">Metodología</a>
+        <a href="limitations.html">Limitaciones</a>
+        <a href="ethics.html">Ética</a>
+        <a href="for-researchers.html">Para investigadores</a>
+        <a href="bitacora.html" class="active">Bitácora</a>
+    </nav>
+
+    <main>
+        <!-- ============== SECTION 0 — INTRO ============== -->
+        <section class="info-hero">
+            <p>
+                Esta bitácora es la memoria pública del proyecto. Si vienes del
+                mundo técnico, ya sabes lo que es un registro de cambios. Aquí
+                le llamamos bitácora porque cada cambio cuenta una historia del
+                pueblo, no solo del código. 1 entrada por sprint cerrado.
+            </p>
+        </section>
+
+        <!-- ============== SECTION 1 — v1.0.0 — s1-cimientos ============== -->
+        <section>
+            <h2>Versiones</h2>
+
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-badge actual">ACTUAL</span>
+                    <h2>[v1.0.0] — 22 de junio de 2026</h2>
+                </div>
+                <p class="version-subtitle">Sprint s1-cimientos cerrado</p>
+                <div class="version-metrics">
+                    381 tests ✓ · 91% cobertura · 12 commits · +323 tests vs versión anterior
+                </div>
+
+                <div class="outcome-humano">
+                    El proyecto ahora se puede clonar, instalar y correr los tests
+                    sin tener que configurar nada especial. Y el pueblo se documenta
+                    con 41 personas, no 29.
+                </div>
+
+                <div class="audience-grid">
+                    <div class="audience-card pueblo">
+                        <h3>🏘️ Para el pueblo</h3>
+                        <p>
+                            15 niños ahora forman parte del monumento. Tienen nombre,
+                            casa, colegio y temperamento registrados — sin invenciones,
+                            con datos documentados. El pueblo completo (adultos + niños)
+                            pasa de 29 a 41 personas.
+                        </p>
+                    </div>
+
+                    <div class="audience-card investigador">
+                        <h3>🔬 Para investigadores</h3>
+                        <p>
+                            El código ahora tiene 91% de cobertura de tests, lo que
+                            significa que las simulaciones son reproducibles y
+                            verificables. Los datos siguen disponibles en 6 formatos
+                            exportables. Cita BibTeX, APA, MLA y Chicago ya están
+                            documentadas.
+                        </p>
+                    </div>
+
+                    <div class="audience-card dev">
+                        <h3>⚙️ Para devs</h3>
+                        <p>
+                            El repo pasó de 58 a 381 tests automatizados (+323).
+                            La deuda técnica está documentada y arreglada: imports
+                            opcionales con fallback, paths portables, datetime
+                            moderno, sin divisiones por cero en distribuciones
+                            estadísticas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ============== Detalle por categoría ============== -->
+                <div class="bitacora-category">
+                    <h3>✨ Agregado</h3>
+                    <ul>
+                        <li>
+                            13 archivos antes sin tests ahora cubiertos al 60-100%
+                            (<code>analysis/red_centralidad.py</code> 99%,
+                            <code>analysis/red_con_perfiles.py</code> 98%,
+                            <code>analysis/best_of_n.py</code> 97%,
+                            <code>prompt_builder.py</code> 91%,
+                            <code>multi_client.py</code> 98%,
+                            <code>motor_simulacion.py</code> 61%,
+                            <code>analysis/estadistica.py</code> 74%,
+                            <code>experimentos/conflict_escalation.py</code> 100%,
+                            <code>experimentos/manipulation_campaign.py</code> 100%,
+                            <code>experimentos/empathy_roleplay.py</code> 100%,
+                            <code>experimentos/gossip_propagation.py</code> 99%,
+                            <code>tests/test_*.py</code> 12 archivos nuevos).
+                        </li>
+                        <li>
+                            3 módulos internos ahora commiteados:
+                            <code>perfiles_psicometricos.py</code> (26 adultos con Big Five),
+                            <code>dashboard_reloj.py</code>,
+                            <code>ninos_tello.py</code> (15 niños ficticios).
+                        </li>
+                        <li>
+                            Página de aterrizaje re-arquitecturada con base en OSINT
+                            psicológico (3 arquetipos de visitante, 5-second test,
+                            badges de mantenimiento visible).
+                        </li>
+                        <li>
+                            <strong>Bitácora del proyecto</strong> (esta página).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bitacora-category">
+                    <h3>🔧 Cambiado</h3>
+                    <ul>
+                        <li>
+                            Imports opcionales con <code>try/except ImportError</code>
+                            + guards en 8 archivos del repo.
+                        </li>
+                        <li>
+                            Helper <code>_get_perfiles()</code> para snapshot en
+                            tiempo de llamada (preserva compatibilidad con
+                            <code>monkeypatch</code> en tests).
+                        </li>
+                        <li>
+                            Paths relativos portables
+                            (<code>Path(__file__).resolve().parent</code> y
+                            <code>Path.home()</code> para engram).
+                        </li>
+                        <li>
+                            <code>.github/workflows/deploy.yml</code> ya no dispara
+                            automático en push a <code>main</code> (deploy es manual
+                            via <code>bootstrap.sh</code> + <code>lambda_deploy.py</code>).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bitacora-category">
+                    <h3>🐛 Arreglado</h3>
+                    <ul>
+                        <li>
+                            <code>datetime.utcnow()</code> deprecation →
+                            <code>datetime.now(timezone.utc)</code> en 4 lugares.
+                        </li>
+                        <li>
+                            <code>ZeroDivisionError</code> en
+                            <code>distribucion_lomnitz()</code> y
+                            <code>distribucion_dunbar()</code> (divisor guard).
+                        </li>
+                        <li>
+                            <code>pytest-cov display_covered</code> import error en CI
+                            (cambiado a <code>coverage run</code> directo en
+                            <code>.github/workflows/test.yml</code>).
+                        </li>
+                        <li>
+                            <code>Agent.slug()</code> quirks documentados en
+                            docstring (orden de regex, stripping de tildes).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bitacora-category">
+                    <h3>📚 Documentado</h3>
+                    <ul>
+                        <li>
+                            Sprint s1-cimientos (12 commits) en <code>dark-mem</code>
+                            con topic_key
+                            <code>sdd/sociedad-opita/sprint-s1-cimientos-progress</code>.
+                        </li>
+                        <li>
+                            Esta landing v2 en <code>dark-mem</code> con topic_key
+                            <code>sdd/sociedad-opita/landing-v2-osint</code>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============== SECTION 2 — Pre-1.0 (narrativo) ============== -->
+        <section>
+            <div class="pre-version-block">
+                <h2>[Pre-1.0] — Primer semestre 2026</h2>
+                <p>
+                    Antes de los sprints numerados, el proyecto creció durante los
+                    primeros meses de 2026 con trabajo de campo en Tello, Huila, y
+                    con el desarrollo iterativo de las simulaciones. Aquí están los
+                    hitos principales, sin numeración técnica:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Q1 2026 — Los 26 perfiles psicométricos de adultos.</strong>
+                        Construidos con observación directa, entrevistas a nativos y
+                        referencias académicas (Costa &amp; McCrae 1992 para Big Five;
+                        Lomnitz 1975 para reciprocidad rural; Dunbar 1992 para capas
+                        de intimidad).
+                    </li>
+                    <li>
+                        <strong>Q1-Q2 2026 — El prompt sociolingüístico de 7 capas +
+                        13 reglas anti-AI-slop.</strong> Validadas con 10 diálogos
+                        ground-truth grabados con hablantes nativos del opita.
+                    </li>
+                    <li>
+                        <strong>Mayo 2026 — Los 4 experimentos reproducibles.</strong>
+                        Chismes, escalada de conflicto, campaña de manipulación, juego
+                        de empatía. Cada uno con su script de validación.
+                    </li>
+                    <li>
+                        <strong>Junio 2026 — Paper forthcoming.</strong> El paper
+                        académico que documenta la metodología está en preparación
+                        para arXiv cs.CY. Mientras tanto, esta bitácora + la sección
+                        de metodología del sitio son la documentación pública.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Sociedad Opita — herramienta forense · Sin fines de lucro ·
+            Datos abiertos · Código abierto
+        </p>
+        <p class="meta">
+            <a href="about.html">Acerca</a> ·
+            <a href="methodology.html">Metodología</a> ·
+            <a href="limitations.html">Limitaciones</a> ·
+            <a href="ethics.html">Ética</a> ·
+            <a href="for-researchers.html">Para investigadores</a> ·
+            <a href="bitacora.html">Bitácora</a>
+        </p>
+        <p class="meta">
+            <strong>Código:</strong> <a href="LICENSE">MIT License</a> ·
+            <strong>Contenido:</strong> CC-BY-SA 4.0 ·
+            <strong>Repo:</strong>
+            <a href="https://github.com/nicourrutia98/sociedad-opita" class="repo-link">github.com/nicourrutia98/sociedad-opita</a>
+        </p>
+        <p class="meta">
+            <strong>Cita:</strong> <a href="for-researchers.html#cita">BibTeX, APA, MLA, Chicago</a> ·
+            <strong>Contacto:</strong> vía GitHub Issues
+        </p>
+    </footer>
+</body>
+</html>
