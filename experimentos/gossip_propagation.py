@@ -67,7 +67,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from reloj import Reloj, formatear_dia, formatear_hora
 from experimento import Experimento, Escenario
-from dashboard_reloj import Dashboard
+try:
+    from dashboard_reloj import Dashboard
+    _HAVE_DASHBOARD = True
+except ImportError:
+    Dashboard = None
+    _HAVE_DASHBOARD = False
 
 
 def parsear_args():
@@ -250,10 +255,13 @@ def main():
         print(f"\n[EXPORT] {ruta}")
 
         # Renderizar dashboard PNG
-        d = Dashboard(exp)
-        ruta_png = d.render_png()
-        if ruta_png:
-            print(f"  Dashboard PNG: {ruta_png}")
+        d = Dashboard(exp) if _HAVE_DASHBOARD and Dashboard is not None else None
+        if d is not None:
+            ruta_png = d.render_png()
+            if ruta_png:
+                print(f"  Dashboard PNG: {ruta_png}")
+        else:
+            print("  Dashboard PNG: [skip] dashboard_reloj no disponible")
 
     print()
     print("=" * 70)

@@ -58,7 +58,14 @@ import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
 
-import perfiles_psicometricos as pp
+# perfiles_psicometricos es opcional. Si no esta disponible (ej. CI minima),
+# pp.PERFILES_ADULTOS queda como {} y unir_red_con_perfiles() retorna [].
+try:
+    import perfiles_psicometricos as pp
+    _HAVE_PERFILES = True
+except ImportError:
+    pp = None
+    _HAVE_PERFILES = False
 from geo_tello import AGENTES_GEO
 from analysis.red_centralidad import (
     construir_red, calcular_centralidad, top_super_spreaders
@@ -89,13 +96,15 @@ NOMBRES_CORTOS = {
 def unir_red_con_perfiles(G, metricas):
     """Para cada nodo adulto con perfil, agrega los rasgos Big Five + Lomnitz."""
     nodos_unidos = []
+    # Snapshot en tiempo de llamada: respeta monkeypatch de pp.PERFILES_ADULTOS
+    perfiles = pp.PERFILES_ADULTOS if pp is not None else {}
     for nodo in G.nodes():
         # Solo adultos con perfil psicometrico
         if G.nodes[nodo].get("tipo") != "adulto":
             continue
-        if nodo not in pp.PERFILES_ADULTOS:
+        if nodo not in perfiles:
             continue
-        perfil = pp.PERFILES_ADULTOS[nodo]
+        perfil = perfiles[nodo]
         centralidad = metricas.get(nodo, {})
         nodos_unidos.append({
             "slug": nodo,

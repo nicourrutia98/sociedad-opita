@@ -49,7 +49,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from experimento import Experimento, Escenario
-from dashboard_reloj import Dashboard
+try:
+    from dashboard_reloj import Dashboard
+    _HAVE_DASHBOARD = True
+except ImportError:
+    Dashboard = None
+    _HAVE_DASHBOARD = False
 
 
 def parsear_args():
@@ -232,10 +237,13 @@ def main():
     for exp in experimentos:
         ruta = exp.exportar(comprimir=True)
         print(f"[EXPORT] {ruta}")
-        d = Dashboard(exp)
-        ruta_png = d.render_png()
-        if ruta_png:
-            print(f"  Dashboard: {ruta_png}")
+        d = Dashboard(exp) if _HAVE_DASHBOARD and Dashboard is not None else None
+        if d is not None:
+            ruta_png = d.render_png()
+            if ruta_png:
+                print(f"  Dashboard: {ruta_png}")
+        else:
+            print("  Dashboard: [skip] dashboard_reloj no disponible")
 
     print()
     print("EXPERIMENTO COMPLETADO.")

@@ -56,7 +56,12 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from reloj import formatear_dia, formatear_hora
 from experimento import Experimento, Escenario
-from dashboard_reloj import Dashboard
+try:
+    from dashboard_reloj import Dashboard
+    _HAVE_DASHBOARD = True
+except ImportError:
+    Dashboard = None
+    _HAVE_DASHBOARD = False
 
 
 # Estados del conflicto
@@ -264,11 +269,14 @@ def main():
         ruta = exp.exportar(comprimir=True)
         print(f"[EXPORT] {ruta}")
 
-        # Dashboard PNG
-        d = Dashboard(exp)
-        ruta_png = d.render_png()
-        if ruta_png:
-            print(f"  Dashboard: {ruta_png}")
+        # Dashboard PNG (opcional — requiere dashboard_reloj)
+        if _HAVE_DASHBOARD and Dashboard is not None:
+            d = Dashboard(exp)
+            ruta_png = d.render_png()
+            if ruta_png:
+                print(f"  Dashboard: {ruta_png}")
+        else:
+            print("  Dashboard: [skip] dashboard_reloj no disponible")
 
     print()
     print("EXPERIMENTO COMPLETADO.")
