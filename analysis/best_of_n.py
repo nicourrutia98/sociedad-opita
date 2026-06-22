@@ -43,7 +43,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import json
 import time
 from motor_simulacion import SimulationEngine, Scene
-import perfiles_psicometricos as pp
+# perfiles_psicometricos es opcional. Si no esta disponible (ej. CI minima),
+# generar_best_of_n() omitira agentes sin perfil y retornara resultados vacios.
+try:
+    import perfiles_psicometricos as pp
+    _HAVE_PERFILES = True
+except ImportError:
+    pp = None
+    _HAVE_PERFILES = False
 
 
 # ============================================================================
@@ -234,7 +241,8 @@ def generar_best_of_n(nombres_agentes, n=3, escena_fn=None, output_dir=None):
             continue
         # Buscar perfil para scoring
         perfil_slug = SLUG_BIO_TO_PERFIL.get(slug)
-        perfil = pp.PERFILES_ADULTOS.get(perfil_slug) if perfil_slug else None
+        perfiles = pp.PERFILES_ADULTOS if pp is not None else {}
+        perfil = perfiles.get(perfil_slug) if perfil_slug else None
         if not perfil:
             print(f'  [skip] {nombre_key}: no encontre perfil para slug={slug}')
             continue
@@ -280,7 +288,9 @@ def generar_best_of_n(nombres_agentes, n=3, escena_fn=None, output_dir=None):
 
     # Guardar
     if output_dir is None:
-        output_dir = Path(r'C:\Users\nicou\Documents\IA\AGENTE\generative\demo_output')
+        # Path portable: directorio raiz del repo / demo_output
+        # (best_of_n.py vive en analysis/, asi que subimos un nivel)
+        output_dir = Path(__file__).resolve().parent.parent / "demo_output"
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 

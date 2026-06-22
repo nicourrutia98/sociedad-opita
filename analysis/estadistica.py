@@ -58,7 +58,28 @@ from collections import Counter
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-import perfiles_psicometricos as pp
+# perfiles_psicometricos es opcional. Si no esta disponible (ej. CI minima),
+# las funciones que dependen de el (distribucion_lomnitz, distribucion_dunbar,
+# etc.) retornaran resultados vacios sin crashear.
+try:
+    import perfiles_psicometricos as pp
+    _HAVE_PERFILES = True
+except ImportError:
+    pp = None
+    _HAVE_PERFILES = False
+
+
+def _get_perfiles():
+    """Retorna pp.PERFILES_ADULTOS o {} si el modulo no esta disponible.
+
+    Evalua en cada llamada (no en import-time) para que monkeypatch de
+    pp.PERFILES_ADULTOS en tests funcione correctamente.
+    """
+    if pp is None:
+        return {}
+    return pp.PERFILES_ADULTOS
+
+
 import numpy as np
 
 # ============================================================================
@@ -81,7 +102,7 @@ BASE_COLOMBIA = {"O": 47, "C": 44, "E": 50, "A": 47, "N": 52}
 
 def estadistica_descriptiva():
     """Calcula estadistica descriptiva por factor Big Five."""
-    perfiles = pp.PERFILES_ADULTOS
+    perfiles = _get_perfiles()
     n = len(perfiles)
 
     resultados = {}
@@ -104,20 +125,27 @@ def estadistica_descriptiva():
 
 
 def distribucion_lomnitz():
-    """Cuenta agentes por categoria Lomnitz default."""
-    perfiles = pp.PERFILES_ADULTOS
+    """Cuenta agentes por categoria Lomnitz default.
+
+    Si PERFILES_ADULTOS esta vacio, retorna las 3 categorias con n=0 y
+    pct=0 (sin division por cero). Caso real: si un perfil psicometrico
+    nuevo no incluye ningun adulto, el reporte sigue funcionando.
+    """
+    perfiles = _get_perfiles()
     cats = Counter(p["lomnitz_default"] for p in perfiles.values())
     n = len(perfiles)
+    # Evitar division por cero cuando n=0 (sin perfiles cargados).
+    divisor = n if n > 0 else 1
     return {
-        "A": {"n": cats.get("A", 0), "pct": cats.get("A", 0) / n * 100},
-        "B": {"n": cats.get("B", 0), "pct": cats.get("B", 0) / n * 100},
-        "C": {"n": cats.get("C", 0), "pct": cats.get("C", 0) / n * 100},
+        "A": {"n": cats.get("A", 0), "pct": cats.get("A", 0) / divisor * 100},
+        "B": {"n": cats.get("B", 0), "pct": cats.get("B", 0) / divisor * 100},
+        "C": {"n": cats.get("C", 0), "pct": cats.get("C", 0) / divisor * 100},
     }
 
 
 def distribucion_dunbar():
     """Estadisticas de las capas Dunbar (intimos=5, buenos=15)."""
-    perfiles = pp.PERFILES_ADULTOS
+    perfiles = _get_perfiles()
     # Asimetria: cuenta enlaces unicos (grafo dirigido)
     enlaces_intimos = set()
     enlaces_buenos = set()
@@ -164,7 +192,7 @@ def distribucion_dunbar():
             "auto_referencias": auto_intimos,
             "reciprocos": reciprocos_intimos,
             "asimetricos": asimetria_intimos,
-            "pct_asimetria": asimetria_intimos / len(enlaces_intimos) * 100,
+            "pct_asimetria": (asimetria_intimos / len(enlaces_intimos) * 100) if enlaces_intimos else 0.0,
             "in_degree_top": in_degree_intimos.most_common(5),
             "out_degree_top": out_degree_intimos.most_common(5),
         },
@@ -174,7 +202,7 @@ def distribucion_dunbar():
             "auto_referencias": auto_buenos,
             "reciprocos": reciprocos_buenos,
             "asimetricos": asimetria_buenos,
-            "pct_asimetria": asimetria_buenos / len(enlaces_buenos) * 100,
+            "pct_asimetria": (asimetria_buenos / len(enlaces_buenos) * 100) if enlaces_buenos else 0.0,
             "in_degree_top": in_degree_buenos.most_common(5),
             "out_degree_top": out_degree_buenos.most_common(5),
         },
@@ -310,7 +338,7 @@ def comparar_lomnitz(descriptiva=None):
     if descriptiva is None:
         descriptiva = estadistica_descriptiva()
 
-    perfiles = pp.PERFILES_ADULTOS
+    perfiles = _get_perfiles()
 
     # Agrupa scores por Lomnitz
     grupos = {"A": [], "B": [], "C": []}
@@ -362,9 +390,10 @@ def comparar_lomnitz(descriptiva=None):
     print(f"{'Factor':<14}{'A vs B (p)':>14}{'A vs C (p)':>14}{'B vs C (p)':>14}")
     print("-" * 60)
     for factor in FACTORES:
-        scores_a = [pp.PERFILES_ADULTOS[s]["big_five"][factor] for s in grupos["A"]]
-        scores_b = [pp.PERFILES_ADULTOS[s]["big_five"][factor] for s in grupos["B"]]
-        scores_c = [pp.PERFILES_ADULTOS[s]["big_five"][factor] for s in grupos["C"]]
+        perfiles = _get_perfiles()
+        scores_a = [perfiles[s]["big_five"][factor] for s in grupos["A"]]
+        scores_b = [perfiles[s]["big_five"][factor] for s in grupos["B"]]
+        scores_c = [perfiles[s]["big_five"][factor] for s in grupos["C"]]
         u_ab, p_ab = mann_whitney_u(scores_a, scores_b)
         u_ac, p_ac = mann_whitney_u(scores_a, scores_c)
         u_bc, p_bc = mann_whitney_u(scores_b, scores_c)

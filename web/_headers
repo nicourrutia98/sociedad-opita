@@ -1,0 +1,32 @@
+# ============================================================
+# Cloudflare Pages — headers for sociedad-opita public site
+# ============================================================
+# Documentación: https://developers.cloudflare.com/pages/configuration/headers/
+
+# --- Global security headers (apply to all paths) ---
+/
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# --- HTML pages: short cache so updates are visible quickly ---
+# (Pages builds deploy atomically; a visitor hitting an old CDN edge
+#  still gets the new content within ~5 min via the must-revalidate.)
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# --- CSS and JS: medium cache with revalidation ---
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+/app.js
+  Cache-Control: public, max-age=300, must-revalidate
+/style.css
+  Cache-Control: public, max-age=300, must-revalidate
+
+# --- Game assets: longer cache (stable per build) ---
+/game/*
+  Cache-Control: public, max-age=86400, must-revalidate

@@ -3,104 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sociedad Opita — Simulación Forense de Sociedad Rural Huilense</title>
-    <meta name="description" content="Herramienta forense de estudio social de Tello, Huila. 29 personas documentadas con Big Five, Lomnitz y Dunbar. Sin fines de lucro, datos abiertos.">
+    <title>Sociedad Opita — Documentación académica forense de Tello, Huila</title>
+    <meta name="description" content="41 personas de Tello, Huila documentadas con Big Five, Lomnitz y Dunbar. Simulación social con LLM, datos abiertos, código abierto. Sin fines de lucro.">
+    <meta name="author" content="Juan Nicolás Urrutia Salcedo">
+    <meta name="keywords" content="Tello, Huila, Colombia, simulación social, Big Five, Lomnitz, Dunbar, opita, agent-based, LLM, sociología rural">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ============== LANDING-SPECIFIC STYLES ============== */
+        .hero-actions {
+            display: flex;
+            gap: 0.6rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.4rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            border: 1px solid #6b3e2e;
+            transition: all 0.15s ease;
+        }
+        .btn-primary {
+            background: #6b3e2e;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #8b5a3c;
+            color: #fff;
+        }
+        .btn-secondary {
+            background: #fff;
+            color: #6b3e2e;
+        }
+        .btn-secondary:hover {
+            background: #faf7f2;
+        }
+        .btn-tertiary {
+            background: #faf7f2;
+            color: #6b3e2e;
+            border-color: #d7ccc8;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .path-card {
+            background: #fff;
+            border: 1px solid #d7ccc8;
+            border-left: 4px solid #6b3e2e;
+            border-radius: 4px;
+            padding: 1.2rem;
+        }
+        .path-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+        .path-card .icon {
+            font-size: 1.5rem;
+            margin-right: 0.3rem;
+        }
+        .path-card .for-whom {
+            font-size: 0.9rem;
+            color: #8d6e63;
+            font-style: italic;
+            margin-bottom: 0.7rem;
+        }
+        .path-card ul {
+            margin-left: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .path-card li {
+            font-size: 0.95rem;
+        }
+
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.6rem;
+            background: #fff;
+            border: 1px solid #d7ccc8;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        .stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .stat .num {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #6b3e2e;
+            display: block;
+            line-height: 1.2;
+        }
+        .stat .label {
+            font-size: 0.8rem;
+            color: #5d4037;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .status-bar {
+            background: #fff;
+            border: 1px solid #d7ccc8;
+            border-radius: 4px;
+            padding: 1rem 1.2rem;
+            font-size: 0.9rem;
+        }
+        .status-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.5rem;
+            align-items: center;
+        }
+        .status-row > span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .status-row code {
+            font-size: 0.85rem;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            background: #ede5d4;
+            color: #6b3e2e;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+        }
+        .badge-tests {
+            background: #c8e6c9;
+            color: #2e7d32;
+        }
+        .badge-cov {
+            background: #bbdefb;
+            color: #1565c0;
+        }
+        .badge-forth {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        footer .repo-link {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Sociedad Opita</h1>
-        <p class="subtitle">Herramienta forense de estudio social rural huilense</p>
-        <p class="meta">29 perfiles documentados · 12 arquetipos · Big Five + Lomnitz + Dunbar</p>
+        <p class="subtitle">
+            Documentación académica forense de Tello, Huila.
+            41 personas modeladas con Big Five + Lomnitz + Dunbar,
+            simuladas con LLM.
+        </p>
+        <p class="meta">
+            41 personas · 18 edificios · 7 capas sociolingüísticas ·
+            13 reglas anti-AI-slop · 10 diálogos validados
+        </p>
+        <div class="hero-actions">
+            <a href="index_game.html" class="btn btn-primary">
+                Explorar el mapa →
+            </a>
+            <a href="methodology.html" class="btn btn-secondary">
+                Leer metodología
+            </a>
+            <a href="bitacora.html" class="btn btn-secondary">
+                📖 Bitácora del proyecto
+            </a>
+            <a href="https://github.com/nicourrutia98/sociedad-opita" class="btn btn-tertiary">
+                &lt;/&gt; GitHub
+            </a>
+        </div>
     </header>
 
-    <nav style="text-align:center;margin:1.5rem 0;display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
-        <a href="index_game.html" style="display:inline-block;padding:0.8rem 1.5rem;background:#6b3e2e;color:#fff;text-decoration:none;border-radius:4px;font-size:1.1rem;">
-            Explorar el mapa de Tello →
-        </a>
-        <a href="about.html" style="display:inline-block;padding:0.8rem 1.5rem;background:#fff;color:#6b3e2e;text-decoration:none;border-radius:4px;border:1px solid #6b3e2e;font-size:1rem;">
-            ¿Qué es esto?
-        </a>
-    </nav>
-
     <main>
+        <!-- ============== 1. PARA QUIÉN ES ESTO ============== -->
         <section>
-            <h2>Una herramienta forense para entender sociedades rurales</h2>
+            <h2>¿Para quién es esto?</h2>
             <p>
-                Sociedad Opita documenta, con profundidad académica, una sociedad
-                rural colombiana real — <strong>Tello, Huila</strong> — usando 29
-                personas modeladas con <em>Big Five</em>, <em>Lomnitz</em> y
-                <em>Dunbar</em>, simuladas con <em>DeepSeek</em> (LLM).
+                Sociedad Opita es una herramienta forense con tres públicos
+                distintos. Encuentra el que se parezca a ti:
             </p>
-            <p>
-                La herramienta permite a investigadores, periodistas, estudiantes
-                y curiosos <strong>explorar la estructura social</strong> de un
-                pueblo rural colombiano: hacer comparaciones entre personas,
-                exportar datos para papers académicos, y entender los hallazgos
-                psicométricos que subyacen a la red social.
-            </p>
-        </section>
 
-        <section>
-            <h2>Qué puedes hacer aquí</h2>
+            <div class="path-grid">
+                <div class="path-card">
+                    <h3><span class="icon">🗺️</span>Explorador del pueblo</h3>
+                    <p class="for-whom">Conoces Tello, eres opita de nacimiento o de elección, o simplemente te interesa la vida rural colombiana.</p>
+                    <p>Qué encuentras aquí:</p>
+                    <ul>
+                        <li>Mapa cenital interactivo de Tello</li>
+                        <li>29 perfiles documentados con nombre, casa, oficio</li>
+                        <li>Historias cruzadas entre personas</li>
+                    </ul>
+                    <p><a href="index_game.html">Ir al mapa →</a></p>
+                </div>
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
-                <div style="background:#fff;border:1px solid #d7ccc8;border-radius:4px;padding:1rem;">
-                    <h3>Explorar el mapa</h3>
-                    <p>
-                        Vista cenital interactiva de Tello. 18 edificios + 29
-                        personas clickeables. Big Five, Lomnitz, Dunbar a un click.
-                    </p>
+                <div class="path-card">
+                    <h3><span class="icon">🔬</span>Investigador académico</h3>
+                    <p class="for-whom">Sociólogo, antropólogo, politólogo, psicólogo, periodista de investigación, estudiante de posgrado.</p>
+                    <p>Qué encuentras aquí:</p>
+                    <ul>
+                        <li>Citas BibTeX listas para papers</li>
+                        <li>6 formatos de exportación de datos</li>
+                        <li>Metodología, limitaciones y ética documentadas</li>
+                    </ul>
+                    <p><a href="for-researchers.html">Para investigadores →</a></p>
                 </div>
-                <div style="background:#fff;border:1px solid #d7ccc8;border-radius:4px;padding:1rem;">
-                    <h3>Comparar personas</h3>
-                    <p>
-                        Comparación honesta de 2 personas: diferencias reales
-                        en psicometría, red, muletillas. Sin invenciones.
-                    </p>
-                </div>
-                <div style="background:#fff;border:1px solid #d7ccc8;border-radius:4px;padding:1rem;">
-                    <h3>Exportar datos</h3>
-                    <p>
-                        6 formatos abiertos: JSON, CSV, BibTeX, Markdown, PDF,
-                        Grafo (Obsidian/Roam). Tus datos son tuyos.
-                    </p>
-                </div>
-                <div style="background:#fff;border:1px solid #d7ccc8;border-radius:4px;padding:1rem;">
-                    <h3>Simular escenas</h3>
-                    <p>
-                        LLM (DeepSeek) genera respuestas plausibles de cada persona
-                        en distintas escenas. Con mitigación de sesgo pro-social.
-                    </p>
+
+                <div class="path-card">
+                    <h3><span class="icon">⚙️</span>Investigador técnico</h3>
+                    <p class="for-whom">Te interesan las simulaciones agent-based con LLM (Park et al. 2023, generative agents).</p>
+                    <p>Qué encuentras aquí:</p>
+                    <ul>
+                        <li>Código abierto, 91% cobertura de tests</li>
+                        <li>7 capas del prompt + 13 reglas anti-AI-slop</li>
+                        <li>Reproducibilidad con seed 32-bit</li>
+                    </ul>
+                    <p><a href="https://github.com/nicourrutia98/sociedad-opita">Ver repositorio →</a></p>
                 </div>
             </div>
         </section>
 
+        <!-- ============== 2. QUÉ ES ============== -->
         <section>
-            <h2>Lo que este producto NO es</h2>
+            <h2>Qué es</h2>
+            <p>
+                Sociedad Opita documenta, con profundidad académica, una sociedad
+                rural colombiana real — <strong>Tello, Huila</strong> — usando
+                tres métodos rigurosos combinados con simulación de LLM.
+            </p>
+
+            <div class="quick-stats">
+                <div class="stat">
+                    <span class="num">41</span>
+                    <span class="label">personas documentadas</span>
+                </div>
+                <div class="stat">
+                    <span class="num">26+15</span>
+                    <span class="label">adultos · niños</span>
+                </div>
+                <div class="stat">
+                    <span class="num">3</span>
+                    <span class="label">métodos psicométricos</span>
+                </div>
+                <div class="stat">
+                    <span class="num">7</span>
+                    <span class="label">capas de prompt</span>
+                </div>
+                <div class="stat">
+                    <span class="num">10</span>
+                    <span class="label">diálogos ground-truth</span>
+                </div>
+                <div class="stat">
+                    <span class="num">4</span>
+                    <span class="label">experimentos reproducibles</span>
+                </div>
+            </div>
+
+            <h3>Tres métodos, una simulación</h3>
             <ul>
-                <li>No es un juego con niveles ni mecánicas de "engagement"</li>
-                <li>No es una red social</li>
-                <li>No es una representación exacta de la realidad (ver <a href="limitations.html">Limitaciones</a>)</li>
-                <li>No es un sustituto del trabajo de campo</li>
-                <li>No es un producto comercial con paywalls</li>
+                <li>
+                    <strong>Big Five</strong> (Costa &amp; McCrae, 1992) —
+                    personalidad en cinco dimensiones (O, C, E, A, N).
+                </li>
+                <li>
+                    <strong>Lomnitz</strong> (Lomnitz, 1975) —
+                    reciprocidad en redes de supervivencia rural.
+                </li>
+                <li>
+                    <strong>Dunbar</strong> (Dunbar, 1992) —
+                    capas de intimidad social (5 → 15 → 50 → 150 → 500).
+                </li>
+                <li>
+                    <strong>LLM</strong> (DeepSeek Chat) — simulación de
+                    diálogos plausibles con mitigación documentada del sesgo
+                    pro-social.
+                </li>
             </ul>
         </section>
 
+        <!-- ============== 3. LO QUE NO ES ============== -->
         <section>
-            <h2>Sobre este proyecto</h2>
-            <p>
-                Sociedad Opita es un proyecto personal de investigación y
-                desarrollo, sin fines de lucro, sin inversores, sin equipo.
-                Construido por un nativo huilense con curiosidad rigurosa.
-            </p>
-            <p>
-                El objetivo es construir la mejor herramienta forense posible
-                para entender sociedades rurales. La monetización, si llega,
-                será decisión posterior basada en uso real, no objetivo actual.
-            </p>
+            <h2>Lo que este producto NO es</h2>
+            <div class="what-is-not">
+                <div class="not-item">
+                    <strong>No es un juego.</strong> Aunque hay una vista de mapa interactiva, no hay mecánicas de juego, no hay puntos por jugar, no hay niveles. Es una herramienta de investigación.
+                </div>
+                <div class="not-item">
+                    <strong>No es una red social.</strong> Las personas no postean, no hay likes, no hay timeline.
+                </div>
+                <div class="not-item">
+                    <strong>No es una representación exacta de la realidad.</strong> Es un <em>modelo forense</em>: útil para estudiar estructuras, no para hacer claims sobre individuos. Ver <a href="limitations.html">Limitaciones</a>.
+                </div>
+                <div class="not-item">
+                    <strong>No es un sustituto del trabajo de campo.</strong> La etnografía directa sigue siendo indispensable.
+                </div>
+                <div class="not-item">
+                    <strong>No es un producto comercial.</strong> Sin inversores, sin paywalls, sin equipo. Licencia MIT (código) / CC-BY-SA 4.0 (contenido).
+                </div>
+            </div>
         </section>
 
+        <!-- ============== 4. ESTADO DEL PROYECTO ============== -->
+        <section>
+            <h2>Estado del proyecto</h2>
+            <p>
+                Sociedad Opita es un proyecto personal de un nativo huilense
+                con curiosidad rigurosa, mantenido en sprints públicos
+                abiertos. Esto es lo que está pasando ahora:
+            </p>
+
+            <div class="status-bar">
+                <div class="status-row">
+                    <span>
+                        <strong>Versión:</strong>
+                        <code>1.0.0</code>
+                    </span>
+                    <span>
+                        <strong>Última actualización:</strong>
+                        22 de junio de 2026
+                    </span>
+                    <span>
+                        <strong>Autor:</strong>
+                        Juan Nicolás Urrutia Salcedo · Neiva, Huila
+                    </span>
+                </div>
+                <div class="status-row" style="margin-top: 0.6rem;">
+                    <span>
+                        <span class="badge badge-tests">381 tests ✓</span>
+                    </span>
+                    <span>
+                        <span class="badge badge-cov">91% cobertura</span>
+                    </span>
+                    <span>
+                        <span class="badge badge-forth">paper arXiv forthcoming</span>
+                    </span>
+                    <span>
+                        <strong>Sprint activo:</strong>
+                        <code>s1-cimientos</code> cerrado
+                    </span>
+                </div>
+                <p style="margin-top: 0.8rem; margin-bottom: 0;">
+                    <strong>Reproducibilidad:</strong>
+                    seed 32-bit → re-runs byte-idénticos. Lee
+                    <a href="methodology.html">Metodología</a> o mira el
+                    <a href="https://github.com/nicourrutia98/sociedad-opita">código</a>.
+                </p>
+            </div>
+
+            <h3>Para revisar antes de usar</h3>
+            <ul>
+                <li><a href="methodology.html">Metodología</a> — cómo se construyó cada persona, qué fuentes, qué supuestos.</li>
+                <li><a href="limitations.html">Limitaciones</a> — qué no sabemos, qué no podemos hacer, qué podría salir mal.</li>
+                <li><a href="ethics.html">Ética</a> — compromisos públicos sobre personas representadas, datos y consentimiento.</li>
+            </ul>
+        </section>
+
+        <!-- ============== 5. TRANSPARENCIA ============== -->
         <section>
             <h2>Transparencia</h2>
             <p>
@@ -118,13 +391,26 @@
     </main>
 
     <footer>
-        <p>Sociedad Opita — herramienta forense · Sin fines de lucro · Datos abiertos</p>
+        <p>
+            Sociedad Opita — herramienta forense · Sin fines de lucro ·
+            Datos abiertos · Código abierto
+        </p>
         <p class="meta">
             <a href="about.html">Acerca</a> ·
             <a href="methodology.html">Metodología</a> ·
             <a href="limitations.html">Limitaciones</a> ·
             <a href="ethics.html">Ética</a> ·
             <a href="for-researchers.html">Para investigadores</a>
+        </p>
+        <p class="meta">
+            <strong>Código:</strong> <a href="LICENSE">MIT License</a> ·
+            <strong>Contenido:</strong> CC-BY-SA 4.0 ·
+            <strong>Repo:</strong>
+            <a href="https://github.com/nicourrutia98/sociedad-opita" class="repo-link">github.com/nicourrutia98/sociedad-opita</a>
+        </p>
+        <p class="meta">
+            <strong>Cita:</strong> <a href="for-researchers.html#cita">BibTeX, APA, MLA, Chicago</a> ·
+            <strong>Contacto:</strong> vía GitHub Issues
         </p>
     </footer>
 </body>

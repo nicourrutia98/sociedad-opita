@@ -20,11 +20,13 @@ jobs:
       - name: Install ruff
         run: pip install ruff>=0.3.0
 
-      - name: Run ruff check
-        run: ruff check city_factory/ api/ core/ tests/ deploy/
+- name: Run ruff check
+      # Camino B: lint SOLO sobre código commiteado (api/, core/, deploy/ están
+      # en .gitignore y el runner no los ve).
+      run: ruff check city_factory/ analysis/ experimentos/ tests/ geo_tello.py motor_simulacion.py multi_client.py prompt_builder.py reloj.py experimento.py simulacion_v3_geografica.py
 
-      - name: Run ruff format check
-        run: ruff format --check city_factory/ api/ core/ tests/ deploy/
+    - name: Run ruff format check
+      run: ruff format --check city_factory/ analysis/ experimentos/ tests/ geo_tello.py motor_simulacion.py multi_client.py prompt_builder.py reloj.py experimento.py simulacion_v3_geografica.py
 
   black:
     runs-on: ubuntu-latest
@@ -32,12 +34,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
+      with:
+        python-version: "3.12"
+        cache: pip
 
       - name: Install black
         run: pip install black>=24.0.0
 
       - name: Run black check
-        run: black --check --diff city_factory/ api/ core/ tests/ deploy/
+        run: black --check --diff city_factory/ analysis/ experimentos/ tests/ geo_tello.py motor_simulacion.py multi_client.py prompt_builder.py reloj.py experimento.py simulacion_v3_geografica.py

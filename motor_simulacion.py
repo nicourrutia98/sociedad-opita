@@ -97,7 +97,7 @@ class SimulationEngine:
             if existing:
                 return
             import datetime
-            now = datetime.datetime.utcnow().isoformat() + "Z"
+            now = datetime.datetime.now(datetime.timezone.utc).isoformat()
             sync_id = f"obs-identity-{agent.slug()}"
             con.execute("""
                 INSERT INTO observations
@@ -178,7 +178,7 @@ class SimulationEngine:
             self._save_round_memory(agent, scene, result)
 
         self.log.append({
-            "ts": datetime.datetime.utcnow().isoformat(),
+            "ts": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "agent": agent.name,
             "scene": scene.time + " " + scene.place,
             "tokens": result.prompt_tokens + result.response_tokens,
