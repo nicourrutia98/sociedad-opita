@@ -61,14 +61,14 @@ simulacion_2026.py
 simulacion_v2.py
 simulacion_sociedad_completa.py
 hello_tello_completo.py
-ninos_tello.py
 visualizar_mapa_tello.py
 visualizar_red_social.py
 red_social_tello.png
 demo.py
-dashboard_reloj.py
 panel_control.py
-perfiles_psicometricos.py
+# NOTA: perfiles_psicometricos.py, dashboard_reloj.py y ninos_tello.py
+# ahora son COMMITEADOS (s1-cimientos). Los importadores los manejan
+# con try/except para que el repo funcione sin ellos en CI minima.
 
 # Web build artifacts
 web/game/_build/
