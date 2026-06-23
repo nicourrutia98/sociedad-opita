@@ -83,3 +83,9 @@ desktop.ini
 # Local-only data
 *.bak
 *.orig
+
+# Bundle source (separate repo at nicourrutia98/sociedad-opita-app)
+bundle-source/
+
+# Test coverage artifact
+.coverage
